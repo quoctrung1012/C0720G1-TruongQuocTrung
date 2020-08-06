@@ -1,0 +1,2 @@
+git clone https://github.com/codegym-vn/wf-hello.git
+-Là lệnh sao chép một mã nguồn hay các file được lưu trên máy chủ chia sẽ (Remote Repository)

@@ -1,0 +1,13 @@
+git remote add origin https://github.com/codegym-vn/my-new-project.git
+- Tạo mối liên hệ giữa máy tính cá nhân với máy chủ của github
+
+git add README.md
+-Đưa file README.md lên máy chủ sau khi đã liên kết với máy chủ trước đó.
+
+git commit -m "Add README.md file"
+- Lưu thay đổi nội dung file README.md và có nội dung thông báo là "Add README.md file"
+
+git push origin master
+- Cập nhật nội dung đã được cập nhật từ máy tính cá nhân(Local Repository) lên máy chủ(Remote Repository)
+
+Đường dẫn dự án https://github.com/quoctrung1012/my-new-project-TQT
