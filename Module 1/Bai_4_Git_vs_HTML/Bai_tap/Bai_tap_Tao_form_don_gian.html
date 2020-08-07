@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP TẠO FORM ĐƠN GIẢN</title>
+</head>
+
+<body>
+<--------------FORM THỨ NHẤT------------->
+    <form action="Thongtincuanguoidung" method="get">
+            <style>
+                input[type=text] {
+                    width: 20%;
+                    padding: 5px 20px;
+                    margin: 8px 0;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            </style>
+        <fieldset>
+            <h1 style="background: orange">
+            <center><label style="color: blue">SỞ THÍCH CỦA BẠN</label></center>
+            </h1>
+            <h2 style="color: blue">
+                <label for="yourname">Họ và Tên:</label>
+                <input type="text"  id="yourname" value=""><br>
+                <label for="email1">Email:</label>
+                <input type="text"  id="email1" value=""> <br>
+            Sở thích
+            </h2>
+            <h3 style="color: orange">
+                <label>
+                    <input name="hobby" value="music" type="checkbox"/> Âm Nhạc</label>
+                <label>
+                    <input name="hobby" value="sport" type="checkbox"/> Thể Thao</label>
+                <label>
+                    <input name="hobby" value="readbook" type="checkbox"/> Đọc Sách </label><br><br>
+                <label>
+                    <input name="bobby" value="websur" type="checkbox"/> Lướt Web </label>
+                <label>
+                    <input name="bobby" value="playgame" type="checkbox"/> Chơi Game </label>
+                <label>
+                    <input name="bobby" value="film" type="checkbox"/> Điện Ảnh </label><br><br>
+                <label>
+                    <input name="bobby" value="travel" type="checkbox"/> Du Lịch </label><br><br>
+            </h3>
+            <h2>
+                <label >
+                    <input type="submit" id="SubmitForm" value="Gửi thông tin"       />
+                    <input type="reset" id="ResetForm" value="      Nhập lại      "/> <br>
+                </label>
+            </h2>
+        </fieldset>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+    <-------------FORM THỨ 2-------------->
+    <form action="Thongtincuanguoidung" method="get">
+        <style>
+            input[type=text] {
+                width: 20%;
+                padding: 5px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+        <fieldset>
+            <h1 style="background: greenyellow">
+                <label style="color: red">ĐĂNG KÝ HỌC VIÊN</label>
+            </h1>
+            <h2 style="color: blue">
+                <label for="yourname21">HỌ VÀ TÊN:</label>
+                    <input type="text" id="yourname21" value=""><br>
+                <label for="date_birth"> Ngày Sinh:</label>
+                    <input type="date" id="date_birth" value=""><br>
+                <p>Giới Tính:
+                    <input type="radio" name="gender" value="male" />
+                    <label>Nam</label>
+                    <input type="radio" name="gender" value="female" />
+                    <label>Nữ</label><br>
+                </p>
+                <label for="address">Địa Chỉ</label>
+                    <input type="text" id="address" value="">
+                <p>Lớp Học:
+                    <select name="class"--Chọn Lớp-->
+                        <option value="C02-19">-Lớp C02-19-</option>
+                        <option value="C03-19">-Lớp C03-19-</option>
+                        <option value="C04-19">-Lớp C04-19-</option>
+                        <option value="C05-19">-Lớp C05-19-</option>
+                        <option value="C06-19">-Lớp C06-19-</option>
+                    </select>
+                </p>
+                <label for="email2">Email:</label>
+                    <input type="text" id="email2" value=""><br>
+                <label for="phone">Số Điện Thoại:</label>
+                    <input type="text" id="phone" value=""><br>
+            </h2>
+            <label >
+                <input type="submit" id="Submitsub2" value="Gửi thông tin"       />
+                <input type="reset" id="Resetform2" value="      Nhập lại      "/> <br>
+            </label>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
