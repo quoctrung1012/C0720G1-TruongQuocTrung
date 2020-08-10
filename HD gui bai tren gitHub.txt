@@ -1,0 +1,3 @@
+git add .    để gửi bài
+git commit -m."guibai" để thông báo 
+git push origin master     có thông báo 100% là thành công
