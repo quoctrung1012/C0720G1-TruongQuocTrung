@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhúng mã JavacScript</title>
+</head>
+<body>
+    Bài tập 1:<br>
+
+    <button type="button" onclick="alert('Xin chào!');">Click Me!</button><BR><BR>
+
+    <div id="messageDiv1"></div>
+    <button type="button" onclick="document.getElementById('messageDiv1').innerHTML='Xin chào'">Click Me!</button><BR><BR>
+
+    <button type="button" onclick="document.write('XIN CHÀO !');">Click Me!</button><BR><BR>
+
+    <button type="button" onclick="console.log('Xin Chào')">Click Me!</button><BR><BR>
+
+        Bài tập 2:<br>
+
+    <!------------------------- Hàm alert()---------->
+    <button type="button" onclick="showMessage1();">Click Me!</button>
+    <script>
+        function showMessage1() {
+            alert('XIN CHÀO')
+        }
+    </script><br><br>
+    <!----------------------------Hiển thị trên Html------------->
+    <div id="messageDiv2"></div>
+    <button type="button" onclick="showMessage2()">Click Me!</button>
+    <script>
+        function showMessage2(){
+            document.getElementById('messageDiv2').innerHTML='Xin chào';
+        }
+    </script><br><br>
+    <!---------------------Kết quả hiển thị hàm document.write()-------------->
+    <button type="button" onclick="showMessage3()">Click Me!</button>
+    <script>
+        function showMessage3() {
+            document.write('Xin chào!');
+        }
+    </script><br><br>
+    <!--------------------------Sử dụng hàm console.log()----------->
+    <button type="button" onclick="showMessage4()">Click Me!</button>
+    <script>
+        function showMessage4() {
+            console.log('Xin Chào');
+        }
+    </script><br><br>
+
+    Bài tâp 3:<br>
+    <!------------------------- Hàm alert()---------->
+    <button type="button" onclick="showMessage5();">Click Me!</button>
+    <script src="test.js">
+
+    </script><br><br>
+    <!----------------------------Hiển thị trên Html------------->
+    <div id="messageDiv3"></div>
+    <button type="button" onclick="showMessage6()">Click Me!</button>
+    <script src="test.js">
+
+    </script><br><br>
+    <!---------------------Kết quả hiển thị hàm document.write()-------------->
+    <button type="button" onclick="showMessage7()">Click Me!</button>
+    <script src="test.js">
+
+    </script><br><br>
+    <!--------------------------Sử dụng hàm console.log()----------->
+    <button type="button" onclick="showMessage8()">Click Me!</button>
+    <script src="test.js">
+
+    </script><br><br>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị Đầu Ra</title>
+</head>
+<body>
+    <!------------------------- Hàm alert()---------->
+    <button type="button" onclick="showMessage1();">Click Me!</button>
+        <script>
+            function showMessage1() {
+                alert('XIN CHÀO')
+            }
+        </script><br><br>
+    <!----------------------------Hiển thị trên Html------------->
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showMessage2()">Click Me!</button>
+        <script>
+            function showMessage2(){
+                document.getElementById('messageDiv').innerHTML='Xin chào';
+            }
+        </script><br><br>
+    <!---------------------Kết quả hiển thị hàm document.write()-------------->
+    <button type="button" onclick="showMessage3()">Click Me!</button>
+        <script>
+            function showMessage3() {
+                document.write('Xin chào!');
+            }
+        </script><br><br>
+    <!--------------------------Sử dụng hàm console.log()----------->
+        <button type="button" onclick="showMessage4()">Click Me!</button>
+        <script>
+            function showMessage4() {
+            console.log('Xin Chào');
+            }
+        </script>
+</body>
+</html>
