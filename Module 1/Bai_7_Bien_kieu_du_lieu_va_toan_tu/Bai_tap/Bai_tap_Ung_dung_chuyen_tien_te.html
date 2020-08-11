@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ỨNG DỤNG CHUYỂN ĐỔI TIỀN TỆ</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: white;
+    }
+    body {
+        padding: 200px;
+    }
+    tr, td, th {
+        padding: 10px;
+    }
+</style>
+<body>
+    <form>
+        <table width="600px" BORDER="1">
+            <tr>
+                <th><font size="+1">AMOUNT</font></th>
+                <th><font size="+1">FROM CURRENCY</font></th>
+                <th><font size="+1">TO CURRENCY</font></th>
+            </tr>
+            <tr>
+                <th><input type="text" id="t" name="Amount"></th>
+                <th>
+                    <select id="fromC" name="money">
+                        <option value="USD1">USD</option>
+                        <option value="VND1">VND</option>
+                    </select>
+                </th>
+                <th>
+                    <select id="toC" name="money">
+                        <option value="VND1">VND</option>
+                        <option value="USD1">USD</option>
+                    </select>
+                </th>
+                <th>
+                    <button type="button" value="Convert" onclick="showMessage();"><font size="+1">Kết quả</font></button>
+                </th>
+            </tr>
+            <tr>
+                <th><font size="+1">Result</font><br></th>
+                <th id="kq"></th>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function showMessage() {
+            let t = parseInt(document.getElementById("t").value);
+            let fromCurrency = document.getElementById("fromC").value;
+            let toCurrency = document.getElementById("toC").value;
+            let  result = 0;
+            if ((fromCurrency ==="USD1") && (toCurrency === "VND1")){
+                result = t * 23000
+            }   else if ((fromCurrency === "VND1") && (toCurrency === "USD1")){
+                result = t / 23000
+            }   else {
+                result = t
+            }
+            document.getElementById("kq").innerHTML = result
+        }
+    </script>
+</body>
+</html>

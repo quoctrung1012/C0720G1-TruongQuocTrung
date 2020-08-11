@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="204762ab-a99e-429c-93cd-6bfc2f675b55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Bai_thuc_hanh_su_dung_toan_tu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Bai_tap_ly_thuyet/Bai_tap_01_tinh_tong_2_so.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bai_thuc_hanh_01_Khai_bao_va_su_dung_bien.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai_thuc_hanh_01_Khai_bao_va_su_dung_bien.html" afterDir="false" />
-    </list>
+    <list default="true" id="204762ab-a99e-429c-93cd-6bfc2f675b55" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +28,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bai_tap" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -45,10 +41,17 @@
       <option name="presentableId" value="Default" />
       <updated>1597075297774</updated>
       <workItem from="1597075298961" duration="690000" />
+      <workItem from="1597107702502" duration="630000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1597108578735">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597108578735" />
   </component>
 </project>
