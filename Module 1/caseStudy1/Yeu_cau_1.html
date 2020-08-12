@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THÔNG TIN KHÁC HÀNG</title>
+</head>
+<body>
+        <script>
+            let fullname = prompt("01.Nhập Họ và Tên khác hàng:");
+            let numId = prompt("02.Nhập Số CMND hoặc Thẻ căng cước: ");
+            let numBirth = prompt("03.Nhập ngày tháng năm sinh Khách: ");
+            let email = prompt("04.Nhập địa chỉ Email: ");
+            let address = prompt("05.Địa chỉ khách hàng: ");
+            let cusType = prompt("06.Nhập Cấp độ khách hàng" +"\n" + "- Diamond, Platinum, Gold, Silver, Member");
+            let numSale = prompt("07.Phần trăm chiết khấu: ");
+            let numMember = prompt("08.Số lượng khác hàng: ");
+            let numDay = prompt("09.Số ngày thuê: ");
+            let serType = prompt("10.Loại hình dịch vụ" + "\n"+ "Villa, House, Room");
+            let roomType = prompt("11.Loại phòng khách cần thuê" + "\n" + "Vip, Business, Normal");
+            let total = 0;
+            if (serType == "Villa"){
+                    total = numDay * 500 * (100 - numSale) / 100;
+            }   else if (serType == "House") {
+                    total = numDay * 300 * (100 - numSale) / 100;
+            }   else {
+                    total = numDay * 100 * (100- numSale) /100;
+            }   alert("Thông tin nhập vào:\n " +
+                "01. Tên khách hàng: " + fullname + "\n" +
+                "02. Số CMND: " + numId + "\n" +
+                "03. Ngày tháng năm sinh: " + numBirth + "\n" +
+                "04. Địa chỉ Email: " + email + "\n" +
+                "05. Địa chỉ khác hàng: " + address + "\n" +
+                "06. Cấp độ khách hàng: " + cusType + "\n" +
+                "07. Phần trăm giảm giá: " + numSale + "\n"  +
+                "08. Số lượng khác hàng: " + numMember + "\n" +
+                "09. Số ngày thuê: " + numDay + "\n" +
+                "10. Loại hình dịch vụ: " + serType + "\n" +
+                "11. Loại phòng khách cần: " + roomType + "\n" +
+                "12. Tổng số tiền phải thanh toán: " + "$" + total
+            );
+        </script>
+</body>
+</html>

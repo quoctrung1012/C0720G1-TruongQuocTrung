@@ -40,7 +40,7 @@
                     </select>
                 </th>
                 <th>
-                    <button type="button" value="Convert" onclick="showMessage();"><font size="+1">Kết quả</font></button>
+                    <button type="button" onclick="calcaulator();"><font size="+1">Kết quả</font></button>
                 </th>
             </tr>
             <tr>
@@ -50,17 +50,17 @@
         </table>
     </form>
     <script>
-        function showMessage() {
-            let t = parseInt(document.getElementById("t").value);
+        function calcaulator() {
+            let t0 = parseInt(document.getElementById("t").value);
             let fromCurrency = document.getElementById("fromC").value;
             let toCurrency = document.getElementById("toC").value;
             let  result = 0;
             if ((fromCurrency ==="USD1") && (toCurrency === "VND1")){
-                result = t * 23000
+                result = t0 * 23000
             }   else if ((fromCurrency === "VND1") && (toCurrency === "USD1")){
-                result = t / 23000
+                result = t0 / 23000
             }   else {
-                result = t
+                result = t0
             }
             document.getElementById("kq").innerHTML = result
         }

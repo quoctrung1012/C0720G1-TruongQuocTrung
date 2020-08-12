@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SỰ KIỆN CHUỘT</title>
+</head>
+<body>
+    <form>
+        <img id="myImage" src="https://vn-test-11.slatic.net/p/f434a7f05630bc6ff26c97b4eeb640d8.jpg_720x720q80.jpg_.webp">
+        <p>Click button below to move the image to right</p>
+        <input type="button" value="Click Me - Right" onclick="moveRight();"/>
+    </form>
+    <script>
+        let img0bj = null;
+        img0bj =document.getElementById('myImage');
+        function init() {
+            imgObj = document.getElementById('myImage');
+            imgObj.style.position = 'relative';
+            imgObj.style.left = '0px';
+        }
+        function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+        }
+        window.onload = init;
+
+    </script>
+</body>
+</html>
