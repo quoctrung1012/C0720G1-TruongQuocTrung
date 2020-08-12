@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="237b1a49-0ab8-446c-9fd0-8572786fa782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Bai_tap/Bai_tap_Bien_kieu_du_lieu_va_toan_tu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Bai_tap/Bai_tap_Ung_dung_chuyen_tien_te.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Bai_tap/Chuyen_tien_te.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Bai_tap/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Bai_tap/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caseStudy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Thuc_hanh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Thuc_hanh/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Thuc_hanh/Bai_thuc_hanh_01_Khai_bao_va_su_dung_bien.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu/Thuc_hanh/Bai_thuc_hanh_01_Khai_bao_va_su_dung_bien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caseStudy_yeu_cau_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caseStudy_yeu_cau_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caseStudy.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +33,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bai_7_Bien_kieu_du_lieu_va_toan_tu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bai_8_Cau_truc_dieu_kien_01/Thuc_Hanh" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -50,6 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1597128918322</updated>
       <workItem from="1597128919661" duration="1499000" />
+      <workItem from="1597164558064" duration="372000" />
+      <workItem from="1597193900415" duration="643000" />
     </task>
     <servers />
   </component>
@@ -57,9 +55,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1597130427733">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1597195008009">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597130427733" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597195008009" />
   </component>
 </project>

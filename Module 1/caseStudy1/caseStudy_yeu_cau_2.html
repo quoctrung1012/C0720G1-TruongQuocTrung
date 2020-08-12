@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu Cầu 1 + 2</title>
+</head>
+<body>
+<script>
+    let fullname = prompt("01.Nhập Họ và Tên khác hàng:");
+    let idcmnd = prompt("02.Nhập Số CMND hoặc Thẻ căng cước: ");
+    let birth = prompt("03.Nhập ngày tháng năm sinh Khách: ");
+    let email = prompt("04.Nhập địa chỉ Email: ");
+    let address = prompt("05.Địa chỉ khách hàng: ");
+    let cusType = prompt("06.Nhập Cấp độ khách hàng: ");
+    let discount = prompt("07.Phần trăm chiết khấu: ");
+    let numMember = prompt("08.Số lượng khác hàng: ");
+    let numDay = prompt("09.Số ngày thuê: ");
+    let serNum = prompt("10.Loại hình dịch vụ: ");
+    let roomType = prompt("11.Loại phòng khách cần: ");
+
+    let total=0;
+    if (serNum == "Villa")
+        total = rompt(numDay) * 500 * (100 - discount) / 100;
+    else
+    if(serNum == "House")
+        total = numDay * 300 * (100 - discount / 100);
+    else
+        total = numDay*100 * ( 100 - discount / 100);
+    alert("Thông tin nhập vào:<br/> " +
+        "01. Tên khách hàng: " + fullname + "<br/>" +
+        "02. Số CMND: " + idcmnd + "<br/>" +
+        "03. Ngày tháng năm sinh: " + birth + "<br/>" +
+        "04. Địa chỉ Email: " + email + "<br/>" +
+        "05. Địa chỉ khác hàng: " + address + "<br/>" +
+        "06. Cấp độ khách hàng: " + cusType + "<br/>" +
+        "07. Phần trăm giảm giá: " + discount + "<br/>"  +
+        "08. Số lượng khác hàng: " + numMember + "<br/>" +
+        "09. Số ngày thuê: " + numDay + "<br/>" +
+        "10. Loại hình dịch vụ: " + serNum + "<br>" +
+        "11. Loại phòng khách cần: " + roomType + "<br/>");
+</script>
+</body>
+</html>

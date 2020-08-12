@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIỂM TRA NĂM NHUẬN</title>
+</head>
+<body>
+<!--    Mã 01-->
+<!--    <script>-->
+<!--        let year =parseInt(prompt("Enter a year"));-->
+<!--        if (year % 4 == 0){-->
+<!--            if (year % 100 == 0) {-->
+<!--                if (year % 400 == 0) {-->
+<!--                    alert(year + " is a a leap year");-->
+<!--                }   else {-->
+<!--                    alert(year + " is Not a leap year");-->
+<!--                }-->
+<!--            }   else {-->
+<!--                alert(year + "is a leap year");-->
+<!--            }-->
+<!--        }   else {-->
+<!--            alert( year + " is Not a leap year");-->
+<!--        }-->
+<!--    </script>-->
+
+<!--        Mã 02-->
+<!--    <script>-->
+<!--        let year = parseInt(prompt("Enter a year:"));-->
+<!--        let isLeapYear = false;-->
+<!--        if (year % 4 == 0) {-->
+<!--            if (year % 100 == 0) {-->
+<!--                if (year % 400 == 0) {-->
+<!--                    isLeapYear = true;-->
+<!--                }-->
+<!--            }   else {-->
+<!--                isLeapYear =true-->
+<!--            }-->
+<!--        }-->
+
+<!--        if (isLeapYear) {-->
+<!--            alert( year + "is a Leap year");-->
+<!--        }   else {-->
+<!--            alert(year + " is NOT a leap year");-->
+<!--        }-->
+<!--    </script>-->
+
+
+<!--        Mã 3-->
+<!--    <script>-->
+<!--        let year = parseInt("Enter a Year:");-->
+<!--        let isLeapYear = false;-->
+<!--        let isDivisible4 = year % 4 == 0;-->
+<!--        if (isDivisible4) {-->
+<!--            let isDivisible100 = year % 100 == 0;-->
+<!--            if (isDivisible100) {-->
+<!--                let isDivisible400 = year % 400 == 0;-->
+<!--                if (isDivisible400) {-->
+<!--                    isLeapYear = true;-->
+<!--                }-->
+<!--            }   else {-->
+<!--                isLeapYear = true;-->
+<!--            }-->
+<!--        }-->
+<!--        if (isLeapYear) {-->
+<!--            alert(year + " is a leap year!");-->
+<!--        }   else {-->
+<!--            alert(year + " is NOT a leap year!");-->
+<!--        }-->
+<!--    </script>-->
+
+            <!--        mã 4: toán tử 3 ngôi-->
+            <script>
+                let year = parseInt(prompt("vui long nhap so nam"))
+                if (((year % 4 === 0)&&(year % 100 !== 0)) || (year % 400 === 0))
+                    alert(year + " is a leap year");
+                else
+                    alert(year + " is NOT a leap year");
+            </script>
+</body>
+</html>
