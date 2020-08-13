@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 05</title>
+</head>
+<body>
+    <script>
+        let ktraMieng1 = parseFloat(prompt("Nhập điểm kiểm tra miệng lần 01:"));
+        let ktraMieng2 = parseFloat(prompt("Nhập điểm kiểm tra miệng lần 02"));
+        let ktraMinute1501 = parseFloat(prompt("Nhâp điểm kiểm tra 15' lần 01"));
+        let ktraMinute1502 = parseFloat(prompt("Nhâp điểm kiểm tra 15' lần 02"));
+        let ktraHour01 = parseFloat(prompt("Nhập điểm kiểm tra một tiết lần 01:"));
+        let ktraHour02 = parseFloat(prompt("Nhập điểm kiểm tra một tiết lần 02:"));
+        let ktraHocky =  parseFloat(prompt("Nhập điểm kiểm tra Học kỳ:"));
+        let diemTB = ((ktraMieng1 + ktraMieng2 + ktraMinute1501 + ktraMinute1502 + ktraHour01 * 2 + ktraHour02 * 2 + ktraHocky *3)/11);
+        if (diemTB < 3.5) {
+            alert("Xếp loại Kém!" + '\n' + "Điểm Trung Bình là:" + " " + diemTB);
+        }   else if (diemTB < 5.0) {
+            alert("Xếp loại Yếu!" + '\n' + "Điểm Trung Bình là:" + " " + diemTB);
+        }   else if (diemTB < 6.5) {
+            alert("Xếp loại Trung Bình!" + '\n' + "Điểm Trung Bình là:" + " " + diemTB);
+        }   else if (diemTB < 8.0) {
+            alert("Xếp loại Khá!" + '\n' + "Điểm Trung Bình là:" + " " + diemTB);
+        }   else {
+            alert("Xếp loại Giỏi!" + '\n' + "Điểm Trung Bình là:" + " " + diemTB);
+        }
+    </script>
+</body>
+</html>

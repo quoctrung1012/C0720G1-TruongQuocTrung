@@ -4,37 +4,51 @@
     <meta charset="UTF-8">
     <title>MÁY TÍNH ĐON GIẢN</title>
 </head>
-
+<style>
+    th{
+        width: 148px;
+    }
+    input {
+        width: 580px;
+    }
+    button {
+        width: 148px;
+        background-color: yellow;
+    }
+    font {
+        size: 50px;
+    }
+</style>
 <body>
-    <table border="1">
+    <table border="1" >
         <tr>
             <th colspan="4">
                 <input type="display" id="kq" disabled>
             </th>
         </tr>
         <tr>
-            <th><button type="button" name="phim1" id="1" onclick="nut01()" value="1">1</button></th></th>
-            <th><button type="button" name="phim2" id="2" onclick="nut02()" value="2">2</button></th></th>
-            <th><button type="button" name="phim3" id="3" onclick="nut03()" value="3">3</button></th></th>
-            <th><button type="button" name="phim+" id="plus" onclick="nutPlus()" value=" + ">+</button></th>
+            <th><button type="button" name="phim1" id="1" onclick="nut01()">1</button></th></th>
+            <th><button type="button" name="phim2" id="2" onclick="nut02()">2</button></th></th>
+            <th><button type="button" name="phim3" id="3" onclick="nut03()">3</button></th></th>
+            <th><button type="button" name="phim+" id="plus" onclick="nutPlus()">+</button></th>
         </tr>
         <tr>
-            <th><button type="button" name="phim4" id="4" onclick="nut04()" value="4">4</button></th>
-            <th><button type="button" name="phim" id="5" onclick="nut05()" value="5">5</button></th>
-            <th><button type="button" name="phim" id="6" onclick="nut06()" value="6">6</button></th>
-            <th><button type="button" name="phim" id="mins" onclick="nutMins()" value=" - ">-</button></th>
+            <th><button type="button" name="phim4" id="4" onclick="nut04()">4</button></th>
+            <th><button type="button" name="phim" id="5" onclick="nut05()">5</button></th>
+            <th><button type="button" name="phim" id="6" onclick="nut06()">6</button></th>
+            <th><button type="button" name="phim" id="mins" onclick="nutMins()">-</button></th>
         </tr>
         <tr>
-            <th><button type="button" name="phim" id="7" onclick="nut07()" value="7">7</button></th>
-            <th><button type="button" name="phim" id="8" onclick="nut08()" value="8">8</button></th>
-            <th><button type="button" name="phim" id="9" onclick="nut09()" value="9">9</button></th>
-            <th><button type="button" name="phim" id="mult" onclick="nutMult()" value=" x ">x</button><br></th>
+            <th><button type="button" name="phim" id="7" onclick="nut07()">7</button></th>
+            <th><button type="button" name="phim" id="8" onclick="nut08()">8</button></th>
+            <th><button type="button" name="phim" id="9" onclick="nut09()" >9</button></th>
+            <th><button type="button" name="phim" id="mult" onclick="nutMult()">x</button><br></th>
         </tr>
         <tr>
             <th><button type="button" name="phim" id="resset" onclick="nutAc()">C</button></th>
-            <th><button type="button" name="phim" id="0" onclick="nut00()" value="0">0</button></th>
-            <th><button type="button" name="phim" id="result" onclick="nutResult()" value="=">=</button></th>
-            <th><button type="button" name="phim" id="div" onclick="nutDiv()" value=" : ">/</button></th>
+            <th><button type="button" name="phim" id="0" onclick="nut00()">0</button></th>
+            <th><button type="button" name="phim" id="result" onclick="nutResult()" >=</button></th>
+            <th><button type="button" name="phim" id="div" onclick="nutDiv()" >/</button></th>
         </tr>
     </table>
     <script>

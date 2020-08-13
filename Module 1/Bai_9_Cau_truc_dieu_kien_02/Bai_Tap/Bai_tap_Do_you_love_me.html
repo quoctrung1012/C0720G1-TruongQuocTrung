@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DO YOU LOVE ME</title>
+</head>
+<style>
+    h1{
+        color: blue;
+    }
+</style>
+<body>
+        <h1 style="position:absolute; left:310px; top:75px;"> DO YOU LOVE ME? </h1>
+        <button type="button"onclick="chonYes()" style="position:absolute; left:285px; top:235px;">YES</button>
+        <button type="button" id="click" onmouseover="chonNo()" style="position:absolute; left:585px; top:235px;">NO</button>
+        <script>
+            function chonYes() {
+                alert("**YES. YOU ARE RIGHT!!**");
+            }
+            function chonNo() {
+                let x = Math.round(Math.random() * window.innerWidth);
+                let y = Math.round(Math.random() * window.innerHeight);
+                document.getElementById('click').style.left = x + 'px';
+                document.getElementById('click').style.top = y + 'px';
+            }
+        </script>
+</body>
+</html>
