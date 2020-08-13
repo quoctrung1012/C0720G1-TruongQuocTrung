@@ -4,32 +4,146 @@
     <meta charset="UTF-8">
     <title>MÁY TÍNH ĐON GIẢN</title>
 </head>
+<style>
+    form {
+        background: #ccc;
+        margin: 0 auto;
+        width: 300px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    form * {
+        box-sizing: border-box;
+    }
+
+    form table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    form table tr, form table td {
+        border: 1px solid #eee;
+    }
+
+    form table tr:first-child input {
+        height: 50px;
+        padding: 0 10px;
+        font-weight: 700;
+    }
+
+    form table tr:not(:first-child) td {
+        height: 70px;
+    }
+
+    form table tr:not(:first-child) td input {
+        height: 100%;
+    }
+
+    form table input {
+        width: 100%;
+        display: block;
+        border: 0;
+        font-size: 16px;
+    }
+
+    form table input:focus {
+        outline: none;
+    }
+
+    form table input:hover {
+        background: #eee;
+        transition: all .2s ease-in-out;
+    }
+
+    form table input.operator {
+        font-weight: 700;
+        color: #fff;
+        background: #ffcc00;
+    }
+</style>
 <body>
-    <form>
-        <input type="text" id="kq"><br>
-        <button type="button" name="phim" onclick="nut01()">1</button>
-        <button type="button" name="phim" onclick="nut02()">2</button>
-        <button type="button" name="phim" onclick="nut03()">3</button>
-        <button type="button" name="phim" onclick="nutPlus()">+</button><br>
-        <button type="button" name="phim" onclick="nut04()">4</button>
-        <button type="button" name="phim" onclick="nut05()">5</button>
-        <button type="button" name="phim" onclick="nut06()">6</button>
-        <button type="button" name="phim" onclick="nutMins()">-</button><br>
-        <button type="button" name="phim" onclick="nut07()">7</button>
-        <button type="button" name="phim" onclick="nut08()">8</button>
-        <button type="button" name="phim" onclick="nut09()">9</button>
-        <button type="button" name="phim" onclick="nutMult()">X</button><br>
-        <button type="button" name="phim" onclick="nutAc()">C</button>
-        <button type="button" name="phim" onclick="nut00()">0</button>
-        <button type="button" name="phim" onclick="nutResult()">=</button>
-        <button type="button" name="phim" onclick="nutDiv()">/</button>
-
-
-
-
-
-
-
-    </form>
+    <table>
+        <tr>
+            <th colspan="4">
+                <input type="display" id="kq" disabled>
+            </th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th><button type="button" name="phim1" id="1" onclick="nut01()" value="1">1</button></th></th>
+            <th><button type="button" name="phim2" id="2" onclick="nut02()" value="2">2</button></th></th>
+            <th><button type="button" name="phim3" id="3" onclick="nut03()" value="3">3</button></th></th>
+            <th><button type="button" name="phim+" id="plus" onclick="nutPlus()" value=" + ">+</button></th>
+        </tr>
+        <tr>
+            <th><button type="button" name="phim4" id="4" onclick="nut04()" value="4">4</button></th>
+            <th><button type="button" name="phim" id="5" onclick="nut05()" value="5">5</button></th>
+            <th><button type="button" name="phim" id="6" onclick="nut06()" value="6">6</button></th>
+            <th><button type="button" name="phim" id="mins" onclick="nutMins()" value=" - ">-</button></th>
+        </tr>
+        <tr>
+            <th><button type="button" name="phim" id="7" onclick="nut07()" value="7">7</button></th>
+            <th><button type="button" name="phim" id="8" onclick="nut08()" value="8">8</button></th>
+            <th><button type="button" name="phim" id="9" onclick="nut09()" value="9">9</button></th>
+            <th><button type="button" name="phim" id="mult" onclick="nutMult()" value=" x ">x</button><br></th>
+        </tr>
+        <tr>
+            <th><button type="button" name="phim" id="resset" onclick="nutAc()">C</button></th>
+            <th><button type="button" name="phim" id="0" onclick="nut00()" value="0">0</button></th>
+            <th><button type="button" name="phim" id="result" onclick="nutResult()" value="=">=</button></th>
+            <th><button type="button" name="phim" id="div" onclick="nutDiv()" value=" : ">/</button></th>
+        </tr>
+    </table>
+    <script>
+            function nut01() {
+                document.getElementById('kq').value +=1;
+            }
+            function nut02() {
+                document.getElementById('kq').value +=2;
+            }
+            function nut03() {
+                document.getElementById('kq').value +=3;
+            }
+            function nut04() {
+                document.getElementById('kq').value +=4;
+            }
+            function nut05() {
+                document.getElementById('kq').value +=5;
+            }
+            function nut06() {
+                document.getElementById('kq').value +=6;
+            }
+            function nut07() {
+                document.getElementById('kq').value +=7;
+            }
+            function nut08() {
+                document.getElementById('kq').value +=8;
+            }
+            function nut09() {
+                document.getElementById('kq').value +=9;
+            }
+            function nut00() {
+                document.getElementById('kq').value +=0;
+            }
+            function nutPlus() {
+                document.getElementById('kq').value +='+';
+            }function nutMins() {
+                document.getElementById('kq').value +='-';
+            }
+            function nutMult() {
+                document.getElementById('kq').value +='*';
+            }
+            function nutDiv() {
+                document.getElementById('kq').value +='/';
+            }
+            function nutResult() {
+                document.getElementById('kq').value = eval(document.getElementById('kq').value)
+            }
+            function nutAc() {
+                document.getElementById('kq').value ='';
+            }
+    </script>
 </body>
 </html>
