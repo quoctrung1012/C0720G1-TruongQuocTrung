@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 09</title>
+</head>
+<body>
+        <script>
+            let a = parseFloat(prompt("Nhập giá trị cạnh thứ nhất: "));
+            let b = parseFloat(prompt("Nhập giá trị cạnh thứ hai: "));
+            let c = parseFloat(prompt("Nhập giá trị cạnh thứ ba: "));
+            if ((a < 0) || (b < 0) || (c < 0) ) {
+                alert("Một trong 3 giá trị bạn nhập vào không phải là số đo của một cạnh hình tam giác!")
+            }   else if (((a + b) < c) || ((b + c) < a) || ((a + c) < b) ) {
+                alert("Ba cạnh bạn nhập vào không thể tạo thành một hình tam giác!")
+            }  else {
+                alert("Ba cạnh bạn nhập vào có thể tạo thành một hình tam giác!")
+            }
+        </script>
+</body>
+</html>

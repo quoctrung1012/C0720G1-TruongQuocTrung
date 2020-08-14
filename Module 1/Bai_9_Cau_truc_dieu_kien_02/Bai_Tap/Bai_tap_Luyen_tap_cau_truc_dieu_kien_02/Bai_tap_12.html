@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 12</title>
+</head>
+<body>
+    <script>
+        let PV = parseInt(prompt("Nhập số tiền bạn đã vay (đơn vị nghìn đồng): "));
+        let r = parseFloat(prompt("Nhập lãi suất theo % hằng năm:"));
+        let T = parseInt(prompt("Nhập số năm bạn muốn vay:"));
+        let FV = PV * (Math.pow((1 + r/100) , T));
+        alert("Số tiền lãi bạn phải trả trong khoảng thời gian" + T + "năm là:" + (FV - PV));
+    </script>
+</body>
+</html>
