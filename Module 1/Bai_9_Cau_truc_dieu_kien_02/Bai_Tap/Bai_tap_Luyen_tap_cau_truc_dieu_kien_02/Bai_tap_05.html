@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 05</title>
+</head>
+<body>
+        <script>
+            let DS = confirm("- Hai cạnh bạn muốn nhập có cạnh nào là cạnh huyền không?\n"+ "- Nếu có vui lòng bấm OK.\n" + "- Còn không vui lòng bấm Cancel\n" + "- Vui lòng nhập cạnh huyền đầy tiên nếu có");
+            let a = parseInt(prompt("Nhập cạnh thứ nhất:"));
+            let b = parseInt(prompt("Nhập cạnh thứ hai:"));
+            let c = Math.sqrt(a*a+b*b);
+            let S1 = 0.5 * a * b;
+            let S2 = 0.5 * b * c;
+            if (DS = true){
+                document.write("Diện tích hình tam giác là: " + S1);
+            }   else {
+                document.write("Diện tích hình tam giác là: "+ S2);
+            }
+        </script>
+</body>
+</html>

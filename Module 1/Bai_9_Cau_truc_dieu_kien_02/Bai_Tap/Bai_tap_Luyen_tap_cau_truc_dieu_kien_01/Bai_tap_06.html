@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 06</title>
+</head>
+<body>
+
+        <script>
+            let ds = parseFloat(prompt('Nhập doanh số tháng này của bạn:'));
+            if ( ds < 200 ) {
+                alert('Số hoa hồng bạn nhận được là:' + ds * 3 / 100*1000+ 'đồng' );
+            }   else if (ds < 500) {
+                alert('Số hoa hồng bạn nhận được là:' + (ds - 200) *5 / 100*1000 + 'đồng');
+            }   else if (ds < 1000) {
+                alert('Số hoa hồng bạn nhận được là:' + (ds - 500) * 10 / 100*1000 + 'đồng');
+            }   else {
+                alert('Số hoa hồng bạn nhận được là:' + (ds - 1000) * 15 / 100*1000 + 'đồng');
+            }
+        </script>
+</body>
+</html>

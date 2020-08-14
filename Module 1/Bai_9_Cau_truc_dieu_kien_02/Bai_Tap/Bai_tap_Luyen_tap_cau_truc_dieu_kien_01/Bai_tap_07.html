@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 07</title>
+</head>
+<body>
+<!--Phí thuê bao bắt buộc là 25 nghìn.-->
+<!--600 đồng cho mỗi phút gọi của 50 phút đầu tiên.-->
+<!--400 đồng cho mỗi phút gọi của 150 phút tiếp theo.-->
+<!--250 đồng cho mỗi phút gọi của 250 phút tiếp theo.-->
+<!--250 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên.-->
+        <script>
+            let phiCodinh = 25000;
+            let min = parseFloat(prompt('Nhập số phút đã gọi trong tháng:'));
+            let total50 = phiCodinh + min * 600;
+            let total150 = phiCodinh + (min- 50) * 400 + 50 * 600;
+            let total250 = phiCodinh + (min - 150)* 250 + 100 * 400 + 50 * 600;
+            let total250up = phiCodinh + (min -250)* 200 + 250 * 250 + 100 * 400 + 50 * 600;
+            if (min < 50) {
+                alert('Số tiền phải trả là: ' + total50);
+            }   else if (min < 150) {
+                alert('Số tiền phải trả là: ' + total150);
+            }   else if (min < 250) {
+                alert('Số tiền phải trả là: ' + total250 );
+            }   else  {
+                alert('Số tiền phải trả là: ' + total250up );
+            }
+        </script>
+</body>
+</html>
