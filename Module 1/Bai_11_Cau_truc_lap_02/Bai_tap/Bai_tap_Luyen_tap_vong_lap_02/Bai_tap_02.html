@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 02</title>
+</head>
+<body>
+<!--Chưa tìm ra cách tối ưu.-->
+<!--        <script>-->
+<!--            let kq = 1;-->
+<!--            let number = parseInt(prompt("Nhập giá trị cần tìm:"));-->
+<!--            let n= number;-->
+<!--            for ( let i = n; i>0 ; i&#45;&#45;){-->
+<!--                if (n>170){-->
+<!--                    alert("Số bạn nhập vượt quá giới hạn tính toán.")-->
+<!--                }   else if ((i === n) || (i ===0)){-->
+<!--                    kq = i-->
+<!--                }   else {-->
+<!--                    kq = kq *(i);-->
+<!--                }-->
+<!--                    alert("Kết quả la: " + kq);-->
+<!--            }-->
+<!--        </script>-->
+
+            <script>
+                let kq = 1;
+                let number = parseInt(prompt("Nhập giá trị cần tính giai thừa:"));
+                if (number==0){
+                    kq=1
+                }else if (number>170){
+                    kq ="Só bạn nhâp lớn qua, không tính được"
+                }else {
+                    for ( let i = 1; i<=number ; i++){
+                        kq = kq *(i);
+                    }
+                }
+                alert("Kết quả la: " + kq);
+            </script>
+</body>
+</html>

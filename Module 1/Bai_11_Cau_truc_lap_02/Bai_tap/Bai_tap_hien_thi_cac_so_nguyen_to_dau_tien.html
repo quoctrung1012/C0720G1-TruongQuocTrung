@@ -5,33 +5,52 @@
     <title> Hiển thị các số nguyên tố đầu tiên</title>
 </head>
 <body>
-        <script>
-            function check_snt(number) {
-                let count = 0;
-                let N =2;
-                for (N =2; N<number; N++ ){
-                    if (number % N === 0) {
-                        count++;
-                    }
-                }   if (count!==0)  {
-                    return false;
-                }   else {
-                    return true;
-                }
-            }
-            let text = " ";
-            let number = parseInt(prompt("Nhập số lượng số nguyên tố cần tìm"));
-            let count = 0;
-            let N  =2;
-            while ( count < number){
-                if (check_snt(N)){
-                    count ++;
-                    document.write(N + "<br>");
-                    text = N;
-                }   N++;
-            }
+<!--        <script>-->
+<!--            function check_snt(number) {-->
+<!--                let count = 0;-->
+<!--                let N =2;-->
+<!--                for (N =2; N<number; N++ ){-->
+<!--                    if (number % N === 0) {-->
+<!--                        count++;-->
+<!--                    }-->
+<!--                }   if (count!==0)  {-->
+<!--                    return false;-->
+<!--                }   else {-->
+<!--                    return true;-->
+<!--                }-->
+<!--            }-->
+<!--            let text = " ";-->
+<!--            let number = parseInt(prompt("Nhập số lượng số nguyên tố cần tìm"));-->
+<!--            let count = 0;-->
+<!--            let N  =2;-->
+<!--            while ( count < number){-->
+<!--                if (check_snt(N)){-->
+<!--                    count ++;-->
+<!--                    document.write(N + "<br>");-->
+<!--                    text = N;-->
+<!--                }   N++;-->
+<!--            }-->
 
-        </script>
+<!--        </script>-->
+
+            <script>
+                let M =parseInt(prompt("nhập số lượng số cần tìm"));
+                let kq = " ";
+                let count = 0;
+                let N=2;
+                while (count < M){
+                    let flag =  true ;
+                    for ( let i =2; i < N ; i++){
+                        if (N % i == 0 ){
+                            flag = false;
+                            break;
+                        }
+                    }   if (flag){
+                        count ++;
+                        kq += N + "<br>"
+                    }   N++
+                }   document.write(kq)
+            </script>
 
 </body>
 </html>

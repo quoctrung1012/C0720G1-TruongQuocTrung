@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 08</title>
+</head>
+<body>
+        <form>
+            <input type="button" id="play" value="Chơi" onclick="clickPlay()">
+        </form>
+
+
+        <script>
+                function clickPlay() {
+                    let number1 = parseFloat(prompt("Nhập giới hạn trước:"));
+                    let number2 = parseFloat(prompt("Nhập giới hạn sau:"));
+                    let random = Math.ceil((number2 - number1) * Math.random()) + number1;
+                    for (let i = 1; i<=3; i ++){
+                        let numGet = parseFloat(prompt(""));
+                        if (numGet == random){
+                            alert("Bạn đã đoán đúng");
+                        }   else if ( numGet > random){
+                            alert("Số bạn nhập lớn hơn số cần tìm.")
+                        }   else  {
+                            alert("Số bạn nhập nhỏ hơn số cần tìm.")
+                        }
+                    }
+                }
+        </script>
+</body>
+</html>

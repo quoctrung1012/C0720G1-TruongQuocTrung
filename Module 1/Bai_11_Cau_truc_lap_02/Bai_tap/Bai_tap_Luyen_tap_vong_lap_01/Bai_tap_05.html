@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 05</title>
+</head>
+<body>
+
+            <script>
+                let N=parseInt(prompt("Nhập số lượng số Fibonacci cầ tìm"));
+                let x1 =0;
+                let x2 =1;
+                let ketQua = x1  + x2;
+                for (let i = 3 ; i <=N; i++){
+                    x = x1 + x2;
+                    ketQua +=x ;
+                    x1 = x2;
+                    x2 = x;
+                }   document.write("" + ketQua);
+            </script>
+</body>
+</html>
