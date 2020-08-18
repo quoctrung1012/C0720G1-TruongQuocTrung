@@ -6,26 +6,50 @@
 </head>
 <body>
 <!--        Hình 1:-->
-<!--        <script>-->
-<!--            let N1 = parseInt( prompt("Nhập giá trị N: "));-->
-<!--            for (let i =1; i<=N1 ; i++){-->
-<!--                for (let j =0; j<=i; j++ ){-->
-<!--                    document.write("*")-->
-<!--                }   document.write("<br/>")-->
-<!--            }-->
-<!--        </script>-->
-
-<!--Hình 2:-->
         <script>
-            let N2 = parseInt( prompt("Nhập giá trị N: "));
-            for (let i= 1; i<=N2 ; i--){
-                for (let j=0; j<=N2-i; j--){
-                    document.write("*");
-                }document.write("<br/>");
+            let N1 = parseInt( prompt("Nhập giá trị N1: "));
+            for (let i =1; i<=N1 ; i++){
+                for (let j =1; j<=i; j++ ){
+                    document.write("*")
+                }   document.write("<br>")
             }
         </script>
 
+<!--Hình 2:-->
+        <script>
+            let N2 = parseInt( prompt("Nhập giá trị N2: "));
+            for (let i= 1; i<=N2 ; i++){
+                for (let j=1; j<=N2-i; j++){
+                    document.write("*");
+                }document.write("<br>");
+            }
+        </script><br><br>
+<!--Hình 3-->
 
+        <script>
+            let N3 =parseInt(prompt("Nhập giá trị N3: "));
+            for (let i= 1; i<=N3 ; i++){
+                for (let j=1; j<=N3-i; j++){
+                    document.write("&nbsp&nbsp");
+                }   for (let k=1; k<= i;k++ ){
+                    document.write("*");
+                }
+
+                document.write("<br>");
+            }
+        </script>
+
+        <script>
+            let N4 = parseInt(prompt("Nhập giá trị N4: "));
+            for (let i= 1; i<=N4 ; i++){
+                for (let j=1; j<=i; j++){
+                    document.write("&nbsp&nbsp");
+                }   for (let k=1; k<= N4-i;k++ ){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        </script>
 
 
 

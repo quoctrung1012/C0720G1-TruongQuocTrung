@@ -6,21 +6,33 @@
 </head>
 <body>
 
+<!--        <script>-->
+<!--            let n= null;-->
+<!--            do {-->
+<!--                n = parseFloat(prompt("Nhập nhiệt độ: "));-->
+<!--                if (isNaN=(n<20 ||n>100)){-->
+<!--                    alert("Yêu cầu bạn nhập lại.")-->
+<!--                }   else {-->
+<!--                    alert("Nhiệt độ bạn vừa nhập là: " + n);-->
+<!--                }-->
+<!--            }   while (isNaN(n));-->
+<!--        </script>-->
+
         <script>
-            let n= null;
+            let check=false;
             do {
-                n = parseFloat(prompt("Nhập nhiệt độ: "));
-                if (isNaN=(n<20 ||n>100)){
-                    alert("Yêu cầu bạn nhập lại.")
-                }   else {
-                    alert("Nhiệt độ bạn vừa nhập là: " + n);
+                let temp=parseInt(prompt("Nhập nhiệt độ hiện tại của phòng"));
+                if (temp<20){
+                    alert("Nhiệt độ thấp quá. yêu cầu tăng nhiệt độ");
+                    check=true;
+                }else if(temp>100){
+                    alert("Nhiệt độ cao quá. yêu cầu giảm nhiệt độ");
+                    check=true;
+                }else {
+                    alert("Nhiệt độ phù hợp .OK");
+                    check=false;
                 }
-            }   while (isNaN(n));
-
-
-
-
-
+            }while (check)
         </script>
 </body>
 </html>
