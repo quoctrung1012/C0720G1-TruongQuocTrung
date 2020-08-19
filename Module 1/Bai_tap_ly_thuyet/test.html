@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--        <script>-->
+<!--            let x = [1, 3, 5, 7];-->
+<!--            let y = [2, 4, 6];-->
+<!--            x[2] = y[x.length - 3];-->
+<!--            console.log(x);-->
+<!--        </script>-->
+<!--        <script>-->
+<!--            let x = [1,3,5,7];-->
+<!--            let y = [2,4,6];-->
+<!--            x[2] = y[x.length-3] + x [ x[0] + y[0] ];-->
+<!--            console.log(x);-->
+<!--        </script>-->
+<script>
+
+    // let iMax = 20;
+    // let jMax = 10;
+    // let f = new Array();
+    //
+    // for (i = 0; i < iMax; i++) {
+    //     f[i] = new Array();
+    //     for (j = 0; j < jMax; j++) {
+    //         f[i][j] = 0;
+    //     }
+    // }
+    // console.log()
+
+    // let fruits= ["Strawberry", "Banana", "Mango"];
+    // let pos = fruits.indexOf('Banana');
+    // console.log(pos);
+    // let removedItem = fruits.splice(pos,pos)
+    // console.log(fruits)
+    //
+    var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+    console.log(vegetables);
+    // ["Cabbage", "Turnip", "Radish", "Carrot"]
+
+    var pos = 1, n = 2;
+
+    var removedItems = vegetables.splice(pos, n);
+    // đây là cách để xoá các phần tử, n định nghĩa số phần tử cần xoá bỏ,
+    // từ vị trí đó (pos) trở đi đến cuối mảng.
+
+    console.log(vegetables);
+    // ["Cabbage", "Carrot"] (mảng ban đầu đã bị thay đổi)
+
+    console.log(removedItems);
+    // ["Turnip", "Radish"]
+</script>
+
+</body>
+</html>

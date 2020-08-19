@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 08</title>
+</head>
+<body>
+
+        <script>
+            let array = [];
+            for (let i = 0;i<10; i++){
+                array[i] = parseInt(prompt("Input mảng " + i +":"));
+            }
+            alert("Mảng trước khi sắp xếp là: " + array);
+            array.sort();
+            array.sort(function (a, b) {return b-a});
+            alert("Mảng sau khi được sắp xếp giảm dần: " + array);
+
+
+        </script>
+</body>
+</html>

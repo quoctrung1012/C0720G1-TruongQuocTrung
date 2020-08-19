@@ -18,10 +18,6 @@
             let serType = "Villa";
             let roomType = "Vip";
             let total = 0;
-            let total1 = 0;
-            let total2 = 0;
-            let total3 = 0;
-            let total4 = 0;
             let current = new Date().getFullYear();
             let numYear = new Date(numBirth).getFullYear();
             let ageCustumer = current - numYear;
@@ -115,43 +111,43 @@
                             }
                             case 3: {
                                 if (serType === "Villa"){
-                                    total1 = numDay * 500 * (1 - numSale/100);
+                                    total = numDay * 500 * (1 - numSale/100);
                                 }   else if (serType === "House") {
-                                    total1 = numDay * 300 * (1 - numSale/100);
+                                    total = numDay * 300 * (1 - numSale/100);
                                 }   else if (serType === "Room"){
-                                    total1 = numDay * 100 * (1 - numSale/100);
+                                    total = numDay * 100 * (1 - numSale/100);
                                 }
                                 if (address === "Đà Nẵng") {
-                                        total2 = total1 - 20;
+                                    total -= 20;
                                 }   else if (address === "Huế") {
-                                        total2 = total1 - 10;
+                                    total -= 10;
                                 }   else if (address === "Quảng Nam") {
-                                        total2 = total1 - 5;
+                                    total -= 5;
                                 }
                                 if (numDay > 7) {
-                                    total3 = total2 - 30;
+                                    total -= 30;
                                 }   else if ( numDay > 5) {
-                                    total3 = total2 -20;
+                                    total -= 20;
                                 }   else if (numDay > 2 ) {
-                                    total3 = total2 -10
+                                    total -= 10
                                 }
                                 if (cusType === "Diamond"){
-                                    total4 = total3 - 15;
+                                    total -= 15;
                                 }   else if (cusType === "Platinum") {
-                                    total4 = total3 - 10;
+                                    total -= 10;
                                 }   else if (cusType === "Gold") {
-                                    total4 = total3 - 5;
+                                    total -= 5;
                                 }   else if (cusType === "Silver"){
-                                    total4 = total3 - 2;
+                                    total -= 2;
                                 }   else if (cusType === "Member"){
-                                    total4 = total3;
+                                    total;
                                 }
                                 if ((ageCustumer > 30 ) && (address === "Đà Nẵng")) {
-                                    total = total4 - 2;
+                                    total -= 2;
                                 }   else if ((ageCustumer > 20) && (address === "Đà Nẵng")) {
-                                    total = total4 - 1;
+                                    total -= 1;
                                 }   else {
-                                    total = total4;
+                                    total;
                                 }
                                 alert(" Số tiền khách hàng phải trả là:" + total + "$");
                                 break;

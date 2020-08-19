@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TỪ ĐIỂN</title>
+</head>
+<body>
+        <form>
+            <h3></h3>
+            <input type="text" id="tratu"><br>
+            <input type="button" id="click" value="Translate" onclick="dich()"><br>
+        </form>
+
+            <p id="ketQua"></p>
+        <script>
+            function dich() {
+                let tratu = document.getElementById("tratu").value;
+                let arrayEnglish = ["table", "teacher", "pencil", "home", "manager"];
+                let arrayVietnamese = ["cái bàn", "giáo viên", "bút chì", "nhà", "giám đốc"];
+                for (let i = 0; i < arrayEnglish.length; i++) {
+                    if (tratu == arrayEnglish[i]) {
+                        document.getElementById("ketQua").innerHTML = arrayVietnamese[i];
+                        break;
+                    } else {
+                        document.getElementById("ketQua").innerHTML = "Không tìm thấy thông tin";
+                    }
+                }
+            }
+
+        </script>
+</body>
+</html>

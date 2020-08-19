@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 04 </title>
+</head>
+<body>
+    <script>
+        let x = [];
+        let length = prompt("nhập số phần tử mảng");
+        for (let i=0;i<length;i++){
+            x[i] = prompt("Nhập từNG phần tử của mảng" + i +": ");
+        }
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last) {
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        }
+        document.write(x);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YÊU CẦU 3</title>
+</head>
+<body>
+        <script>
+
+                let inputInformation = parseInt(prompt(
+                    "1. Kiểm tra định dạng CMND" + "\n" +
+                    "2. Kiểm tra định dạng email" + "\n" +
+                    "3. Kiểm tra định dạng Ngày Sinh." + "\n" +
+                    "4. Kiểm tra định dạng Số ngày đặt phòng và Sale."));
+
+                switch (inputInformation) {
+                    case 1:
+                        numID();
+                        break;
+                    case 2:
+                        email();
+                        break;
+                    case 3:
+                        numBirth();
+                        break;
+                    case 4:
+                        numSale();
+                        numDay();
+                        numMember();
+                        break;
+
+            }
+
+            function email() {
+                let email;
+                let test = true;
+                let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                do {
+                    email= prompt("Nhập địa chỉ Email.");
+                    if (email ==""){
+                        alert("Nhập địa chỉ email:");
+                        test = false;
+                    }   else if (filter.test(email) == true){
+                        alert("Bạn đã nhập đúng.");
+                        break;
+                    }   else {
+                        alert("Yêu cầu bạn nhập đúng định dạng: Example@gmail.com");
+                        test = false;
+                    }
+                }   while (!test)
+            }
+                function numID() {
+                    let numId;
+                    let test = true;
+                    do {
+                        numId = prompt("Nhập thông tin CMND.");
+                        if (numId==""){
+                            alert("Nhập thông tin CMND.");
+                            test = false;
+                        }   else if (isNaN(numId) == false && numId>=0 && numId == 9){
+                            alert("Bạn có thể tiếp tục!");
+                            break;
+                        }   else {
+                            alert("Hãy nhập lại")
+                        }
+                    }   while (!test)
+                }
+            function numBirth() {
+                let numBirth;
+                let test = true;
+                let regDay = /^[MM/DD/YYYY]$/i;
+                do {
+                    numBirth =prompt("Nhập ngày tháng năm sinh.");
+                    if (numBirth ==""){
+                        alert("Nhập thông tin.");
+                        test = false;
+                    }   else if (isNaN(numBirth) == false && regDay.test(numBirth)){
+                        alert("Bạn nhập đã đúng");
+                        break;
+                    }   else {
+                        alert("Yêu cầu bạn nhập lại.");
+                        test = false;
+                    }
+                }   while (!test);
+            }
+            function numSale() {
+                let numSale;
+                let regNumber = /^\d*$/.test(value);
+                do {
+                    numSale = prompt("Nhâp số Sale");
+                    if (numSale = ""){
+                        alert("Nhập thông tin lại.");
+                        test = false;
+                    }   else if (regNumber.test(numSale)==true){
+                        alert("Bạn đã nhập đúng.");
+                        break;
+                    }   else {
+                        alert("Yêu cầu bạn nhập lai.");
+                        test = false;
+                    }
+                }while (!test)
+            }
+            function numDay() {
+                let numDay;
+                let test = true;
+                let regNumber = /^\d*$/.test(value);
+                do {
+                    numDay  = prompt("Nhập Số ngày");
+                    if (numDay = ""){
+                        alert("Nhập thông tin lại.");
+                        test = false;
+                    }   else if (regNumber.test(numDay)==true){
+                        alert("Bạn đã nhập đúng.");
+                        break;
+                    }   else {
+                        alert("Yêu cầu bạn nhập lai.");
+                        test = false;
+                    }
+                }while (!test)
+            }
+            function numMember() {
+                let numMember;
+                let test = true;
+                let regNumber = /^\d*$/.test(value);
+                do {
+                    numMember = prompt("Nhập Số người.");
+                    if (numMember = ""){
+                        alert("Nhập thông tin lại.");
+                        test = false;
+                    }   else if (regNumber.test(numMember)==true){
+                        alert("Bạn đã nhập đúng.");
+                        break;
+                    }   else {
+                        alert("Yêu cầu bạn nhập lai.");
+                        test = false;
+                    }
+                }while (!test)
+            }
+        </script>
+</body>
+</html>

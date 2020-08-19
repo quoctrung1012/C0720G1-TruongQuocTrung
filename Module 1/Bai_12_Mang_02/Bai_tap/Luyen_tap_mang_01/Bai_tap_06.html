@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 06</title>
+</head>
+<body>
+
+    <script>
+        let array = [];
+        for (let i = 0;i<10; i++){
+            array[i] = parseInt(prompt("Input mảng " + i +":"));
+        }
+        let a= parseInt(prompt(array + "\n" + "Nhập phần tử V muốn tìm:"));
+        if (array.indexOf(a) == -1){
+            alert("V is not in the array")
+        }   else if (array.indexOf(a) > -1){
+            alert("V is in the array")
+        }
+    </script>
+</body>
+</html>

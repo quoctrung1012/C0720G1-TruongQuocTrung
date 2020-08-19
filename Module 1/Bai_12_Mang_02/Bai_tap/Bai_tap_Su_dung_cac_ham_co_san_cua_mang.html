@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+
+    <script>
+
+        // Bài tập 01
+        // let myCity=["Đà Nẵng" , "Huế", "Nha Trang" , "Quảng Nam" , "Hồ Chí MInh"];
+        // document.write(myCity.join());
+
+        // Bài Tập 02
+        // let daySo = parseFloat(prompt("Nhập dãy số bất kỳ."));
+        // let array = daySo.toString();
+        // let kq = [array[0]];
+        // for (let i = 1; i<= array.length;i++) {
+        //     if ((array[i] % 2) === 0 && (array[i - 1] % 2 === 0)) {
+        //         kq.push('-', array[i]);
+        //     } else {
+        //         kq.push(array[i]);
+        //     }
+        //     // }   console.log(kq.join());
+        // }document.write(kq.join());
+
+        // Bài tập 03;
+        let array= "The Quick Brown Fox";
+        let inHoaUPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let inThuongLOWER = "abcdefghijklmnopqrstuvwxyz";
+        let kq =[];
+        for (let i=0;i<=array.length;i++){
+            if (inHoaUPPER.includes(array[i])){
+                kq.push(array[i].toLowerCase());  // Chuyển từ hoa sang thường
+            }   else if (inThuongLOWER.includes(array[i])){
+                kq.push(array[i].toUpperCase());  // Chuyển từ thường sang hoa
+            }   else {
+                kq.push(array[i]);
+            }
+        }   document.write(kq.join(""));
+    </script>
+</body>
+</html>
