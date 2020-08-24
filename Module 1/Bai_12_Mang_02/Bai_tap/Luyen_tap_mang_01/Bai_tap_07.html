@@ -12,15 +12,14 @@
                 array[i] = parseInt(prompt("Input mảng " + i +":"));
             }
             let a= parseInt(prompt(array + "\n" + "Nhập phần tử V muốn tìm:"));
-            if (array.indexOf(a) > -1){
-                let vitri = array.indexOf(a);
-                let del = array.splice(vitri,1);
-                alert("Mảng sau khi chỉnh sửa: " + array + "\n"+
-                "Mảng tách ra: " + del);
-            }   else {
-                alert("V is not in the array")
-            }
-
+                if (array.indexOf(a) > -1){
+                    let vitri = array.indexOf(a);
+                    let del = array.splice(vitri,1);
+                    alert("Mảng sau khi chỉnh sửa: " + array + "\n"+
+                        "Mảng tách ra: " + del);
+                }   else {
+                    alert("V is not in the array")
+                }
 
         </script>
 </body>

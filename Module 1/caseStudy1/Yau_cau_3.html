@@ -21,7 +21,21 @@
             let today = new Date();
             let currentYear = today.getFullYear();
 
+            let tempFullName = "";
             fullname = prompt("01.Nhập Họ và Tên khác hàng:");
+            fullname = fullname.trim().toLowerCase();
+            for (let i =0; i<fullname.length;i++){
+                if (fullname.charAt(i)=== " " && fullname.charAt(i+1) === " "){
+                    continue;
+                }   if (i === 0 || fullname.charAt(i-1) === " "){
+                    tempFullName = fullname.charAt(i).toLowerCase();
+                    continue;
+                }
+                tempFullName += fullname.charAt(i);
+            }
+            fullname = tempFullName;
+
+            address = prompt("05.Địa chỉ khách hàng: ");
 
             do {
                 numId = prompt("02.Nhập Số CMND hoặc Thẻ căng cước: ");
@@ -38,7 +52,7 @@
             check = false;
 
             do {
-                numBirth = prompt("03.Nhập ngày tháng năm sinh Khách: " + "\n" + "Theo dạng 'MM/dd/yyyy' hoặc 'yyyy-MM-dd" );
+                numBirth = prompt("03.Nhập ngày tháng năm sinh Khách: " + "\n" + "Theo dạng 'MM/dd/yyyy' hoặc 'yyyy-MM-dd' hoặc 'dd/MM/yyyy'"  );
                 if (numBirth.charAt(2)=== "/" && numBirth.charAt(5)==="/"){
                     let day = numBirth.substring(0,2);
                     let month = numBirth.substring(3,5);
@@ -80,8 +94,6 @@
             }   while (!check);
                 check = false;
 
-            address = prompt("05.Địa chỉ khách hàng: ");
-
             do {
                 cusType = prompt("06.Nhập Cấp độ khách hàng" +"\n" + "- Diamond, Platinum, Gold, Silver, Member");
                 if ((cusType === Diamond) || (cusType === Platinum) || (cusType === Gold) || (cusType === Silver) || (cusType === Member)){
@@ -91,7 +103,6 @@
                 }
             } while (!check);
             check = false;
-
 
             do {
                 numSale = prompt("07.Phần trăm chiết khấu: ");

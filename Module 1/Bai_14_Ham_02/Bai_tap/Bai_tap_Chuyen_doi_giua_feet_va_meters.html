@@ -7,25 +7,23 @@
 <body>
         <script>
             function footToMeter(foot){
-
-                return 3.279 * meter;
-
+                return 0.305 * foot;
             }
             function meterToFoot(meter){
-
-                return 0.305 * foot;
-
+                return 3.279 * meter;
             }
             let section = parseInt( prompt("Nhập lựa chon " + "\n" +
-                                            "1.footToMeter" + "\n" +
-                                            "2.meterToFoot"));
-            let input = parseInt(prompt("Nhập số"));
+                                            "1.Foot To Meter" + "\n" +
+                                            "2.Meter To Foot"));
+            let input = parseInt(prompt("Nhập giá trị cần đổi."));
             switch (section) {
                 case 1:
-                    footToMeter(input);
+                    let result1 = footToMeter(input);
+                    alert("Kết quả là " + result1 + "m");
                     break;
                 case 2:
-                    meterToFoot(input);
+                    let result2 = meterToFoot(input);
+                    alert("Kết quả là" + result2 + "ft");
                     break;
                 default:
                     alert("Chọn 1 hoặc 2")

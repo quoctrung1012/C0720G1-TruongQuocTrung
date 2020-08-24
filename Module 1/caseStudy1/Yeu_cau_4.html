@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YÊU CẦU 4</title>
+</head>
+<body>
+        <script>
+            let arrFullName = [];
+            while (true){
+            let choose = parseInt(prompt("1. Thêm Khách Hàng. " + "\n" +
+                                         "2. Xóa Khách Hàng." ));
+            switch (choose) {
+                case 1:
+                    let numberCustumer = parseInt(prompt("Nhập số lượng khách hàng mà bạn muốn thêm."));
+                    for (let i = 0; i<numberCustumer; i++){
+                        let fullName =prompt("Nhập tên khách hàng. ");
+                        arrFullName.push(fullName);
+                    }
+                    let result ="";
+                    for (let i = 0; i<arrFullName.length; i++){
+                        result += "No " + (i+1) + ". " + arrFullName[i] + "\n"
+                    }   alert(result);
+                    break;
+                }
+            }
+        </script>
+</body>
+</html>
