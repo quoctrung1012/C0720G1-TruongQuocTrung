@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+        <script>
+            function isPalindrome(s){
+                for (let i = 0;i < (s.length -1)/2;i++){
+                    if (s[i] != s[s.length - 1 - i]){
+                        return 0;
+                    }
+                }   return 1;
+            }
+            let string = prompt("Nhập chuỗi cần kiểm tra đối xứng.");
+            if (isPalindrome(string) == 0){
+                alert("Chuổi vừa nhập không đối xứng.");
+            }
+            if (isPalindrome(string) == 1){
+                alert("Chuổi vừa nhập là chuỗi đối xứng.")
+            }
+        </script>
+</body>
+</html>
