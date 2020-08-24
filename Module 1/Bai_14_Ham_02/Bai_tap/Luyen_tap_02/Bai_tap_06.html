@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 06</title>
+</head>
+<body>
+        <script>
+            function kiemtra(num) {
+                if (num >= 0 ){
+                    return true;
+                }   else {
+                    return false;
+                }
+            }
+            let num = parseFloat(prompt("Nhập số."));
+            let result = kiemtra(num);
+            if (result){
+                alert(num + " là số nguyên dương")
+            }   else {
+                alert(num + " là số nguyên âm")
+            }
+            alert(result);
+        </script>
+</body>
+</html>

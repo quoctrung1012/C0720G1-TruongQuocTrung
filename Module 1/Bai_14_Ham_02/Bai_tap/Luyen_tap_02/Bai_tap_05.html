@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 05</title>
+</head>
+<body>
+        <script>
+            function kiemtra(a, b, c) {
+                if (a < b && a < c){
+                    alert("Số thứ nhất nhỏ nhất")
+                }   else if (b < c){
+                    alert("Số thứ hai nhỏ nhất")
+                }   else {
+                    alert("Số thứ ba nhỏ nhất")
+                }
+                return kiemtra(a,b,c);
+            }
+            let a = parseInt(prompt("Nhập số thứ 1."));
+            let b = parseInt(prompt("Nhập số thứ 2."));
+            let c = parseInt(prompt("Nhập số thứ 3."));
+            let result = kiemtra(a,b,c);
+            alert(result)
+        </script>
+</body>
+</html>

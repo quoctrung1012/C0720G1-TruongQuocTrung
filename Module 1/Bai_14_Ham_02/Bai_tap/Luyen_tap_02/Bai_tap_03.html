@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI TẬP 03</title>
+</head>
+<body>
+    <script>
+        function tinhGiaThua(number) {
+            let kq = 1;
+            if (number === 0){
+                kq=1
+            }else if (number > 170){
+                kq ="Số bạn nhập vượt quá giới hạn tính toán. Yêu cầu bạn nhập lại"
+            }else {
+                for ( let i = 1; i <=number ; i++){
+                    kq = kq *(i);
+                }
+            }
+            alert("Kết quả la: " + kq);
+        }
+        let num = parseInt(prompt("Nhập số cần tính."));
+        tinhGiaThua(num)
+    </script>
+</body>
+</html>

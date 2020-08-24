@@ -5,20 +5,14 @@
     <title>BÀI TẬP 02</title>
 </head>
 <body>
-        <form>
-            <input type="number" id="text" value="dienso">
-            <input type="button" id="click" value="Click" onclick="dienSo()">
-            <br><br>
-            <p>Result</p>
-            <p id="kq"></p>
-        </form>
         <script>
-            function dienSo(number1) {
-                return number1++;
+
+            function nhapSo(num) {
+                return num +1;
             }
-            let number1 = document.getElementById("text").value;
-            let ketqua = dienSo(number1);
-            document.getElementById("kq").innerHTML = ketqua;
+            let number = parseInt(prompt("Nhập số"));
+            let ketQua = nhapSo(number);
+            alert(ketQua);
         </script>
 </body>
 </html>
