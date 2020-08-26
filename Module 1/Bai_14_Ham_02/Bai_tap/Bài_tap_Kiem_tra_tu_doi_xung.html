@@ -9,15 +9,15 @@
             function isPalindrome(s){
                 for (let i = 0;i < (s.length -1)/2;i++){
                     if (s[i] != s[s.length - 1 - i]){
-                        return 0;
+                        return true;
                     }
-                }   return 1;
+                }   return false;
             }
             let string = prompt("Nhập chuỗi cần kiểm tra đối xứng.");
-            if (isPalindrome(string) == 0){
+            if (isPalindrome(string) == true){
                 alert("Chuổi vừa nhập không đối xứng.");
             }
-            if (isPalindrome(string) == 1){
+            if (isPalindrome(string) == false){
                 alert("Chuổi vừa nhập là chuỗi đối xứng.")
             }
         </script>

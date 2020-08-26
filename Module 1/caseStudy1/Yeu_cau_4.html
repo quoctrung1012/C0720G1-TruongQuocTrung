@@ -6,28 +6,46 @@
 </head>
 <body>
         <script>
-            let arrFullName = [];
+            let arrFullName = ["Nam","Anh","Thanh","Tuấn","Hoàng","Thành","Hà","Sương","Loan", "Thuyên"];
             while (true){
             let choose = parseInt(prompt("1. Thêm Khách Hàng. " + "\n" +
-                                         "2. Xóa Khách Hàng." ));
+                                         "2. Xóa Khách Hàng."));
+            }
             switch (choose) {
                 case 1:
-                    let numberCustumer = parseInt(prompt("Nhập số lượng khách hàng mà bạn muốn thêm."));
-                    for (let i = 0; i<numberCustumer; i++){
-                        let fullName =prompt("Nhập tên khách hàng. ");
-                        arrFullName.push(fullName);
-                    }
-                    let result ="";
-                    for (let i = 0; i<arrFullName.length; i++){
-                        result += "No " + (i+1) + ". " + arrFullName[i] + "\n"
-                    }   alert(result);
+                    addCustumer();
                     break;
                 case 2:
-                    let deleteCustumer = parseInt(prompt("Nhập số lượng khách hàng mà bạn muốn xóa. "));
-                    for (let i = 0; i < deleteCustumer;i++){
-                        let fullName = prompt("Nhập tên khách hàng muốn xóa. ");
-                        
-                    }
+                    deleteCustumer();
+                    break;
+                default:
+                    alert("Yêu cầu chọn sự lựa chon khác.")
+                }
+
+            function addCustumer() {
+                let numberCustumer = parseInt(prompt("Nhập số lượng khách hàng mà bạn muốn thêm."));
+                for (let i = 0; i<numberCustumer; i++){
+                    let fullName = prompt("Nhập tên khách hàng. ");
+                    arrFullName.push(fullName);
+                }
+                let result ="";
+                arrFullName.sort();
+                for (let i = 0; i < arrFullName.length; i++){
+                    result +=  "No" + (i+1) + ". " + arrFullName[i] + "\n"
+                }   alert(result);
+            }
+            function deleteCustumer() {
+                let result ="";
+                arrFullName.sort();
+                for (let i = 0; i < arrFullName.length;i++) {
+                    result +=  "No" + (i+1) + ". " + arrFullName[i] + "\n"
+                }
+                let vitriDel = parseInt(prompt(result + + "\n" + "Nhập vị trí muốn Xóa"));
+                if (vitriDel > -1){
+                    let del = arrFullName.splice((vitriDel-1),1);
+                    alert("Danh sách sau khi xóa là: " + "\n" + result + "\n"+ "Khách đã xóa là:" + del);
+                }   else {
+                    alert("Yếu cầu bạn nhập lại lựa chọn")
                 }
             }
         </script>

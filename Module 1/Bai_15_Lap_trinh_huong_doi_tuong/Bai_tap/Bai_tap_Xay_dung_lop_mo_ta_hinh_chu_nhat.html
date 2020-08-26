@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+
+        <script>
+            // let hinhChuNhat = function (chieuRong, chieuDai) {
+            //     this.chieuRong = chieuRong;
+            //     this.chieuDai = chieuDai;
+            //     this.getchieuRong = function () {
+            //         return chieuRong;
+            //     };
+            //     this.getchieuDai = function () {
+            //         return chieuDai;
+            //     };
+            //     this.getdienTich= function () {
+            //         return chieuRong * chieuDai;
+            //     };
+            //     this.getchuVi = function () {
+            //         return (chieuRong + chieuDai) * 2
+            //     };
+            // };
+            // let a = parseInt(prompt("Nhập độ lớn chiều rộng."));
+            // let b = parseInt(prompt("Nhập độ lớn chiều dài."));
+            // let hinhChunhat = new hinhChuNhat(a,b);
+            // let chieuRong = hinhChunhat.getchieuRong();
+            // let chieuDai = hinhChunhat.getchieuDai();
+            // let dienTich = hinhChunhat.getdienTich();
+            // let chuVi = hinhChunhat.getchuVi();
+            // alert("Chiều rộng: " + chieuRong+"int" + "\n"+"Chiều dài: " + chieuDai+"int" + "\n"+
+            //       "Diện tích: " + dienTich+"int" + "\n" + "Chu vi: " + chuVi+"int");
+
+
+            class hinhChuNhat {
+                 thongTin (x,y,chieuRong,chieuDai){
+                     this.x = x;
+                     this.y = y;
+                     this.chieuRong = chieuRong;
+                     this.chieuDai = chieuDai;
+                 }
+                 dienTich (){
+                     return this.chieuDai* this.chieuRong
+                 }
+            }
+        </script>
+</body>
+</html>
