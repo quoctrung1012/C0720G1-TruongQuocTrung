@@ -5,7 +5,7 @@
     <title>Xây dựng lớp mô tả hình chữ nhật</title>
 </head>
 <body>
-
+        <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
         <script>
             // let hinhChuNhat = function (chieuRong, chieuDai) {
             //     this.chieuRong = chieuRong;
@@ -34,17 +34,73 @@
             //       "Diện tích: " + dienTich+"int" + "\n" + "Chu vi: " + chuVi+"int");
 
 
+            // class hinhChuNhat {
+            //     constructor (chieuRong,chieuDai){
+            //          // this.x = x;
+            //          // this.y = y;
+            //          this.chieuRong = chieuRong;
+            //          this.chieuDai = chieuDai;
+            //      }
+            //      getChieuRong(){
+            //         return this.chieuRong;
+            //      }
+            //      getChieuDai(){
+            //         return this.chieuDai
+            //      }
+            //      getDienTich (){
+            //          return this.chieuDai* this.chieuRong;
+            //      }
+            //      getChiVi(){
+            //         return (this.chieuDai + this.chieuRong)*2
+            //      }
+            // }
+            // let hinhChuNhat1 = new hinhChuNhat(20,30);
+            // let chieudai = hinhChuNhat1.getChieuDai();
+            // let chieurong = hinhChuNhat1.getChieuRong();
+            // let dientich = hinhChuNhat1.getDienTich();
+            // let chuvi = hinhChuNhat1.getChiVi();
+            // alert("Chiều rộng: " + chieurong+"int" + "\n"+"Chiều dài: " + chieudai+"int" + "\n"+
+            //       "Diện tích: " + dientich+"int" + "\n" + "Chu vi: " + chuvi+"int");
+
             class hinhChuNhat {
-                 thongTin (x,y,chieuRong,chieuDai){
-                     this.x = x;
-                     this.y = y;
-                     this.chieuRong = chieuRong;
-                     this.chieuDai = chieuDai;
-                 }
-                 dienTich (){
-                     return this.chieuDai* this.chieuRong
-                 }
+                constructor (x,y,chieuRong,chieuDai){
+                    this.x = x;
+                    this.y = y;
+                    this.chieuRong = chieuRong;
+                    this.chieuDai = chieuDai;
+                }
+                getChieuRong(){
+                    return this.chieuRong;
+                }
+                getChieuDai(){
+                    return this.chieuDai;
+                }
+                getDienTich (){
+                    return this.chieuDai* this.chieuRong;
+                }
+                getChiVi(){
+                    return (this.chieuDai + this.chieuRong)*2
+                }
+                veHinhChuNhat(){
+                    let ctx = document.getElementById("myCanvas").getContext("2d");
+                    ctx.fillStyle = "#FF00FF";
+                    ctx.fillRect(x,y,this.getChieuRong(),this.getChieuDai());
+                }
+                toString(){
+                    return "Chiều rộng: " + chieuRong+"int" + "\n"+"Chiều dài: " + chieuDai+"int" + "\n"+
+                        "Diện tích: " + dienTich+"int" + "\n" + "Chu vi: " + chuVi+"int";
+                }
             }
+            let x = 0;
+            let y = 0;
+            let chieuDai = 250;
+            let chieuRong = 90;
+            let hinhChuNhat1 = new hinhChuNhat(x,y,chieuRong,chieuDai);
+            let create = hinhChuNhat1.veHinhChuNhat();
+            let dienTich = hinhChuNhat1.getDienTich();
+            let chuVi = hinhChuNhat1.getChiVi();
+            alert(hinhChuNhat1.toString());
+            document.getElementById("myCanvas").innerHTML = create;
         </script>
 </body>
 </html>

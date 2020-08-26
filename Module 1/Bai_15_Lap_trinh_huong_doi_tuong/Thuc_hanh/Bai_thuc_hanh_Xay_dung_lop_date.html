@@ -43,7 +43,7 @@
 
 
             class ngayThangNam {
-                thongTin (day, month, year){
+                constructor (day, month, year,){
                     this.day = day;
                     this.month = month;
                     this.year = year;
@@ -51,23 +51,37 @@
                 getDay(){
                     return this.day;
                 }
-                setDat(){
-                    return this.day;
+                setDay(day){
+                    this.day = day;
                 }
                 getMonth(){
                     return this.month;
                 }
-                setMonth(){
-                    return this.month;
+                setMonth(month){
+                    this.month = month;
                 }
                 getYear(){
                     return this.year;
                 }
-                setYear(){
-                    return this.year;
+                setYear(year){
+                    this.year = year;
                 }
-
+                getFullYear(){//tương đương với toString()
+                    return this.day + "/" + this.month + "/" + this.year
+                }
+                toString(){
+                    return this.day + "/" + this.month + "/" + this.year
+                }
             }
+            let ngayThangNam1 = new ngayThangNam(2,12,2009);
+            alert(ngayThangNam1.getFullYear());
+            alert(ngayThangNam1.toString());
+            // bước 7
+            ngayThangNam1.setDay(23);
+            ngayThangNam1.setMonth(8);
+            ngayThangNam1.setYear(2020);
+            alert(ngayThangNam1.getFullYear());
+            alert(ngayThangNam1.toString());
         </script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+        <script>
+            class Temperature {
+                constructor(doC) {
+                    this.doC = doC
+                }
+                getDoC(){
+                    return this.doC;
+                }
+                setDoC(doC){
+                    this.doC = doC;
+                }
+                getDoF(){
+                    return (this.doC * 1.8) +32;
+                }
+                getDoK(){
+                    return this.doC + 273.15;
+                }
+                toString(){
+                    return  doC + "độ C đổi sang độ F là: " + doF +"độ F" + "\n"+ doC+ "độ C đổi sang độ K là: " + doK +"độ K";
+                }
+            }
+            let doC = parseInt(prompt("Nhập số nhiệt độ bạn muốn đổi."));
+            let temperature = new Temperature(doC);
+            let doF = temperature.getDoF();
+            let doK = temperature.getDoK();
+            if (doC < - 273){
+                alert("Yêu cầu nhập lại.")
+            }   else {
+                alert(temperature.toString());
+            }
+
+
+
+        </script>
+</body>
+</html>
