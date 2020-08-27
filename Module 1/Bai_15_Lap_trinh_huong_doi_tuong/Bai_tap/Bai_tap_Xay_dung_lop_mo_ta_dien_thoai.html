@@ -8,8 +8,47 @@
     <script>
         class Mobile {
             constructor() {
+                this.status = true;
+                this.pin = 100;
+                this.memoryDraft = [];
+                this.memoryeSended = [];
+                this.memoryInport = [];
+            }
+            turnOn(){
+                this.status = true;
+            }
+            turnOff(){
+                this.status = false;
+            }
+            makeDraft(message){
+                if (this.status === true){
+                    this.makeDraft().push(message);
+                    this.pin--;
+                }   else {
+                    alert("Bật điện thoại");
+                }
+            }
+            sendMessage(mobile){
+                mobile.memoryInport = this.memoryDraft;
+                this.memoryeSended = this.memoryDraft;
+                this.memoryDraft = [];
+            }
+            showMessageInport(){
+                alert(this.memoryInport);
+            }
+            showMessagSended(){
+                alert(this.memoryeSended);
             }
         }
+        let samSung = new Mobile();
+        let nokia = new Mobile();
+        samSung.makeDraft("Hello Nokia");
+        samSung.sendMessage(nokia);
+
+        let iphone =new Mobile();
+        iphone.makeDraft("Hello SamSung");
+        iphone.sendMessage(samSung);
+        samSung.showMessageInport();
     </script>
 </body>
 </html>
