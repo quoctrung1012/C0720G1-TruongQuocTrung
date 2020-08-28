@@ -9,46 +9,70 @@
         class Mobile {
             constructor() {
                 this.status = true;
-                this.pin = 100;
-                this.memoryDraft = [];
-                this.memoryeSended = [];
-                this.memoryInport = [];
+                this.pin = "100";
+                this.textDraft = [];// bộ nhớ bản nháp
+                this.textSend = [];// bộ nhớ tin gửi đi
+                this.textInport = [];// bộ nhớ tin nhận được
             }
-            turnOn(){
+            mobileStatus(){
+                if (this.status === true){
+                    alert("Đã bật điện thoại");
+                }   else if (this.status === false){
+                    alert("Chưa bật điện thoại")
+                }
+            }
+            checkPin(){
+                return this.pin;
+            }
+            mobileOn(){
                 this.status = true;
             }
-            turnOff(){
+            mobileOff(){
                 this.status = false;
             }
-            makeDraft(message){
+            messageDraft(message){ // soạn tin nhắn
                 if (this.status === true){
-                    this.makeDraft().push(message);
+                    this.textDraft.push(message);
                     this.pin--;
                 }   else {
                     alert("Bật điện thoại");
                 }
             }
-            sendMessage(mobile){
-                mobile.memoryInport = this.memoryDraft;
-                this.memoryeSended = this.memoryDraft;
-                this.memoryDraft = [];
+            sendMessage(mobile){//tin gửi đi
+                if (this.status === true){
+                    mobile.textSend = this.textDraft;
+                    this.textInport = this.textDraft;
+                    this.textDraft = [];
+                    this.pin--;
+                }   else {
+                    alert("Bật điện thoại")
+                }
             }
             showMessageInport(){
-                alert(this.memoryInport);
+                if (this.status === true){
+                    return this.textInport;
+                    this.pin--;
+                }   else {
+                    alert("Bật điện thoại")
+                }
             }
-            showMessagSended(){
-                alert(this.memoryeSended);
+            showMessageSend(){
+                if (this.status === true){
+                    return this.textSend;
+                    this.pin--;
+                }   else {
+                    alert("Bật điện thoại")
+                }
             }
         }
-        let samSung = new Mobile();
+        let iphone = new Mobile();
         let nokia = new Mobile();
-        samSung.makeDraft("Hello Nokia");
-        samSung.sendMessage(nokia);
+        nokia.messageDraft("Hello! How are you doing?");
+        nokia.sendMessage(iphone);
+        alert("Tin Nhắn đã nhận: " + iphone.showMessageSend());
+        alert("Tin nhắn đã gửi: " + nokia.showMessageInport());
+        alert("Check Pin" + nokia.checkPin());
 
-        let iphone =new Mobile();
-        iphone.makeDraft("Hello SamSung");
-        iphone.sendMessage(samSung);
-        samSung.showMessageInport();
     </script>
 </body>
 </html>

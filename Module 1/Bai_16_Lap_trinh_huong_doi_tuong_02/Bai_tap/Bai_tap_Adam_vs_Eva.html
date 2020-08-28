@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            class Apple{
+                constructor(weight) {
+                    this.weight = weight;
+                }
+                getWeight(){
+                    return this.weight;
+                }
+                decrease(){
+                    this.weight--;
+                }
+                isEmpty(){
+                    if (this.weight <=0){
+                        alert("Quả táo đã bị ăn hết.");
+                        return true;
+                    }   else {
+                        return false;
+                    }
+                }
+            }
+            class Human{
+                constructor(name, gender, weight) {
+                    this.name = name;
+                    this.gender = gender;
+                    this.weight = weight;
+                }
+                isMale(){
+                    if (this.gender === "Male"){
+                        return true;
+                    }   else {
+                        return false;
+                    }
+                }
+                setGender(gender){
+                    this.gender = gender;
+                }
+                checkApple(apple){
+                    if (apple.isEmpty()){
+                        return false;
+                    }else {
+                        return true;
+                    }
+                }
+                eatApple(apple){
+                    if (apple.getWeight()>0){
+                        apple.weight--;
+                        this.weight++;
+                    } else {
+                        alert("Quả táo đã bị ăn hết.");
+                    }
+                }
+                say(text){
+                    alert(this.name + " nói: " + text);
+                }
+                getName(){
+                    return this.name;
+                }
+                setName(name){
+                    this.name = name;
+                }
+                getWeight(){
+                    alert("Trọng lượng của "+this.name+" là: "+this.weight)
+                }
+                showInfor(){
+                    alert("Tên: "+ this.name +"\nGiới tính: "+ this.gender+"\nCân nặng: "+ this.weight )
+                }
+            }
+            let apple = new Apple(10);
+            let human1= new Human("Adam", "Male",50);
+            let human2= new Human("Eva", "Female",40);
+            human1.showInfor();
+            human2.showInfor();
+            while (apple.getWeight()>0){
+                human1.say("Eva em ăn táo đi");
+                human2.say(" Dạ, để em ăn");
+                human2.eatApple(apple);
+                human2.say("E ăn rồi ,Adam ăn đi");
+                human1.say("Vậy để anh ăn");
+                human1.eatApple(apple);
+                alert("Không lượng còn lại của quả táo là: "+apple.getWeight());
+                human1.getWeight();
+                human2.getWeight();
+            }
+            alert(" Cuộc đối thoại và ăn táo kết thúc")
+
+        </script>
+</body>
+</html>
