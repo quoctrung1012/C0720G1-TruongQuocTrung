@@ -7,45 +7,73 @@
 <body>
         <script>
             let arrFullName = ["Nam","Anh","Thanh","Tuấn","Hoàng","Thành","Hà","Sương","Loan", "Thuyên"];
+            // let arrFullName = [];
             while (true){
-            let choose = parseInt(prompt("1. Thêm Khách Hàng. " + "\n" +
-                                         "2. Xóa Khách Hàng."));
-            }
-            switch (choose) {
-                case 1:
-                    addCustumer();
-                    break;
-                case 2:
-                    deleteCustumer();
-                    break;
-                default:
-                    alert("Yêu cầu chọn sự lựa chon khác.")
+                let choose = parseInt(prompt("1. Hiển thị thông tin khách hàng" + "\n" +
+                                             "2. Thêm Khách Hàng. " + "\n" +
+                                             "3. Xóa Khách Hàng."));
+
+                switch (choose) {
+                    case 1:
+                        listCustomer1();
+                        break;
+                    case 2:
+                        addCustumer();
+                        break;
+                    case 3:
+                        deleteCustumer();
+                        break;
+                    default:
+                        alert("Yêu cầu chọn sự lựa chon khác.")
+                    }
+
+                function listCustomer1() {
+                    let result ="";
+                    arrFullName.sort();
+                    for (let i = 0; i < arrFullName.length; i++){
+                        result += (i+1) + ". " + arrFullName[i] + "\n"
+                    }   alert("Danh sách khách hàng hiện tại là: " + "\n" + result);
                 }
 
-            function addCustumer() {
-                let numberCustumer = parseInt(prompt("Nhập số lượng khách hàng mà bạn muốn thêm."));
-                for (let i = 0; i<numberCustumer; i++){
-                    let fullName = prompt("Nhập tên khách hàng. ");
-                    arrFullName.push(fullName);
+                function addCustumer() {
+                    let numberCustumer = parseInt(prompt("Nhập số lượng khách hàng mà bạn muốn thêm."));
+                    for (let i = 0; i < numberCustumer; i++){
+                        let fullName = prompt("Nhập tên khách hàng. ");
+                        arrFullName.push(fullName);
+                    }
+                    listCustomer1();
                 }
-                let result ="";
-                arrFullName.sort();
-                for (let i = 0; i < arrFullName.length; i++){
-                    result +=  "No" + (i+1) + ". " + arrFullName[i] + "\n"
-                }   alert(result);
-            }
-            function deleteCustumer() {
-                let result ="";
-                arrFullName.sort();
-                for (let i = 0; i < arrFullName.length;i++) {
-                    result +=  "No" + (i+1) + ". " + arrFullName[i] + "\n"
-                }
-                let vitriDel = parseInt(prompt(result + + "\n" + "Nhập vị trí muốn Xóa"));
-                if (vitriDel > -1){
-                    let del = arrFullName.splice((vitriDel-1),1);
-                    alert("Danh sách sau khi xóa là: " + "\n" + result + "\n"+ "Khách đã xóa là:" + del);
-                }   else {
-                    alert("Yếu cầu bạn nhập lại lựa chọn")
+                function deleteCustumer() {
+                    let result ="";
+                    arrFullName.sort();
+                    for (let i = 0; i < arrFullName.length;i++) {
+                        result += (i+1) + ". " + arrFullName[i] + "\n"
+                    }
+                    let vitriXoa = parseInt(prompt(result + "\n" + " Nhập vị trí muốn Xóa"));
+                    if (vitriXoa > -1){
+                        arrFullName.splice((vitriXoa-1),1);
+                        listCustomer1();
+                        // let xoa = arrFullName.splice((vitriXoa-1),1);
+                        // alert("Danh sách sau khi xóa là: " + "\n" + danhSachCustumer() + "\n"+ "Khách đã xóa là:" + xoa);
+                    }   else {
+                        alert("Yếu cầu bạn nhập lại lựa chọn")
+                    }
+                    // let check = false;
+                    // let nameDeleteCustumer = prompt("Nhập tên khách bạn muốn xóa.");
+                    // for(let i=0; i < nameDeleteCustumer.length; i++){
+                    //     if (arrFullName[i] === nameDeleteCustumer){
+                    //         arrFullName.splice(i,1);
+                    //         check = true;
+                    //     }
+                    // }
+                    // if (!check){
+                    //     alert("Tên bạn muốn xóa không có trong thông tin.")
+                    // }
+                    // let result ="";
+                    // arrFullName.sort();
+                    // for (let i = 0; i < arrFullName.length; i++){
+                    //     result += (i+1) + ". " + arrFullName[i] + "\n"
+                    // }   alert(result);
                 }
             }
         </script>
