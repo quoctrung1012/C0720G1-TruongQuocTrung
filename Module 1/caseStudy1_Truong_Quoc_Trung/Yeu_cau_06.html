@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YÊU CÂU 6</title>
+</head>
+<body>
+
+
+let fullname = prompt("01.Nhập Họ và Tên khác hàng:");
+let numId = prompt("02.Nhập Số CMND hoặc Thẻ căng cước: ");
+let numBirth = prompt("03.Nhập ngày tháng năm sinh Khách: " + "\n" + "Theo dạng 'MM/dd/yyyy' hoặc 'yyyy-MM-dd" );
+let email = prompt("04.Nhập địa chỉ Email: ");
+let address = prompt("05.Địa chỉ khách hàng: ");
+let cusType = prompt("06.Nhập Cấp độ khách hàng" +"\n" + "- Diamond, Platinum, Gold, Silver, Member");
+let numSale = prompt("07.Phần trăm chiết khấu: ");
+let numMember = prompt("08.Số lượng khách hàng: ");
+let numDay = prompt("09.Số ngày thuê: ");
+let serType = prompt("10.Loại hình dịch vụ" + "\n"+ "Villa, House, Room");
+let roomType = prompt("11.Loại phòng khách cần thuê" + "\n" + "Vip, Business, Normal");
+        <script>
+            class Customer{
+                constructor(fullName, numId, numBirth, email, address, cusType, numSale, numMember, numDay, serType, roomType) {
+                    this.fullName = fullName;
+                    this.numId = numId;
+                    this.numBirth = numBirth;
+                    this.email = email;
+                    this.address= address;
+                    this.cusType = cusType;
+                    this.numSale =numSale;
+                    this.numMember = numMember;
+                    this.numDay = numDay;
+                    this.serType = serType;
+                    this.roomType = roomType;
+                }
+                getFullName (){
+                    return this.fullName
+                }
+                setFullName (fullName){
+                    this.fullName = fullName;
+                }
+                getNumId (){
+                    return this.numId;
+                }
+                setNumId (numId){
+                    this.numId = numId;
+                }
+                getNumBirth (){
+                    return  this.numBirth;
+                }
+                setNumBirth (numBirth){
+                    this.numBirth = numBirth;
+                }
+                getEmail (){
+                    return this.email;
+                }
+                setEmail (email){
+                    this.email = email
+                }
+                getAddress (){
+                    return  this.address;
+                }
+                setAddress (address){
+                    this.address = address;
+                }
+                getCusType (){
+                    return  this.cusType;
+                }
+                setCusType (cusType){
+                    this.cusType = cusType
+                }getNumSale (){
+                    return  this.numSale
+                }
+                setNumSale (numSale){
+                    this.numSale = numSale;
+                }
+                getNumMember (){
+                    return  this.numMember;
+                }
+                setNumMember (numMember){
+                    this.numMember = numMember;
+                }
+                getNumDay (){
+                    return  this.numDay
+                }
+                setNumDay (numDay){
+                    this.numDay = numDay;
+                }
+                getSerType (){
+                    return  this.serType;
+                }
+                setSerType (serType){
+                    this.serType = serType;
+                }
+                getRoomType (){
+                    return  this.roomType;
+                }
+                setRoomType (roomType){
+                    this.roomType = roomType;
+                }
+               getTotal(total){
+                   if (this.serType === "Villa"){
+                       total = this.numDay * 500 * (100 - this.numSale) / 100;
+                   }   else if (serType === "House") {
+                       total = this.numDay * 300 * (100 - this.numSale) / 100;
+                   }   else {
+                       total = this.numDay * 100 * (100 - this.numSale) / 100;
+                   }   alert("Thông tin nhập vào:\n " +
+                       "01. Tên khách hàng: " + this.fullname + "\n" +
+                       "02. Số CMND: " + this.numId + "\n" +
+                       "03. Ngày tháng năm sinh: " + this.numBirth + "\n" +
+                       "04. Địa chỉ Email: " + this.email + "\n" +
+                       "05. Địa chỉ khác hàng: " + this.address + "\n" +
+                       "06. Cấp độ khách hàng: " + this.cusType + "\n" +
+                       "07. Phần trăm giảm giá: " + this.numSale + "\n"  +
+                       "08. Số lượng khác hàng: " + this.numMember + "\n" +
+                       "09. Số ngày thuê: " + this.numDay + "\n" +
+                       "10. Loại hình dịch vụ: " + this.serType + "\n" +
+                       "11. Loại phòng khách cần: " + this.roomType + "\n" +
+                       "12. Tổng số tiền phải thanh toán: " + "$" + total
+                   );
+               }
+            }
+            function addNewCustomer() {
+
+            }
+        </script>
+</body>
+</html>

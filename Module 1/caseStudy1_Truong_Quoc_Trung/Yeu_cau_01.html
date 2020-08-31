@@ -18,9 +18,9 @@
             let serType = prompt("10.Loại hình dịch vụ" + "\n"+ "Villa, House, Room");
             let roomType = prompt("11.Loại phòng khách cần thuê" + "\n" + "Vip, Business, Normal");
             let total = 0;
-            if (serType == "Villa"){
+            if (serType === "Villa"){
                     total = numDay * 500 * (100 - numSale) / 100;
-            }   else if (serType == "House") {
+            }   else if (serType === "House") {
                     total = numDay * 300 * (100 - numSale) / 100;
             }   else {
                     total = numDay * 100 * (100- numSale) /100;
