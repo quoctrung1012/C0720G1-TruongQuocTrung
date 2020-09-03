@@ -105,7 +105,7 @@
                     }
                 }
                 class Employee1{
-                    constructor(ten,ngaySinh,cmnd,sdt,email,hocVan,viTri,luong) {
+                    constructor(ten,ngaySinh,cmnd,sdt,email,hocVan,viTri) {
                         this.ten = ten;
                         this.ngaySinh = ngaySinh;
                         this.cmnd = cmnd;
@@ -113,7 +113,7 @@
                         this.email = email;
                         this.hocVan = hocVan;
                         this.viTri = viTri;
-                        this.luong = luong;
+                        // this.luong = luong;
                     }
                     getTen(){
                         return this.ten;
@@ -225,9 +225,9 @@
                     let email = prompt("Email");
                     let hocVan = prompt("Trình d? h?c v?n");
                     let viTri = prompt("Ví trí làm vi?c");
-                    let luong = prompt("Luong");
+                    // let luong = prompt("Luong");
 
-                    let newEmployee = new Employee1(ten,ngaySinh,cmnd,sdt,email,hocVan,viTri,luong);
+                    let newEmployee = new Employee1(ten,ngaySinh,cmnd,sdt,email,hocVan,viTri);
                     arrEmployee.push(newEmployee);
                     alert("B?n dã thêm thành công");
                     displayMainMenu();
