@@ -8,7 +8,7 @@
         <script>
             let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
             let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-            function mang(test) {
+            function star(test) {
                for (let i = 0; i < array1.length; i++){
                    if (array1[i] === test){
                        return i;
@@ -16,7 +16,7 @@
                } return -1;
             }
             let test = prompt("NHập tên ngôi sao cần tìm");
-            const kt = mang(test);
+            let kt = star(test);
             if (kt != -1){
                 alert("Ngôi sao " + array1[kt] + " Chòm sao tương ứng là " + array2[kt]);
             }   else {

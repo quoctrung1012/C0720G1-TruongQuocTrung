@@ -6,17 +6,15 @@
 </head>
 <body>
         <script>
-            function addNumbers() {
-                firstNum = 4;
-                secondNum = 8;
-                result = firstNum + secondNum;
-                alert("Số thứ nhất là: " + firstNum + "\n"+
-                      "Số thứ hai là: " + secondNum);
-                return result;
+            function addNumbers(num1,num2) {
+                return num1 + num2;
             }
-            result = 0;
-            result = addNumbers();
-            alert(result)
+            a = parseInt(prompt("Số thứ nhất"));
+            b = parseInt(prompt("Số thứ hai"));
+            alert("Số thứ nhất là: " + a + "\n"+
+                "Số thứ hai là: " + b +
+                "\nTổng 2 số là: " + addNumbers(a,b));
+
         </script>
 </body>
 </html>

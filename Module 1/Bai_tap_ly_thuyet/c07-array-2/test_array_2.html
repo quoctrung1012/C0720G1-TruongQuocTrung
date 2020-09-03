@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // let a = [
+        //     [1, 2, 3],
+        //     [8, 7, 6]
+        // ];
+        //
+        // for (let i = 0; i < a.length; i++) {
+        //     for (let j = 0; j < a[i].length; j++) {
+        //         document.write(a[i][j] + " ");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        let a = new Array(3);
+
+        for (let i = 0; i < a.length; i++) {
+            a[i] = new Array(2);
+            for (let j = 0; j < a[i].length; j++) {
+                a[i][j] = parseInt(prompt("Input " + i + " " + j + ": "));
+            }
+        }
+
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                document.write(a[i][j] + " ");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</body>
+</html>

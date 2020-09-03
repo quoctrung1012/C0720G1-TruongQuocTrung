@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        let n = parseInt(prompt("Input length of array: "));
+
+        let a = new Array(n);
+        console.log("Input: ");
+        for (let i = 0; i < a.length; i++) {
+            a[i] = prompt("Input a " + i + ": ");
+        }
+
+        console.log("Output: ")
+        for (let i = 0; i < a.length; i++) {
+            console.log(a[i]);
+        }
+
+        console.log("Output for in: ")
+        for (let i in a) {
+            console.log(a[i]);
+        }
+
+        console.log("Output for of: ")
+        for (let i of a) {
+            console.log(i);
+        }
+
+        console.log("Output nguoc: ")
+        for (let i = a.length - 1; i >= 0; i--) {
+            console.log(a[i]);
+        }
+    </script>
+</body>
+</html>

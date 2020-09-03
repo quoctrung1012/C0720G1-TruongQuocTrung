@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Bài toán: Cho người dùng nhập vào 2 dãy số, mỗi dãy bao gồm 3 số và hiển thị
+        // tổng của mỗi cặp số lên màn hình?
+        //     Ví dụ:
+        // Input:
+        //     1	7	3
+        //     9	2	8
+        // Output:
+        //     10	9	11
+        
+        // let a = new Array(3);
+        // let b = new Array(3);
+        //
+        // console.log("Input array a: ");
+        // for (let i = 0; i < a.length; i++) {
+        //     a[i] = parseInt(prompt("Input a " + i + ": "));
+        // }
+        //
+        // console.log("Input array b: ");
+        // for (let i = 0; i < b.length; i++) {
+        //     b[i] = parseInt(prompt("Input b " + i + ": "));
+        // }
+        //
+        // let result = "";
+        // for (let i = 0; i < 3; i++) {
+        //     result += a[i] + b[i] + " ";
+        //     // result = result + (a[i] + b[i]) + " ";
+        // }
+        //
+        // console.log("Ouput: " + result);
+
+        let a = [];
+        let b = [];
+
+        console.log("Input array a: ");
+        for (let i = 0; i < 3; i++) {
+            a[i] = prompt("Input a " + i + ": ");
+        }
+
+        console.log("Input array b: ");
+        for (let i = 0; i < 3; i++) {
+            b[i] = prompt("Input b " + i + ": ");
+        }
+
+        let result = "";
+        for (let i = 0; i < 3; i++) {
+            result += a[i] + b[i] + " ";
+            // result = result + (a[i] + b[i]) + " ";
+        }
+
+        console.log("Ouput: " + result);
+    </script>
+</body>
+</html>
