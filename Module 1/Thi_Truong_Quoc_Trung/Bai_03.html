@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 03</title>
+</head>
+<body>
+
+        <script>
+            function isFibonacci(find) {
+                let number = parseInt(prompt("Nhập số lượng số fibonacci đầu tiên"));
+                let check = false;
+                let x1 = 0;
+                let x2 = 1;
+                let result = x1 + ", " + x2 + ", ";
+                for (let i = 3; i <= number; i++) {
+                    x = x1 + x2;
+                    result += x + ", ";
+                    x1 = x2;
+                    x2 = x;
+                }
+                for (let i = 0; i <= result.length; i++) {
+                    if (result[i] === find) {
+                        check = true;
+                        break;
+                    }
+                }
+                if (check == true){
+                    alert("Số cần tìm có trong dãy fibonacci.")
+                }   else {
+                    alert("Số cần tìm không có trong dãy fibonacci.")
+                }
+            }
+
+            let find = parseInt(prompt("Nhập số cần tìm."));
+            isFibonacci(find)
+
+        </script>
+</body>
+</html>

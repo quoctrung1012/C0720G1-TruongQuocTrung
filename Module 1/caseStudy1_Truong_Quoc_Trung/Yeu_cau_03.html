@@ -6,34 +6,34 @@
 </head>
 <body>
         <script>
-            let fullname;
+            let fullName;
             let numId ;
             let numBirth;
             let email;
             let address;
-            let cusType;
+            let customerType;
             let numSale;
             let numMember;
             let numDay;
-            let serType;
+            let serviceType;
             let roomType;
             let check = false;
             let today = new Date();
             let currentYear = today.getFullYear();
 
             let tempFullName = "";
-            fullname = prompt("01.Nhập Họ và Tên khác hàng:");
-            fullname = fullname.trim().toLowerCase();
-            for (let i =0; i<fullname.length;i++){
-                if (fullname.charAt(i)=== " " && fullname.charAt(i+1) === " "){
+            fullName = prompt("01.Nhập Họ và Tên khác hàng:");
+            fullName = fullName.trim().toLowerCase();
+            for (let i =0; i<fullName.length;i++){
+                if (fullName.charAt(i)=== " " && fullName.charAt(i+1) === " "){
                     continue;
-                }   if (i === 0 || fullname.charAt(i-1) === " "){
-                    tempFullName = fullname.charAt(i).toLowerCase();
+                }   if (i === 0 || fullName.charAt(i-1) === " "){
+                    tempFullName = fullName.charAt(i).toLowerCase();
                     continue;
                 }
-                tempFullName += fullname.charAt(i);
+                tempFullName += fullName.charAt(i);
             }
-            fullname = tempFullName;
+            fullName = tempFullName;
 
             address = prompt("05.Địa chỉ khách hàng: ");
 
@@ -62,7 +62,7 @@
                         month = Number.parseFloat(month);
                         year = Number.parseFloat(year);
                         if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)){
-                            if (day < 32 && month < 13 && year >1800 && year< currentYear){
+                            if (day < 32 && month < 13 && year > 1800 && year < currentYear){
                                 check = true;
                             }
                         }
@@ -95,8 +95,8 @@
                 check = false;
 
             do {
-                cusType = prompt("06.Nhập Cấp độ khách hàng" +"\n" + "- Diamond, Platinum, Gold, Silver, Member");
-                if ((cusType === Diamond) || (cusType === Platinum) || (cusType === Gold) || (cusType === Silver) || (cusType === Member)){
+                customerType = prompt("06.Nhập Cấp độ khách hàng" +"\n" + "Diamond, Platinum, Gold, Silver, Member");
+                if ((customerType === Diamond) || (customerType === Platinum) || (customerType === Gold) || (customerType === Silver) || (customerType === Member)){
                     check = true;
                 }   if (!check){
                     alert("Yêu cầu bạn nhập lại thông tin.")
@@ -145,8 +145,8 @@
             check = false;
 
             do {
-                serType = prompt("10.Loại hình dịch vụ" + "\n"+ "Villa, House, Room");
-                if ((serType === Villa) || (serType ===  House) || (serType === Room)){
+                serviceType = prompt("10.Loại hình dịch vụ" + "\n"+ "Villa, House, Room");
+                if ((serviceType === Villa) || (serviceType ===  House) || (serviceType === Room)){
                     check = true;
                 }   if (!check){
                     alert("Yêu cầu bạn nhập lại thông tin.")

@@ -49,9 +49,9 @@
                     for (let i = 0; i < arrFullName.length;i++) {
                         result += (i+1) + ". " + arrFullName[i] + "\n"
                     }
-                    let vitriXoa = parseInt(prompt(result + "\n" + " Nhập vị trí muốn Xóa"));
-                    if (vitriXoa > -1){
-                        arrFullName.splice((vitriXoa-1),1);
+                    let location = parseInt(prompt(result + "\n" + " Nhập vị trí muốn Xóa"));
+                    if (location > -1){
+                        arrFullName.splice((location-1),1);
                         listCustomer1();
                         // let xoa = arrFullName.splice((vitriXoa-1),1);
                         // alert("Danh sách sau khi xóa là: " + "\n" + danhSachCustumer() + "\n"+ "Khách đã xóa là:" + xoa);

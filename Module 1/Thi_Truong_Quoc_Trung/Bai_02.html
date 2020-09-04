@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 02</title>
+</head>
+<body>
+    <script>
+        function tryRemoveFromArray( array, find) {
+            for(let i=1; i < array.length; i++ ){
+                if (array.indexOf(find) > -1){
+                    let location = array.indexOf(find);
+                    array.splice(location,1);
+                    return array;
+                }   else {
+                    return array;
+                }
+            }
+        }
+        let array = [];
+        for (let i = 0;i<10; i++){
+            array[i] = parseInt(prompt("Input mảng " + (i + 1) +":"));
+        }
+        let find = parseInt(prompt(array + "\n" + "Nhập phần tử muốn tìm:"));
+        alert(tryRemoveFromArray(array,find));
+    </script>
+</body>
+</html>

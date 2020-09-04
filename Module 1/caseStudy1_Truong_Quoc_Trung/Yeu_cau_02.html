@@ -6,21 +6,21 @@
 </head>
 <body>
         <script>
-            let fullname = "Nguyễn Văn Nam";
+            let fullName = "Nguyễn Văn Nam";
             let numId = "201775846";
             let numBirth = "08/08/1998";
             let email = "vannam97@gmail.com";
             let address = "Đà Nẵng";
-            let cusType = "Diamond";
+            let customerType = "Diamond";
             let numSale = 10;
             let numMember = 10;
             let numDay = 10;
-            let serType = "Villa";
+            let serviceType = "Villa";
             let roomType = "Vip";
             let total = 0;
             let current = new Date().getFullYear();
             let numYear = new Date(numBirth).getFullYear();
-            let ageCustumer = current - numYear;
+            let ageCustomer = current - numYear;
             let selectInformation =  parseInt(prompt(
                 "1. Hiển thị toàn bộ thông tin của Khách hàng(Custumer): \n" +
                 "2. Chỉnh sửa thông tin của Khách hàng(Custumer): \n " +
@@ -30,37 +30,36 @@
                     case 1: {
                         alert(
                             "Thông tin Khách hàng(Custumer) :\n " +
-                            "01. Tên khách hàng: " + fullname + "\n" +
+                            "01. Tên khách hàng: " + fullName + "\n" +
                             "02. Số CMND: " + numId + "\n" +
                             "03. Ngày tháng năm sinh: " + numBirth + "\n" +
                             "04. Địa chỉ Email: " + email + "\n" +
                             "05. Địa chỉ khác hàng: " + address + "\n" +
-                            "06. Cấp độ khách hàng: " + cusType + "\n" +
+                            "06. Cấp độ khách hàng: " + customerType + "\n" +
                             "07. Phần trăm giảm giá: " + numSale + "\n" +
                             "08. Số lượng khác hàng: " + numMember + "\n" +
                             "09. Số ngày thuê: " + numDay + "\n" +
-                            "10. Loại hình dịch vụ: " + serType + "\n" +
+                            "10. Loại hình dịch vụ: " + serviceType + "\n" +
                             "11. Loại phòng khách cần: " + roomType + "\n");
                         break;
                     }
                     case 2: {
                         let editInformation = parseInt(prompt(
                             "Thông tin Khách hàng(Custumer) :\n " +
-                            "01. Tên khách hàng: " + fullname + "\n" +
+                            "01. Tên khách hàng: " + fullName + "\n" +
                             "02. Số CMND: " + numId + "\n" +
                             "03. Ngày tháng năm sinh khách hàng: " + numBirth + "\n" +
                             "04. Địa chỉ Email: " + email + "\n" +
                             "05. Địa chỉ khác hàng: " + address + "\n" +
-                            "06. Cấp độ khách hàng: " + cusType + "\n" +
+                            "06. Cấp độ khách hàng: " + customerType + "\n" +
                             "07. Phần trăm giảm giá: " + numSale + "\n"  +
                             "08. Số lượng khác hàng: " + numMember + "\n" +
                             "09. Số ngày thuê: " + numDay + "\n" +
-                            "10. Loại hình dịch vụ: " + serType + "\n" +
+                            "10. Loại hình dịch vụ: " + serviceType + "\n" +
                             "11. Loại phòng khách cần: " + roomType + "\n"));
 
                                 switch (editInformation) {
-                                    case 1:
-                                        fullname = prompt("01. Nhập Họ và Tên khác hàng:");
+                                    case 1:fullName = prompt("01. Nhập Họ và Tên khác hàng:");
                                         break;
                                     case 2:
                                         numId = parseInt(prompt("02. Nhập Số CMND hoặc Thẻ căng cước: "));
@@ -75,7 +74,7 @@
                                         address = prompt("05. Địa chỉ khách hàng: ");
                                         break;
                                     case 6:
-                                        cusType = prompt("06. Nhập Cấp độ khách hàng" +"\n" + "Diamond, Platinum, Gold, Silver, Member");
+                                        customerType = prompt("06. Nhập Cấp độ khách hàng" +"\n" + "Diamond, Platinum, Gold, Silver, Member");
                                         break;
                                     case 7:
                                         numSale = prompt("07. Phần trăm chiết khấu: ");
@@ -87,7 +86,7 @@
                                         numDay = prompt("09. Số ngày thuê: ");
                                         break;
                                     case 10:
-                                        serType = prompt("10. Loại hình dịch vụ" + "\n"+ "Villa, House, Room");
+                                        serviceType = prompt("10. Loại hình dịch vụ" + "\n"+ "Villa, House, Room");
                                         break;
                                     case 11:
                                         roomType = prompt("11. Loại phòng khách cần thuê" + "\n" + "Vip, Business, Normal");
@@ -96,25 +95,25 @@
                                         alert("FALSE");
                                 }   alert(
                                     "Thông tin Khách hàng(Custumer) sau khi chỉnh sửa :\n " +
-                                    "01. Tên khách hàng: " + fullname + "\n" +
+                                    "01. Tên khách hàng: " + fullName + "\n" +
                                     "02. Số CMND: " + numId + "\n" +
                                     "03. Ngày tháng năm sinh: " + numBirth + "\n" +
                                     "04. Địa chỉ Email: " + email + "\n" +
                                     "05. Địa chỉ khác hàng: " + address + "\n" +
-                                    "06. Cấp độ khách hàng: " + cusType + "\n" +
+                                    "06. Cấp độ khách hàng: " + customerType + "\n" +
                                     "07. Phần trăm giảm giá: " + numSale + "\n" +
                                     "08. Số lượng khác hàng: " + numMember + "\n" +
                                     "09. Số ngày thuê: " + numDay + "\n" +
-                                    "10. Loại hình dịch vụ: " + serType + "\n" +
+                                    "10. Loại hình dịch vụ: " + serviceType + "\n" +
                                     "11. Loại phòng khách cần: " + roomType + "\n");
                                 break;
                             }
                             case 3: {
-                                if (serType === "Villa"){
+                                if (serviceType === "Villa"){
                                     total = numDay * 500 * (1 - numSale/100);
-                                }   else if (serType === "House") {
+                                }   else if (serviceType === "House") {
                                     total = numDay * 300 * (1 - numSale/100);
-                                }   else if (serType === "Room"){
+                                }   else if (serviceType === "Room"){
                                     total = numDay * 100 * (1 - numSale/100);
                                 }
                                 if (address === "Đà Nẵng") {
@@ -131,23 +130,21 @@
                                 }   else if (numDay > 2 ) {
                                     total -= 10
                                 }
-                                if (cusType === "Diamond"){
+                                if (customerType === "Diamond"){
                                     total -= 15;
-                                }   else if (cusType === "Platinum") {
+                                }   else if (customerType === "Platinum") {
                                     total -= 10;
-                                }   else if (cusType === "Gold") {
+                                }   else if (customerType === "Gold") {
                                     total -= 5;
-                                }   else if (cusType === "Silver"){
+                                }   else if (customerType === "Silver"){
                                     total -= 2;
-                                }   else if (cusType === "Member"){
-                                    total;
+                                }   else if (customerType === "Member"){
+                                    total -= 0;
                                 }
-                                if ((ageCustumer > 30 ) && (address === "Đà Nẵng")) {
+                                if ((ageCustomer > 30 ) && (address === "Đà Nẵng")) {
                                     total -= 2;
-                                }   else if ((ageCustumer > 20) && (address === "Đà Nẵng")) {
+                                }   else if ((ageCustomer > 20) && (address === "Đà Nẵng")) {
                                     total -= 1;
-                                }   else {
-                                    total;
                                 }
                                 alert(" Số tiền khách hàng phải trả là:" + total + "$");
                                 break;

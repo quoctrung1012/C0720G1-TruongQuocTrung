@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            let N=parseInt(prompt("Nhập số lượng số fibonacci cầ tìm"));
+            let x1 =0;
+            let x2 =1;
+            let find = parseInt(prompt("Nhập số cần tìm"))
+            let ketQua = x1 + "<br>" + x2 + "<br>";
+            for (let i = 3 ; i <=N; i++){
+                x = x1 + x2;
+                ketQua +=x + "<br>";
+                x1 = x2;
+                x2 = x;
+                if ( x  == find){
+                    alert(true);
+                    break;
+                }   else{
+                    alert(false)
+                }
+            }
+        </script>
+</body>
+</html>
