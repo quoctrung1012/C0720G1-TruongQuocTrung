@@ -22,7 +22,7 @@
             let currentYear = today.getFullYear();
 
             let tempFullName = "";
-            fullName = prompt("01.Nhập Họ và Tên khác hàng:");
+            fullName = prompt("01.Nhập Họ và Tên khách hàng:");
             fullName = fullName.trim().toLowerCase();
             for (let i =0; i<fullName.length;i++){
                 if (fullName.charAt(i)=== " " && fullName.charAt(i+1) === " "){
@@ -107,7 +107,7 @@
             do {
                 numSale = prompt("07.Phần trăm chiết khấu: ");
                 if (!isNaN(numSale)){
-                    numSale = Number.parseFloat(numSale);
+                    numSale = Number.parseInt(numSale);
                     if ((Number.isInteger(numSale)) && (numSale>0)){
                         check = true;
                     }
@@ -120,7 +120,7 @@
             do {
                 numMember = prompt("08.Số lượng khách hàng: ");
                 if (!isNaN(numMember)){
-                    numMember = Number.parseFloat(numMember);
+                    numMember = Number.parseInt(numMember);
                     if ((Number.isInteger(numMember)) && (numMember>0)){
                         check = true;
                     }
@@ -134,7 +134,7 @@
             do {
                 numDay = prompt("09.Số ngày thuê: ");
                 if (!isNaN(numDay)){
-                    numDay = Number.parseFloat(numDay);
+                    numDay = Number.parseInt(numDay);
                     if ((Number.isInteger(numDay)) && (numDay >0)){
                         check = true;
                     }
