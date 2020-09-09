@@ -2,7 +2,7 @@ package lesson_01_introduction_to_java.practice;
 
 import java.util.Scanner;
 
-public class Lesson03SuDungToanTu {
+public class Bai03SuDungToanTu {
     public static void main(String[] args) {
         float width;
         float height;

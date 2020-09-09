@@ -1,6 +1,6 @@
 package lesson_01_introduction_to_java.practice;
 
-public class Lesson02KhaiBaoBienVaSuDungBien {
+public class Bai02KhaiBaoBienVaSuDungBien {
     public static void main(String[] args) {
         int i = 10;
         float f = 20.5f;
