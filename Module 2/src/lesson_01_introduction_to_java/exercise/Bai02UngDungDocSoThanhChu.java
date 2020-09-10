@@ -4,139 +4,120 @@ import java.util.Scanner;
 
 public class Bai02UngDungDocSoThanhChu {
 
-    public static void hangDonVi(int donVi){
-        switch (donVi){
-            case 0:
-                System.out.print(" Không");
-                break;
+    static String read1To10(int number) {
+        String say = "";
+        switch(number) {
             case 1:
-                System.out.print(" Một");
+                say = "one";
                 break;
             case 2:
-                System.out.print(" Hai");
+                say = "two";
                 break;
             case 3:
-                System.out.print(" Ba");
+                say = "three";
                 break;
             case 4:
-                System.out.print(" Bốn");
+                say = "four";
                 break;
             case 5:
-                System.out.print(" Năm");
+                say = "five";
                 break;
             case 6:
-                System.out.print(" Sáu");
+                say = "six";
                 break;
             case 7:
-                System.out.print(" Bảy");
+                say = "seven";
                 break;
             case 8:
-                System.out.print(" Tám");
+                say = "eight";
                 break;
             case 9:
-                System.out.print(" Chín");
+                say = "nine";
+                break;
+            case 10:
+                say = "ten";
                 break;
         }
-    }
-    public static void hangChuc(int hangChuc){
-        switch (hangChuc){
-            case 0:
-                System.out.print(" Linh");
-                break;
-            case 1:
-                System.out.print(" Mười");
-                break;
-            case 2:
-                System.out.print(" Hai Mươi");
-                break;
-            case 3:
-                System.out.print(" Ba Mươi");
-                break;
-            case 4:
-                System.out.print(" Bốn Mươi");
-                break;
-            case 5:
-                System.out.print(" Năm Mươi");
-                break;
-            case 6:
-                System.out.print(" Sáu Mươi");
-                break;
-            case 7:
-                System.out.print(" Bảy Mươi");
-                break;
-            case 8:
-                System.out.print(" Tám Mươi");
-                break;
-            case 9:
-                System.out.print(" Chín Mươi");
-                break;
-        }
-    }
-    public static void hangTram(int hangTram){
-        switch (hangTram) {
-            case 0:
-                System.out.print("Linh");
-                break;
-            case 1:
-                System.out.print("Một Trăm");
-                break;
-            case 2:
-                System.out.print("Hai Trăm");
-                break;
-            case 3:
-                System.out.print("Ba Trăm");
-                break;
-            case 4:
-                System.out.print("Bốn Trăm");
-                break;
-            case 5:
-                System.out.print("Năm Trăm");
-                break;
-            case 6:
-                System.out.print("Sáu Trăm");
-                break;
-            case 7:
-                System.out.print("Bảy Trăm");
-                break;
-            case 8:
-                System.out.print("Tám Trăm");
-                break;
-            case 9:
-                System.out.print("Chín Trăm");
-                break;
-        }
+
+        return say;
     }
 
+    static String read11To19(int number) {
+        String say = "";
+        switch(number) {
+            case 11:
+                say = "eleven";
+                break;
+            case 12:
+                say = "twelve";
+                break;
+            case 13:
+                say = "thirteen";
+                break;
+            case 14:
+                say = "forteen";
+                break;
+            case 15:
+                say = "fifteen";
+                break;
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+                int unit = number % 10;
+                say = read1To10(unit) + "teen";
+                break;
+        }
 
+        return say;
+    }
+
+    static String readNumberTy(int number) {
+        String say = "";
+
+        switch (number) {
+            case 20:
+                say = "twenty";
+                break;
+            case 30:
+                say = "thirty";
+                break;
+            case 40:
+                say = "forty";
+                break;
+            case 50:
+                say = "fifty";
+                break;
+            case 60:
+            case 70:
+            case 80:
+            case 90:
+                int dozen = number / 10;
+                say = read1To10(dozen) + "ty";
+                break;
+        }
+        return say;
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Điền số cần đọc: ");
-        int nhapSo = scanner.nextInt();
-        int hangDonVi = nhapSo % 10;
-        int hangChuc = (nhapSo / 10) % 10;
-        int hangTram = (nhapSo / 100) % 10;
+        System.out.println("Nhập số cần chuyển từ số sang chữ: ");
+        int number = scanner.nextInt();
 
-//        if (hangChuc != 0){
-//            if (hangChuc == 0){
-//                hangDonVi(hangDonVi);
-//            }   else {
-//                hangChuc(hangChuc);
-//                hangDonVi(hangDonVi);
-//            }
-//        }   else {
-//
-//        }
-        if ((hangChuc == 0) && (hangChuc != 0)){
-            hangDonVi(hangDonVi);
-        }   else if ((hangTram == 0) && (hangTram != 0)){
-            hangChuc(hangChuc);
-            hangDonVi(hangDonVi);
-        }   else {
-            hangTram(hangTram);
-            hangChuc(hangChuc);
-            hangDonVi(hangDonVi);
-        }
+
+        int dozen = number / 10;
+        String sayDozen = dozen + "0";
+        int unit = number % 10;
+        String result = readNumberTy(Integer.parseInt(sayDozen)) + " " + read1To10(unit);
+
+        int hundred = number /100;
+
+        // readOneHundred(int number) -> hangTram = number / 100
+        // -> read1To10(hangTram) + "one hundred"
+        // hangChucVaDonVi = number % 100;
+        // read1To99(hangChucVaDonVi);
+
+        System.out.println("Result: " + result);
     }
 }
 
