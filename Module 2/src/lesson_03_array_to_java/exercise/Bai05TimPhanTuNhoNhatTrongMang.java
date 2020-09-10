@@ -12,20 +12,22 @@ public class Bai05TimPhanTuNhoNhatTrongMang {
         }
         return min;
     }
+
     public static void main(String[] args) {
         int size;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập vào số phần tử của mảng: ");
         size = scanner.nextInt();
+
         int array[] = new int[size];
         System.out.println("Nhập các phần tử cho mảng: ");
-        for (int i = 0; i < size; i++) {
-            System.out.print("A[" + i + "] = ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("Nhập phần tử thứ " + (i+1) + ": ");
             array[i] = scanner.nextInt();
         }
-        System.out.println("Phần tử nhỏ nhất trong mảng = " + minValue(array));
+
+//        int index = minValue(array);
+        System.out.println("The smallest element in the array is: " + minValue(array));
+
     }
 }
-
-
-
