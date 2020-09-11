@@ -1,6 +1,6 @@
 package lesson_03_array_to_java.practice;
 
-public class Bai06TaoBanDoTroChoiMineSweeperTrongMang2Chieu {
+public class Bai07TaoBanDoTroChoiMineSweeper2Chieu {
     public static void main(String[] args) {
 ////        [*Thực hành]Mảng hai chiều - tạo bản đồ trò chơi MineSweeper
 ////        Mục tiêu
@@ -175,64 +175,64 @@ public class Bai06TaoBanDoTroChoiMineSweeperTrongMang2Chieu {
 ////
 ////        Sửa để bản đồ đầu vào có nhiều dòng hơn:
 ////
-//        String[][] map = {
-//                {"*", ".", "*", ".", "."},
-//                {".", "*", ".", ".", "."}
-//        };
-//        final int MAP_HEIGHT = map.length;
-//        final int MAP_WIDTH = map[0].length;
-//
+        String[][] map = {
+                {"*", ".", "*", ".", "."},
+                {".", "*", ".", ".", "."}
+        };
+        final int MAP_HEIGHT = map.length;
+        final int MAP_WIDTH = map[0].length;
+
 //        Sửa để mảng mapReport có số cột bằng với số cột của mảng map thay vì chỉ một dòng như hiện tại:
 //
 //        String[][] mapReport = new String[MAP_HEIGHT][MAP_WIDTH];
 //        Sửa để phần mã đếm số láng giềng “ôm bom”duyệt qua tất cả các dòng thay vì chỉ mỗi dòng đầu tiên như
 //        hiện tại, đồng thời sửa những phần mã đang sử dụng chỉ mục của dòng đầu tiên (số 0)thành sử dụng chỉ mục thực
 //        tế của dòng.
+
+                String[][] mapReport = new String[MAP_HEIGHT][MAP_WIDTH];
+        for (int yOrdinate = 0; yOrdinate < MAP_HEIGHT; yOrdinate++) {
+            for (int xOrdinate = 0; xOrdinate < map[0].length; xOrdinate++) {
+                String curentCell = map[yOrdinate][xOrdinate];
+                if (curentCell.equals("*")) {
+                    mapReport[yOrdinate][xOrdinate] = "*";
+                } else {
+                    final int[][] NEIGHBOURS_ORDINATE = {
+                            {yOrdinate, xOrdinate - 1}, {yOrdinate, xOrdinate + 1}
+                    };
+
+                    int minesAround = 0;
+                    for (int i = 0; i < NEIGHBOURS_ORDINATE.length; i++) {
+                        int[] neighbourOrdinate = NEIGHBOURS_ORDINATE[i];
+                        int xOrdinateOfNeighbour = neighbourOrdinate[1];
+                        int yOrdinateOfNeighbour = neighbourOrdinate[0];
+
+                        boolean isOutOfMapNeighbour = xOrdinateOfNeighbour < 0 || xOrdinateOfNeighbour == MAP_WIDTH;
+                        if (isOutOfMapNeighbour) continue;
+
+                        boolean isMineOwnerNeighbour = map[yOrdinateOfNeighbour][xOrdinateOfNeighbour].equals("*");
+                        if (isMineOwnerNeighbour) minesAround++;
+                    }
+
+                    mapReport[yOrdinate][xOrdinate] = String.valueOf(minesAround);
+                }
+            }
+        }
+//        Tương tự, sửa để phần mã in báo áo in ra tất cả các dòng của báo cáo, thay vì chỉ mỗi dòng đầu tiên như hiện
+//        tại:
 //
-//                String[][] mapReport = new String[MAP_HEIGHT][MAP_WIDTH];
-//        for (int yOrdinate = 0; yOrdinate < MAP_HEIGHT; yOrdinate++) {
-//            for (int xOrdinate = 0; xOrdinate < map[0].length; xOrdinate++) {
-//                String curentCell = map[yOrdinate][xOrdinate];
-//                if (curentCell.equals("*")) {
-//                    mapReport[yOrdinate][xOrdinate] = "*";
-//                } else {
-//                    final int[][] NEIGHBOURS_ORDINATE = {
-//                            {yOrdinate, xOrdinate - 1}, {yOrdinate, xOrdinate + 1}
-//                    };
+        for (int yOrdinate = 0; yOrdinate < MAP_HEIGHT; yOrdinate++) {
+            for (int xOrdinate = 0; xOrdinate < MAP_WIDTH; xOrdinate++) {
+                String currentCellReport = mapReport[yOrdinate][xOrdinate];
+                System.out.print(currentCellReport);
+            }
+        }
+//        Bạn tự sửa mã để sau khi in hết một dòng thì in thêm ký tự xuống dòng.
 //
-//                    int minesAround = 0;
-//                    for (int i = 0; i < NEIGHBOURS_ORDINATE.length; i++) {
-//                        int[] neighbourOrdinate = NEIGHBOURS_ORDINATE[i];
-//                        int xOrdinateOfNeighbour = neighbourOrdinate[1];
-//                        int yOrdinateOfNeighbour = neighbourOrdinate[0];
+//        Chạy thử để kiểm tra kết quả.
 //
-//                        boolean isOutOfMapNeighbour = xOrdinateOfNeighbour < 0 || xOrdinateOfNeighbour == MAP_WIDTH;
-//                        if (isOutOfMapNeighbour) continue;
+//                Mã hiện tại đang chỉ đếm những láng giềng ở phía bên trái và bên phải, ta bổ sung tọa độ của các
+//        láng giềng còn lại vào danh sách láng giềng:
 //
-//                        boolean isMineOwnerNeighbour = map[yOrdinateOfNeighbour][xOrdinateOfNeighbour].equals("*");
-//                        if (isMineOwnerNeighbour) minesAround++;
-//                    }
-//
-//                    mapReport[yOrdinate][xOrdinate] = String.valueOf(minesAround);
-//                }
-//            }
-//        }
-////        Tương tự, sửa để phần mã in báo áo in ra tất cả các dòng của báo cáo, thay vì chỉ mỗi dòng đầu tiên như hiện
-////        tại:
-////
-//        for (int yOrdinate = 0; yOrdinate < MAP_HEIGHT; yOrdinate++) {
-//            for (int xOrdinate = 0; xOrdinate < MAP_WIDTH; xOrdinate++) {
-//                String currentCellReport = mapReport[yOrdinate][xOrdinate];
-//                System.out.print(currentCellReport);
-//            }
-//        }
-////        Bạn tự sửa mã để sau khi in hết một dòng thì in thêm ký tự xuống dòng.
-////
-////        Chạy thử để kiểm tra kết quả.
-////
-////                Mã hiện tại đang chỉ đếm những láng giềng ở phía bên trái và bên phải, ta bổ sung tọa độ của các
-////        láng giềng còn lại vào danh sách láng giềng:
-////
 //        final int[][] NEIGHBOURS_ORDINATE = {
 //                {yOrdinate - 1, xOrdinate - 1}, {yOrdinate - 1, xOrdinate}, {yOrdinate - 1, xOrdinate + 1},
 //                {yOrdinate, xOrdinate - 1}, {yOrdinate, xOrdinate + 1},

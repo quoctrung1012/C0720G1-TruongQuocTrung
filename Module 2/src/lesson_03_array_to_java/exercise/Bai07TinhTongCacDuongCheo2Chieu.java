@@ -2,7 +2,7 @@ package lesson_03_array_to_java.exercise;
 
 import java.util.Scanner;
 
-public class Bai07TinhTongCacDuongCheoTrongMang2Chieu {
+public class Bai07TinhTongCacDuongCheo2Chieu {
     public static void main(String[] args) {
         int row, column;
         Scanner scanner = new Scanner(System.in);
@@ -37,15 +37,15 @@ public class Bai07TinhTongCacDuongCheoTrongMang2Chieu {
                 }
             }
         }
-//        int sum_2=0;
-//        for (int i = 0; i<row ;i++){
-//            for (int j=column; j>=0;j++){
-//                sum_2 += array[i][j];
-//            }
-//        }
-//        int sum_3 = sum_1 + sum_2;
-        System.out.println("Tổng đường chéo thứ nhất là:" + sum_1 );
-//                        "\n Tổng đường chéo thứ hai là: " + sum_2 +
-//                        "\n Tổng hai đường chéo là: " + sum_3);
+        int sum_2=0;
+        for (int i = 0; i<row ;i++){
+            for (int j=column; j>=i;j++){
+                sum_2 += array[i][j];
+            }
+        }
+        int sum_3 = sum_1 + sum_2;
+        System.out.println("Tổng đường chéo thứ nhất là:" + sum_1 +
+                        "\n Tổng đường chéo thứ hai là: " + sum_2 +
+                        "\n Tổng hai đường chéo là: " + sum_3);
     }
 }
