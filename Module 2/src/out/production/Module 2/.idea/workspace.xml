@@ -19,24 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c499dc9-89c8-4deb-89ef-d01c50e241b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_03_array_to_java/exercise/Bai06TinhTongCacSoMotCotXacDinh2Chieu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai01XayDungLopQuadraticEquation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_03_array_to_java/exercise/Bai06TinhTongCacSoMotCotXacDinhTrongMang2Chieu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_03_array_to_java/exercise/Bai07TinhTongCacDuongCheoTrongMang2Chieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_03_array_to_java/exercise/Bai07TinhTongCacDuongCheo2Chieu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_03_array_to_java/exercise/Bai08DemSoLanXuatHienCuaMotKyTu.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_03_array_to_java/exercise/Bai08DemSoLanXuatHienCuaMotKyTu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_03_array_to_java/practice/Bai06DemSoLuongSinhVienDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_03_array_to_java/practice/Bai06DemSoLuongSinhVienDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_03_array_to_java/practice/Bai07TaoBanDoTroChoiMineSweeperTrongMang2Chieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_03_array_to_java/practice/Bai07TaoBanDoTroChoiMineSweeper2Chieu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai01XayDungLopQuadraticEquationPtBac2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopStopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopStopWatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_04_oop_to_java/practice/Bai01LopHinhChuNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_04_oop_to_java/practice/Bai01LopHinhChuNhat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/lesson_03_array_to_java/exercise/Bai06TinhTongCacSoMotCotXacDinhTrongMang2Chieu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/lesson_03_array_to_java/exercise/Bai07TinhTongCacDuongCheoTrongMang2Chieu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/out/production/Module 2/out/production/Module 2/out/production/Module 2/META-INF/Module 2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/out/production/Module 2/out/production/Module 2/out/production/Module 2/out/production/Module 2/META-INF/Module 2.kotlin_module" beforeDir="false" />
-    </list>
+    <list default="true" id="8c499dc9-89c8-4deb-89ef-d01c50e241b6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,20 +51,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Bai07TinhTongCacDuongCheo2Chieu">
-    <configuration name="Bai01LopHinhChuNhat$Ex14_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson_04_oop_to_java.practice.Bai01LopHinhChuNhat$Ex14_1" />
-      <module name="Module 2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lesson_04_oop_to_java.practice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.OOPStopWatch">
     <configuration name="Bai01LopHinhChuNhat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson_04_oop_to_java.practice.Bai01LopHinhChuNhat" />
       <module name="Module 2" />
@@ -134,13 +104,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OOPStopWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson_04_oop_to_java.exercise.Bai02XayDungLopStopWatch.OOPStopWatch" />
+      <module name="Module 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson_04_oop_to_java.exercise.Bai02XayDungLopStopWatch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OOPStopWatch" />
         <item itemvalue="Application.Bai07TinhTongCacDuongCheo2Chieu" />
         <item itemvalue="Application.Bai02XayDungLopStopWatch" />
         <item itemvalue="Application.Bai01XayDungLopQuadraticEquationPtBac2" />
         <item itemvalue="Application.Bai01LopHinhChuNhat" />
-        <item itemvalue="Application.Bai01LopHinhChuNhat$Ex14_1" />
       </list>
     </recent_temporary>
   </component>
@@ -161,6 +144,7 @@
       <workItem from="1599745899878" duration="7945000" />
       <workItem from="1599785390967" duration="10688000" />
       <workItem from="1599805627025" duration="5066000" />
+      <workItem from="1599813802150" duration="374000" />
     </task>
     <servers />
   </component>
@@ -184,22 +168,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599732848346" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1599813723064">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1599813862906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599813723064" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1599813723064">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599813862906" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1599813862906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599813723064" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1599813723064">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599813862906" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1599813862905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599813723064" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1599813723064">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599813862905" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1599813862906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599813723064" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599813862906" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599800798209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
