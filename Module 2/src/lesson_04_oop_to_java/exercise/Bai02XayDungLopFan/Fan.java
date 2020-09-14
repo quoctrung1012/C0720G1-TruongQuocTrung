@@ -3,12 +3,15 @@ package lesson_04_oop_to_java.exercise.Bai02XayDungLopFan;
 
 
 public class Fan {
+    int SLOW = 1;
+    int MEDIUM = 2;
+    int FAST = 3;
     private int speed;
     private boolean on;
     private double radius;
     private String color;
     public Fan(){
-        speed = 10;
+        speed = SLOW;
         on = false;
         radius = 5;
         color = "blue";
@@ -45,9 +48,12 @@ public class Fan {
     public void setColor(String color) {
         this.color = color;
     }
-    public String toString(){
-        if (isOn()== on){
-            System.out.println("Tốc độ quạt: " + getSpeed() + "\nQuạt có màu: " + getColor() + "\nQuạt đang bật số: " +getRadius());
+    public String showInfo(){
+        if (this.isOn()){
+            return "Quạt đang bật. \nTốc độ quạt: " + getSpeed() + "\nQuạt có màu: " + getColor() + "\nQuạt đang bật số: " +getRadius();
+        }
+        else {
+            return "Quạt đang tắt. \nTốc độ quạt: " + getSpeed() + "\nQuạt có màu: " + getColor() + "\nQuạt đang bật số: " +getRadius();
         }
     }
 }

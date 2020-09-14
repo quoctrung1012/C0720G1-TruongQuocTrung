@@ -29,6 +29,7 @@ public class OOPStopWatch {
         for(int x : a){
             System.out.println(x);
         }
+        System.out.println("Time: "+sw.getElapsedTime());
     }
 
 }
