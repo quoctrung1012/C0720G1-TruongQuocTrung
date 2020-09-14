@@ -20,30 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c499dc9-89c8-4deb-89ef-d01c50e241b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MyClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Module 2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Module 2/MyClass$ChuNhat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Module 2/MyClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Module 2/lesson_04_oop_to_java/exercise/Bai02XayDungLopFan/Fan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Module 2/lesson_04_oop_to_java/exercise/Bai02XayDungLopFan/OOPFan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/b/A.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopFan/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopFan/Fan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopFan/OOPFan.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopFan/OOPFan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopStopWatch/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_04_oop_to_java/exercise/Bai02XayDungLopStopWatch/StopWatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/META-INF/Module 2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/lesson_04_oop_to_java/exercise/Bai02XayDungLopStopWatch/StopWatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module 2/lesson_04_oop_to_java/exercise/Bai02XayDungLopStopWatch/StopWatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module 2/MyClass$ChuNhat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module 2/MyClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/.idea/src.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/META-INF/Module 2.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/Module 2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/out/production/Module 2/META-INF/Module 2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/out/production/Module 2/out/production/Module 2/out/production/Module 2/META-INF/Module 2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module 2/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,15 +62,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.OOPStopWatch">
-    <configuration name="DisplayResult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson_04_oop_to_java.exercise.Bai01XayDungLopQuadraticEquation.DisplayResult" />
+  <component name="RunManager" selected="Application.Counter">
+    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.b.A" />
       <module name="Module 2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson_04_oop_to_java.exercise.Bai01XayDungLopQuadraticEquation.*" />
+          <option name="PATTERN" value="test.b.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,19 +81,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyClass" />
-      <module name="Module 2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OOPFan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson_04_oop_to_java.exercise.Bai02XayDungLopFan.OOPFan" />
+    <configuration name="A2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.b.A2" />
       <module name="Module 2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson_04_oop_to_java.exercise.Bai02XayDungLopFan.*" />
+          <option name="PATTERN" value="test.b.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OOPStopWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson_04_oop_to_java.exercise.Bai02XayDungLopStopWatch.OOPStopWatch" />
+    <configuration name="Calculate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.b.Calculate" />
       <module name="Module 2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson_04_oop_to_java.exercise.Bai02XayDungLopStopWatch.*" />
+          <option name="PATTERN" value="test.b.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,20 +107,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
+    <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.b.Counter" />
       <module name="Module 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.b.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Student" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.b.Student" />
+      <module name="Module 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.b.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OOPStopWatch" />
-        <item itemvalue="Application.OOPFan" />
-        <item itemvalue="Application.MyClass" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.DisplayResult" />
+        <item itemvalue="Application.Counter" />
+        <item itemvalue="Application.Student" />
+        <item itemvalue="Application.A2" />
+        <item itemvalue="Application.A" />
+        <item itemvalue="Application.Calculate" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +166,7 @@
       <workItem from="1600045360609" duration="10000" />
       <workItem from="1600045455383" duration="735000" />
       <workItem from="1600046261441" duration="17000" />
+      <workItem from="1600046371708" duration="5713000" />
     </task>
     <servers />
   </component>
@@ -190,42 +194,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599816893873" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599732848346">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600052127514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599732848346" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600046277688">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127514" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1600052127530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600046277688" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600046277688">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127530" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1600052127530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600046277688" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600046277687">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127530" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1600052127530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600046277687" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600046277688">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127530" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1600052127530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600046277688" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599800798209">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127530" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1600052127531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599800798209" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1599800798209">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127531" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1600052127530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599800798209" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1599800798208">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127530" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1600052127530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599800798208" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1599800798209">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127530" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1600052127531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599800798209" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600052127531" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1600051757368">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600051757368" />
     <state x="803" y="277" key="refactoring.ChangeSignatureDialog" timestamp="1600012168310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
