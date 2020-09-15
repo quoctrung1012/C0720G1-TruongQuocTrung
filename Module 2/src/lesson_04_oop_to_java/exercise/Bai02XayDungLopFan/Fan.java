@@ -1,11 +1,14 @@
 package lesson_04_oop_to_java.exercise.Bai02XayDungLopFan;
 
-
-
 public class Fan {
-    int SLOW = 1;
-    int MEDIUM = 2;
-    int FAST = 3;
+    //Cách 1:
+    public static final int SLOW = 1;
+    public static final int MEDIUM = 2;
+    public static final int FAST = 3;
+    //Cách 2:
+//    int SLOW = 1;
+//    int MEDIUM = 2;
+//    int FAST = 3;
     private int speed;
     private boolean on;
     private double radius;

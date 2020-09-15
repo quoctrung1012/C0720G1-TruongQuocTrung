@@ -2,12 +2,12 @@ package lesson_04_oop_to_java.exercise.Bai02XayDungLopFan;
 
 public class OOPFan {
     public static void main(String[] args) {
-        int SLOW = 1;
-        int MEDIUM = 2;
-        int FAST = 3;
+//        int SLOW = 1;
+//        int MEDIUM = 2;
+//        int FAST = 3;
         Fan fan1 = new Fan();
         Fan fan2 = new Fan();
-        fan1.setSpeed(FAST);
+        fan1.setSpeed(Fan.FAST);
         fan1.setColor("yellow");
         fan1.setRadius(10);
         fan1.setOn(true);
