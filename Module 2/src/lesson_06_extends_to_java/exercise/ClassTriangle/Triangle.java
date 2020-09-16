@@ -46,18 +46,12 @@ public class Triangle extends Shape {
     public double getHalfPerimeter() {
         return getPerimeter() / 2;
     }
-
-    public double getSqrt() {
-        return (getHalfPerimeter() * (getHalfPerimeter() - side1) * (getHalfPerimeter() - side2) * (getHalfPerimeter() - side3));
-    }
-
-    public double getHeightTriangle() {
-        //return (2/side1)*(Math.sqrt(getSqrt()));
-        return Math.sqrt(getSqrt());
-    }
-
+//theo công thức Heron
+//p : nữa chu vi
+//Căn bậc hai của (p*(p-a)*(p-b)*(p-c))
     public double getArea() {
-        return side1 * getHeightTriangle() * 0.5;
+        double p = getHalfPerimeter();
+        return Math.sqrt(p* (p-side1)*(p-side2)*(p-side3));
     }
 
     @Override
@@ -70,6 +64,4 @@ public class Triangle extends Shape {
                 "\nDiện tích là = " + getArea() + "\n" +
                 super.toString();
     }
-
-
 }
