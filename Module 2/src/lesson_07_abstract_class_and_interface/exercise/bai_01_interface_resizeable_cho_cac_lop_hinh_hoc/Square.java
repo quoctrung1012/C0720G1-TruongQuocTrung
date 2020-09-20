@@ -1,6 +1,6 @@
 package lesson_07_abstract_class_and_interface.exercise.bai_01_interface_resizeable_cho_cac_lop_hinh_hoc;
 
-public class Square extends Shape {
+public class Square extends Shape implements Resizeable{
     private double side;
 
     public Square() {
@@ -40,8 +40,6 @@ public class Square extends Shape {
                 + ", Area="
                 + getArea();
     }
-
-
 
     @Override
     public void resize(double percent) {
