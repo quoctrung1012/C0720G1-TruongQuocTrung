@@ -7,18 +7,22 @@ public class TennisGame {
         int tempScore = 0;
         if (player1Score == player2Score) {
             score = getStringFirstMessage(player1Score);
-        } else if (player1Score >= 4 || player2Score >= 4) {
-            int minusResult = player1Score - player2Score;
-            score = getStringSecondMessage(minusResult);
         } else {
-            for (int i = 1; i < 3; i++) {
-                if (i == 1) {
-                    tempScore = player1Score;
-                } else {
-                    score += "-";
-                    tempScore = player2Score;
+            boolean isScore1 = player1Score >= 4;
+            boolean isScore2 = player2Score >= 4;
+            if (isScore1 || isScore2) {
+                int minusResult = player1Score - player2Score;
+                score = getStringSecondMessage(minusResult);
+            } else {
+                for (int i = 1; i < 3; i++) {
+                    if (i == 1) {
+                        tempScore = player1Score;
+                    } else {
+                        score += "-";
+                        tempScore = player2Score;
+                    }
+                    score = getStringThirdMessage(score, tempScore);
                 }
-                score = getStringThirdMessage(score, tempScore);
             }
         }
         return score;
