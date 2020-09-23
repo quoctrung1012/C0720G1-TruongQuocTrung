@@ -29,10 +29,10 @@ public class Villa extends Services {
     @Override
     public String toString() {
         return "Villa{" +
-                "standardRoom=" + standardRoom +
-                ", descriptionOfOtherAmenities='" + descriptionOfOtherAmenities + '\'' +
-                ", swimmingPoolArea=" + swimmingPoolArea +
-                ", numberOfFloors=" + numberOfFloors +
+                ", Tiêu chuẩn phòng : " + standardRoom +
+                ". Mô tả tiện nghi khác: " + descriptionOfOtherAmenities + '\'' +
+                ". Diện tích hồ bơi" + swimmingPoolArea +
+                ". Số tầng: " + numberOfFloors +
                 '}' + super.toString();
     }
 

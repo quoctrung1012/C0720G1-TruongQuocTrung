@@ -3,7 +3,6 @@ package lesson_11_dsa_stack_queue.exercise.bai_07_to_chuc_du_lieu_hop_ly;
 import java.util.*;
 
 public class Demerging {
-    private static int count = 0;
 
     public static class Person {
         boolean gender = false;

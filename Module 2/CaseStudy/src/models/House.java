@@ -27,9 +27,9 @@ public class House extends Services {
     public String toString() {
         return "House{" +
                 super.toString() +
-                ", standardRoom=" + standardRoom +
-                ", descriptionOfOtherAmenities='" + descriptionOfOtherAmenities + '\'' +
-                ", numberOfFloors=" + numberOfFloors +
+                ". Tiêu chuẩn phòng : " + standardRoom +
+                ". Mô tả tiện nghi khác: " + descriptionOfOtherAmenities + '\'' +
+                ". Số tầng: " + numberOfFloors +
                 '}' + super.toString();
     }
 

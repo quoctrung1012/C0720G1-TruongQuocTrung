@@ -1,5 +1,8 @@
 package controllers;
 
+import models.Services;
+import models.Villa;
+
 import java.util.Scanner;
 
 public class MainController {
@@ -54,6 +57,16 @@ public class MainController {
 
         System.out.println();
         System.out.println("Nhập sự lựa chọn của bạn.");
+
+        int choose = scanner.nextInt();
+        switch (choose){
+            case 1:
+                Services servicesVilla = new Villa();
+                servicesVilla.setId(scanner.nextLine());
+                servicesVilla.setNameService(scanner.nextLine());
+
+
+        }
     }
 
     public static void showServices() {
@@ -81,5 +94,8 @@ public class MainController {
     }
 
     public static void showInformationOfEmployee() {
+    }
+    public static void add(){
+        System.out.println();
     }
 }

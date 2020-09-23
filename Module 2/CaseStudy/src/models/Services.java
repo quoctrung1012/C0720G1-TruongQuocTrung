@@ -3,17 +3,18 @@ package models;
 import java.time.LocalDateTime;
 
 public abstract class Services {
-    private String Id;
+    private String id;
     private String nameService;
     private double nameUseArea;
     private int rentalCosts;
     private int maximumNumberOfPeople;
     private LocalDateTime rentalType;
 
-    public Services() {}
+    public Services() {
+    }
 
     public Services(String id, String nameService, double nameUseArea, int rentalCosts, int maximumNumberOfPeople, LocalDateTime rentalType) {
-        Id = id;
+        this.id = id;
         this.nameService = nameService;
         this.nameUseArea = nameUseArea;
         this.rentalCosts = rentalCosts;
@@ -22,11 +23,11 @@ public abstract class Services {
     }
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getNameService() {
@@ -72,12 +73,12 @@ public abstract class Services {
     @Override
     public String toString() {
         return "Services{" +
-                "Id='" + Id + '\'' +
-                ", nameService='" + nameService + '\'' +
-                ", nameUseArea=" + nameUseArea +
-                ", rentalCosts=" + rentalCosts +
-                ", maximumNumberOfPeople=" + maximumNumberOfPeople +
-                ", rentalType=" + rentalType +
+                "Id ='" + id + '\'' +
+                ". Tên dịch vụ : " + nameService + '\'' +
+                ". Diện tích sử dụng : " + nameUseArea +
+                ". Chi phí thuê : " + rentalCosts +
+                ". Số lượng người tối đa : " + maximumNumberOfPeople +
+                ". Kiểu thuê : " + rentalType +
                 '}';
     }
 
