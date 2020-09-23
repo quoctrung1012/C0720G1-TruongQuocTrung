@@ -55,7 +55,7 @@ public class MyLinkedList<E> {
         }
         //cho holder tham chiếu đến vị trí index
         holder = temp.next;
-        //Node tại bị trí index-1 sẽ trỏ đến vị trí Node mới
+        //Node tại vị trí index-1 sẽ trỏ đến vị trí Node mới
         temp.next = new Node(element);
         //node mới sẽ trỏ đến holder
         temp.next.next = holder;

@@ -11,10 +11,16 @@ public class MyStack {
         stack.push(4);
         stack.push(5);
 
-        System.out.printf("Stack: ");
+
         while (!stack.isEmpty()) {
-            System.out.printf(" %d", stack.pop());
+            System.out.println(stack.pop());
         }
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        System.out.println(String.valueOf(stack));
     }
 
     private static void stackOfString() {

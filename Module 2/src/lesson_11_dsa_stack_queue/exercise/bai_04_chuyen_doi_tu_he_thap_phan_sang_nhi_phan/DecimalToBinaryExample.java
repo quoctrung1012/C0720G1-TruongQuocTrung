@@ -14,4 +14,9 @@ public class DecimalToBinaryExample {
             System.out.print(stack.pop());
         }
     }
+    public static void main(String[] args) {
+        int decimalNumber = 123456789;
+        System.out.println("Hệ nhị phân của: " + decimalNumber + " là");
+        new DecimalToBinaryExample().convertBinary(decimalNumber);
+    }
 }
