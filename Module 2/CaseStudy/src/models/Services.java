@@ -69,4 +69,17 @@ public abstract class Services {
         this.rentalType = rentalType;
     }
 
+    @Override
+    public String toString() {
+        return "Services{" +
+                "Id='" + Id + '\'' +
+                ", nameService='" + nameService + '\'' +
+                ", nameUseArea=" + nameUseArea +
+                ", rentalCosts=" + rentalCosts +
+                ", maximumNumberOfPeople=" + maximumNumberOfPeople +
+                ", rentalType=" + rentalType +
+                '}';
+    }
+
+    public abstract void showInFor();
 }
