@@ -96,10 +96,10 @@ public class MyList<E> {
 
     // phương thức tạo ra một bảng sao của mảng cú MyList
     public MyList<E> clone() {
-        MyList<E> v = new MyList<>();
-        v.elements = Arrays.copyOf(this.elements, this.size);
-        v.size = this.size;
-        return v;
+        MyList<E> clone = new MyList<>();
+        clone.elements = Arrays.copyOf(this.elements, this.size);
+        clone.size = this.size;
+        return clone;
     }
     // phương thức xóa một phần tử khỏi mảng
     public E remove(int index) {

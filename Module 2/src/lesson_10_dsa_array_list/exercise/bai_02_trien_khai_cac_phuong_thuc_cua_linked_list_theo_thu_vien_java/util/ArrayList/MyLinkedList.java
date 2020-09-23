@@ -171,10 +171,11 @@ public class MyLinkedList<E> {
             return (E) head;
         }
     }
-    public E getLast(){
-        if (numNotes ==0){
+
+    public E getLast() {
+        if (numNotes == 0) {
             return null;
-        }   else {
+        } else {
             return (E) tail;
         }
     }
