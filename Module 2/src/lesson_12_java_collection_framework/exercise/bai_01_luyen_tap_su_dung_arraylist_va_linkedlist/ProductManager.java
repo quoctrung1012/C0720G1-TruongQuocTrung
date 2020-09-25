@@ -9,14 +9,6 @@ public class ProductManager {
     public static Scanner scanner = new Scanner(System.in);
     public static List<Product> arrayList = new ArrayList<>();
 
-    public static void main(String[] args) {
-        arrayList.add(new Product(7, "Tủ Lạnh", "Đồ gia dụng", 2000));
-        arrayList.add(new Product(22, "Máy giặt", "Đồ gia dụng", 1500));
-        arrayList.add(new Product(15, "Lò vi sóng", "Đồ gia dụng", 3000));
-        menu();
-
-    }
-
     public static void menu() {
         int choose;
         do {
@@ -83,7 +75,8 @@ public class ProductManager {
     }
 
     public static void searchProduct() {
-        System.out.println("Nhập id sản phẩm bạn muốn tìm kiếm");
+        System.out.println("Nhập tên sản phẩm bạn muốn tìm kiếm");
+        scanner.nextLine();
         String name = scanner.nextLine();
         for (int i = 0; i < arrayList.size(); i++) {
             if (name.equals(arrayList.get(i).getName())) {
