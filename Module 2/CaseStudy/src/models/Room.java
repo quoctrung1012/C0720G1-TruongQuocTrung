@@ -5,15 +5,17 @@ import java.time.LocalDateTime;
 public class Room extends Services {
     private String freeServiceIncluded = "";
 
-    public Room() {
-    }
-
-    public Room(String freeServiceIncluded) {
+    public Room(){}
+    public Room(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, String freeServiceIncluded) {
+        super(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.freeServiceIncluded = freeServiceIncluded;
     }
 
-    public Room(String id, String nameService, double nameUseArea, int rentalCosts, int maximumNumberOfPeople, LocalDateTime rentalType, String freeServiceIncluded) {
-        super(id, nameService, nameUseArea, rentalCosts, maximumNumberOfPeople, rentalType);
+    public String getFreeServiceIncluded() {
+        return freeServiceIncluded;
+    }
+
+    public void setFreeServiceIncluded(String freeServiceIncluded) {
         this.freeServiceIncluded = freeServiceIncluded;
     }
 

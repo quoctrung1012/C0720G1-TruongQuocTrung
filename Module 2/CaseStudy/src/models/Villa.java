@@ -1,28 +1,50 @@
 package models;
 
-import java.time.LocalDateTime;
-
 public class Villa extends Services {
-    private int standardRoom = 0;
-    private String descriptionOfOtherAmenities = "";
-    private double swimmingPoolArea = 0.0;
-    private int numberOfFloors = 0;
+    private int standardRoom ;
+    private String descriptionOfOtherAmenities;
+    private double swimmingPoolArea ;
+    private int numberOfFloors;
 
-    public Villa() {
-    }
+    public Villa(){}
 
-    public Villa(int standardRoom, String descriptionOfOtherAmenities, double swimmingPoolArea, int numberOfFloors) {
+    public Villa(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, int standardRoom, String descriptionOfOtherAmenities, double swimmingPoolArea, int numberOfFloors) {
+        super(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.standardRoom = standardRoom;
         this.descriptionOfOtherAmenities = descriptionOfOtherAmenities;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberOfFloors = numberOfFloors;
     }
 
-    public Villa(String id, String nameService, double nameUseArea, int rentalCosts, int maximumNumberOfPeople, LocalDateTime rentalType, int standardRoom, String descriptionOfOtherAmenities, double swimmingPoolArea, int numberOfFloors) {
-        super(id, nameService, nameUseArea, rentalCosts, maximumNumberOfPeople, rentalType);
+    public int getStandardRoom() {
+        return standardRoom;
+    }
+
+    public void setStandardRoom(int standardRoom) {
         this.standardRoom = standardRoom;
+    }
+
+    public String getDescriptionOfOtherAmenities() {
+        return descriptionOfOtherAmenities;
+    }
+
+    public void setDescriptionOfOtherAmenities(String descriptionOfOtherAmenities) {
         this.descriptionOfOtherAmenities = descriptionOfOtherAmenities;
+    }
+
+    public double getSwimmingPoolArea() {
+        return swimmingPoolArea;
+    }
+
+    public void setSwimmingPoolArea(double swimmingPoolArea) {
         this.swimmingPoolArea = swimmingPoolArea;
+    }
+
+    public int getNumberOfFloors() {
+        return numberOfFloors;
+    }
+
+    public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 

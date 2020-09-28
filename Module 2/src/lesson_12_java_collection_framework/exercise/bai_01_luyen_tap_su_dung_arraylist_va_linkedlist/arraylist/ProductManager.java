@@ -1,4 +1,4 @@
-package lesson_12_java_collection_framework.exercise.bai_01_luyen_tap_su_dung_arraylist_va_linkedlist;
+package lesson_12_java_collection_framework.exercise.bai_01_luyen_tap_su_dung_arraylist_va_linkedlist.arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -66,11 +66,12 @@ public class ProductManager {
     }
 
     public static void decreasePriceProduct() {
-        Collections.sort(arrayList, new decreaseProduct());
+        Collections.sort(arrayList, new DecreaseProduct());
+        displayProduct();
     }
 
     public static void ascendingPriceProduct() {
-        Collections.sort(arrayList, new ascendingProduct());
+        Collections.sort(arrayList, new AscendingProduct());
         displayProduct();
     }
 
@@ -116,6 +117,7 @@ public class ProductManager {
         for (Product product : arrayList) {
             System.out.println(product);
         }
+
     }
 
     public static void addProduct() {

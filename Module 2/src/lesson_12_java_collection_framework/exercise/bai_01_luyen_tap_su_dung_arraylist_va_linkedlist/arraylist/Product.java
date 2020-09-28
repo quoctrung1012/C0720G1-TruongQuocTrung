@@ -1,6 +1,6 @@
-package lesson_12_java_collection_framework.exercise.bai_01_luyen_tap_su_dung_arraylist_va_linkedlist;
+package lesson_12_java_collection_framework.exercise.bai_01_luyen_tap_su_dung_arraylist_va_linkedlist.arraylist;
 
-public class Product{
+public class Product implements Comparable<Product>{
     private int id;
     private String name;
     private String productInformation;
@@ -60,5 +60,8 @@ public class Product{
     }
 
 
-
+    @Override
+    public int compareTo(Product product) {
+        return this.getId() - product.getId();
+    }
 }

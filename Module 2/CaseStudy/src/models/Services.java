@@ -1,22 +1,20 @@
 package models;
 
-import java.time.LocalDateTime;
-
-public abstract class Services {
+public abstract class Services{
     private String id;
     private String nameService;
-    private double nameUseArea;
-    private int rentalCosts;
+    private double useArea;
+    private double rentalCosts;
     private int maximumNumberOfPeople;
-    private LocalDateTime rentalType;
+    private String rentalType;
 
     public Services() {
     }
 
-    public Services(String id, String nameService, double nameUseArea, int rentalCosts, int maximumNumberOfPeople, LocalDateTime rentalType) {
+    public Services(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType) {
         this.id = id;
         this.nameService = nameService;
-        this.nameUseArea = nameUseArea;
+        this.useArea = useArea;
         this.rentalCosts = rentalCosts;
         this.maximumNumberOfPeople = maximumNumberOfPeople;
         this.rentalType = rentalType;
@@ -38,19 +36,19 @@ public abstract class Services {
         this.nameService = nameService;
     }
 
-    public double getNameUseArea() {
-        return nameUseArea;
+    public double getUseArea() {
+        return useArea;
     }
 
-    public void setNameUseArea(double nameUseArea) {
-        this.nameUseArea = nameUseArea;
+    public void setUseArea(double useArea) {
+        this.useArea = useArea;
     }
 
-    public int getRentalCosts() {
+    public double getRentalCosts() {
         return rentalCosts;
     }
 
-    public void setRentalCosts(int rentalCosts) {
+    public void setRentalCosts(double rentalCosts) {
         this.rentalCosts = rentalCosts;
     }
 
@@ -62,11 +60,11 @@ public abstract class Services {
         this.maximumNumberOfPeople = maximumNumberOfPeople;
     }
 
-    public LocalDateTime getRentalType() {
+    public String getRentalType() {
         return rentalType;
     }
 
-    public void setRentalType(LocalDateTime rentalType) {
+    public void setRentalType(String rentalType) {
         this.rentalType = rentalType;
     }
 
@@ -75,7 +73,7 @@ public abstract class Services {
         return "Services{" +
                 "Id ='" + id + '\'' +
                 ". Tên dịch vụ : " + nameService + '\'' +
-                ". Diện tích sử dụng : " + nameUseArea +
+                ". Diện tích sử dụng : " + useArea +
                 ". Chi phí thuê : " + rentalCosts +
                 ". Số lượng người tối đa : " + maximumNumberOfPeople +
                 ". Kiểu thuê : " + rentalType +
