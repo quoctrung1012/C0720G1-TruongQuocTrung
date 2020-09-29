@@ -1,5 +1,6 @@
 package controllers;
 
+import commons.FileUtils;
 import models.House;
 import models.Room;
 import models.Services;
@@ -23,6 +24,11 @@ public class MainController {
     static int numberOfFloors;
     static String freeServiceIncluded;
 
+    public static final String FILE_NAME_VILLA = "src/data/villa.csv";
+    public static final String FILE_NAME_HOUSE = "src/data/house.csv";
+    public static final String FILE_NAME_ROOM = "src/data/room.csv";
+    public static final String COMMA = ", ";
+
     public static ArrayList<Room> roomArrayList = new ArrayList<>();
     public static ArrayList<House> houseArrayList = new ArrayList<>();
     public static ArrayList<Villa> villaArrayList = new ArrayList<>();
@@ -41,8 +47,8 @@ public class MainController {
                             "6.\tShow Information of Employee\n" +
                             "7.\tExit\n");
             System.out.println("-------------------------------------");
-            System.out.println("Nhập sự lựa chọn của bạn.");
-            choose = scanner.nextInt();
+            System.out.print("Nhập sự lựa chọn của bạn: ");
+            choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
                     addNewServices();
@@ -63,6 +69,7 @@ public class MainController {
                     showInformationOfEmployee();
                     break;
                 case 7:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Yêu cầu nhập sự lựa chọn khác.");
@@ -83,8 +90,8 @@ public class MainController {
                             "4.\tBack to menu\n" +
                             "5.\tExit\n");
             System.out.println("-------------------------------------");
-            System.out.println("Nhập sự lựa chọn của bạn.");
-            choose = scanner.nextInt();
+            System.out.print("Nhập sự lựa chọn của bạn: ");
+            choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
                     addNewVilla();
@@ -98,11 +105,14 @@ public class MainController {
                 case 4:
                     displayMainMenu();
                     break;
+                case 5:
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Yêu cầu nhập lại");
                     addNewServices();
             }
-        } while (choose >= 1 && choose <= 4);
+        } while (choose >= 1 && choose <= 5);
 
     }
 
@@ -113,64 +123,98 @@ public class MainController {
         Room room = new Room(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType, freeServiceIncluded);
         roomArrayList.add(room);
         servicesArrayList.add(room);
+
+        String line = null;
+        for (Room writeVilla : roomArrayList) {
+            line = writeVilla.getId()
+                    + COMMA + writeVilla.getNameService()
+                    + COMMA + writeVilla.getUseArea()
+                    + COMMA + writeVilla.getRentalCosts()
+                    + COMMA + writeVilla.getMaximumNumberOfPeople()
+                    + COMMA + writeVilla.getRentalType();
+            FileUtils.writeFile(FILE_NAME_ROOM, line);
+        }
     }
 
     public static void addNewHouse() {
         addServices();
         System.out.print("Nhập Tiêu chuẩn phòng: ");
-        standardRoom = scanner.nextInt();
-        scanner.nextLine();
+        standardRoom = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Mô tả tiện nghi khác: ");
         descriptionOfOtherAmenities = scanner.nextLine();
 
         System.out.print("Số tầng của Villa: ");
-        numberOfFloors = scanner.nextInt();
+        numberOfFloors = Integer.parseInt(scanner.nextLine());
 
         House house = new House(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType, standardRoom, descriptionOfOtherAmenities, numberOfFloors);
         houseArrayList.add(house);
         servicesArrayList.add(house);
+
+        String line = null;
+        for (House writeHousr : houseArrayList) {
+            line = writeHousr.getId()
+                    + COMMA + writeHousr.getNameService()
+                    + COMMA + writeHousr.getUseArea()
+                    + COMMA + writeHousr.getRentalCosts()
+                    + COMMA + writeHousr.getMaximumNumberOfPeople()
+                    + COMMA + writeHousr.getRentalType()
+                    + COMMA + writeHousr.getStandardRoom()
+                    + COMMA + writeHousr.getDescriptionOfOtherAmenities()
+                    + COMMA + writeHousr.getNumberOfFloors();
+            FileUtils.writeFile(FILE_NAME_HOUSE, line);
+        }
     }
 
     public static void addNewVilla() {
         addServices();
         System.out.print("Nhập Tiêu chuẩn phòng: ");
-        standardRoom = scanner.nextInt();
-        scanner.nextLine();
+        standardRoom = Integer.parseInt(scanner.nextLine());
 
-        System.out.print("Mô tả tiện nghi khác");
+        System.out.print("Mô tả tiện nghi khác: ");
         descriptionOfOtherAmenities = scanner.nextLine();
 
         System.out.print("Diện tích hồ bơi(lớn hơn 30m vuông): ");
-        swimmingPoolArea = scanner.nextDouble();
+        swimmingPoolArea = Double.parseDouble(scanner.nextLine());
 
         System.out.print("Số tầng của Villa: ");
-        numberOfFloors = scanner.nextInt();
+        numberOfFloors = Integer.parseInt(scanner.nextLine());
 
-        Villa villa = new Villa(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType, standardRoom, descriptionOfOtherAmenities, swimmingPoolArea, numberOfFloors);
+        Villa villa = new Villa(id, nameService, useArea, rentalCosts, maximumNumberOfPeople,
+                rentalType, standardRoom, descriptionOfOtherAmenities, swimmingPoolArea, numberOfFloors);
         villaArrayList.add(villa);
         servicesArrayList.add(villa);
+        String line = null;
+        for (Villa writeVilla : villaArrayList) {
+        line = writeVilla.getId()
+                + COMMA + writeVilla.getNameService()
+                + COMMA + writeVilla.getUseArea()
+                + COMMA + writeVilla.getRentalCosts()
+                + COMMA + writeVilla.getMaximumNumberOfPeople()
+                + COMMA + writeVilla.getRentalType()
+                + COMMA + writeVilla.getStandardRoom()
+                + COMMA + writeVilla.getDescriptionOfOtherAmenities()
+                + COMMA + writeVilla.getSwimmingPoolArea()
+                + COMMA + writeVilla.getNumberOfFloors();
+        FileUtils.writeFile(FILE_NAME_VILLA, line);
+        }
     }
 
     public static void addServices() {
         System.out.print("Nhập id loại phòng thuê: ");
         id = scanner.nextLine();
-        scanner.nextLine();
 
         System.out.print("Nhập Tên dịch vụ: ");
         nameService = scanner.nextLine();
 
         System.out.print("Nhập diện tích phòng: ");
-        useArea = scanner.nextDouble();
-
+        useArea = Double.parseDouble(scanner.nextLine());
 
         System.out.print("Nhập chi phí thuê: ");
-        rentalCosts = scanner.nextDouble();
+        rentalCosts = Double.parseDouble(scanner.nextLine());
 
         System.out.print("Nhập số người thuê( Tối đa 20 người): ");
-        maximumNumberOfPeople = scanner.nextInt();
-
-
+        maximumNumberOfPeople = Integer.parseInt(scanner.nextLine());
         System.out.print("Nhập kiểu thuê (Thuê theo : Ngày, tháng, năm, giờ): ");
         rentalType = scanner.nextLine();
     }
@@ -189,8 +233,8 @@ public class MainController {
                             "7.\tBack to menu\n" +
                             "8.\tExit\n");
             System.out.println("-------------------------------------");
-            System.out.println("Nhập sự lựa chọn của bạn.");
-            choose = scanner.nextInt();
+            System.out.print("Nhập sự lựa chọn của bạn: ");
+            choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
                     showAllVilla();
@@ -214,6 +258,7 @@ public class MainController {
                     displayMainMenu();
                     break;
                 case 8:
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Yêu cầu nhập lại");

@@ -71,12 +71,12 @@ public abstract class Services{
     @Override
     public String toString() {
         return "Services{" +
-                "Id ='" + id + '\'' +
-                ". Tên dịch vụ : " + nameService + '\'' +
-                ". Diện tích sử dụng : " + useArea +
-                ". Chi phí thuê : " + rentalCosts +
-                ". Số lượng người tối đa : " + maximumNumberOfPeople +
-                ". Kiểu thuê : " + rentalType +
+                "id='" + id + '\'' +
+                ", nameService='" + nameService + '\'' +
+                ", useArea=" + useArea +
+                ", rentalCosts=" + rentalCosts +
+                ", maximumNumberOfPeople=" + maximumNumberOfPeople +
+                ", rentalType='" + rentalType + '\'' +
                 '}';
     }
 

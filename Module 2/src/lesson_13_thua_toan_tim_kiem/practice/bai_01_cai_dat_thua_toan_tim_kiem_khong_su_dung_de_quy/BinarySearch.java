@@ -2,6 +2,7 @@ package lesson_13_thua_toan_tim_kiem.practice.bai_01_cai_dat_thua_toan_tim_kiem_
 
 public class BinarySearch {
     static int[] list = {2, 4, 7, 10, 11, 45, 50, 59, 60, 66, 69, 70, 79};
+
     static int binarySearch(int[] list, int key) {
         int low = 0;
         int high = list.length - 1;
@@ -16,6 +17,7 @@ public class BinarySearch {
         }
         return -1; /* Now high < low, key not found */
     }
+
     public static void main(String[] args) {
         System.out.println(binarySearch(list, 2));  /* 0 */
         System.out.println(binarySearch(list, 11)); /* 4 */
