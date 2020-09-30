@@ -1,4 +1,4 @@
-package models;
+package controllers;
 
 import static controllers.MainController.displayMainMenu;
 

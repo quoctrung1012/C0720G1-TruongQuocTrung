@@ -1,12 +1,12 @@
 package models;
 
 public abstract class Services{
-    private String id;
-    private String nameService;
-    private double useArea;
-    private double rentalCosts;
-    private int maximumNumberOfPeople;
-    private String rentalType;
+    protected String id;
+    protected String nameService;
+    protected double useArea;
+    protected double rentalCosts;
+    protected int maximumNumberOfPeople;
+    protected String rentalType;
 
     public Services() {
     }

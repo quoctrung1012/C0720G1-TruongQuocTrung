@@ -3,23 +3,30 @@ package models;
 import java.time.LocalDateTime;
 
 public class House extends Services {
-    private int standardRoom = 0;
-    private String descriptionOfOtherAmenities = "";
-    private int numberOfFloors = 0;
+    private String standardRoom;
+    private String descriptionOfOtherAmenities;
+    private int numberOfFloors;
 
     public House(){}
-    public House(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, int standardRoom, String descriptionOfOtherAmenities, int numberOfFloors) {
+
+    public House(String standardRoom, String descriptionOfOtherAmenities, int numberOfFloors) {
+        this.standardRoom = standardRoom;
+        this.descriptionOfOtherAmenities = descriptionOfOtherAmenities;
+        this.numberOfFloors = numberOfFloors;
+    }
+
+    public House(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, String standardRoom, String descriptionOfOtherAmenities, int numberOfFloors) {
         super(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.standardRoom = standardRoom;
         this.descriptionOfOtherAmenities = descriptionOfOtherAmenities;
         this.numberOfFloors = numberOfFloors;
     }
 
-    public int getStandardRoom() {
+    public String getStandardRoom() {
         return standardRoom;
     }
 
-    public void setStandardRoom(int standardRoom) {
+    public void setStandardRoom(String standardRoom) {
         this.standardRoom = standardRoom;
     }
 
@@ -42,11 +49,10 @@ public class House extends Services {
     @Override
     public String toString() {
         return "House{" +
-                super.toString() +
-                ". Tiêu chuẩn phòng : " + standardRoom +
-                ". Mô tả tiện nghi khác: " + descriptionOfOtherAmenities + '\'' +
-                ". Số tầng: " + numberOfFloors +
-                '}' + super.toString();
+                "standardRoom='" + standardRoom + '\'' +
+                ", descriptionOfOtherAmenities='" + descriptionOfOtherAmenities + '\'' +
+                ", numberOfFloors=" + numberOfFloors +
+                "} " + super.toString();
     }
 
     @Override

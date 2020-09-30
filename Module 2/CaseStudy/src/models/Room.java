@@ -4,26 +4,25 @@ import java.time.LocalDateTime;
 
 public class Room extends Services {
     private String freeServiceIncluded = "";
+    private ExtraServices extraServices;
 
-    public Room(){}
-    public Room(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, String freeServiceIncluded) {
+    public Room(String freeServiceIncluded, ExtraServices extraServices) {
+        this.freeServiceIncluded = freeServiceIncluded;
+        this.extraServices = extraServices;
+    }
+
+    public Room(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, String freeServiceIncluded, ExtraServices extraServices) {
         super(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.freeServiceIncluded = freeServiceIncluded;
-    }
-
-    public String getFreeServiceIncluded() {
-        return freeServiceIncluded;
-    }
-
-    public void setFreeServiceIncluded(String freeServiceIncluded) {
-        this.freeServiceIncluded = freeServiceIncluded;
+        this.extraServices = extraServices;
     }
 
     @Override
     public String toString() {
         return "Room{" +
                 "freeServiceIncluded='" + freeServiceIncluded + '\'' +
-                '}' + super.toString();
+                ", extraServices=" + extraServices +
+                "} " + super.toString();
     }
 
     @Override

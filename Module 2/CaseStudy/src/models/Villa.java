@@ -1,14 +1,23 @@
 package models;
 
 public class Villa extends Services {
-    private int standardRoom ;
+    private String standardRoom;
     private String descriptionOfOtherAmenities;
-    private double swimmingPoolArea ;
+    private double swimmingPoolArea;
     private int numberOfFloors;
 
-    public Villa(){}
+    public Villa() {
 
-    public Villa(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, int standardRoom, String descriptionOfOtherAmenities, double swimmingPoolArea, int numberOfFloors) {
+    }
+
+    public Villa(String standardRoom, String descriptionOfOtherAmenities, double swimmingPoolArea, int numberOfFloors) {
+        this.standardRoom = standardRoom;
+        this.descriptionOfOtherAmenities = descriptionOfOtherAmenities;
+        this.swimmingPoolArea = swimmingPoolArea;
+        this.numberOfFloors = numberOfFloors;
+    }
+
+    public Villa(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, String standardRoom, String descriptionOfOtherAmenities, double swimmingPoolArea, int numberOfFloors) {
         super(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.standardRoom = standardRoom;
         this.descriptionOfOtherAmenities = descriptionOfOtherAmenities;
@@ -16,11 +25,11 @@ public class Villa extends Services {
         this.numberOfFloors = numberOfFloors;
     }
 
-    public int getStandardRoom() {
+    public String getStandardRoom() {
         return standardRoom;
     }
 
-    public void setStandardRoom(int standardRoom) {
+    public void setStandardRoom(String standardRoom) {
         this.standardRoom = standardRoom;
     }
 
@@ -51,11 +60,11 @@ public class Villa extends Services {
     @Override
     public String toString() {
         return "Villa{" +
-                ", Tiêu chuẩn phòng : " + standardRoom +
-                ". Mô tả tiện nghi khác: " + descriptionOfOtherAmenities + '\'' +
-                ". Diện tích hồ bơi" + swimmingPoolArea +
-                ". Số tầng: " + numberOfFloors +
-                '}' + super.toString();
+                "standardRoom='" + standardRoom + '\'' +
+                ", descriptionOfOtherAmenities='" + descriptionOfOtherAmenities + '\'' +
+                ", swimmingPoolArea=" + swimmingPoolArea +
+                ", numberOfFloors=" + numberOfFloors +
+                "} " + super.toString();
     }
 
     @Override

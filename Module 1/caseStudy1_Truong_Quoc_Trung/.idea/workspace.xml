@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="237b1a49-0ab8-446c-9fd0-8572786fa782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/caseStudy_yeu_cau_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caseStudy_yeu_cau_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module 2/src/lesson_14_sort_algorithm/exercise/bai_01_thuat_toan_chen/InsertionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module 2/src/lesson_14_sort_algorithm/practice/bai_01_minh_hoa_thuat_toan_noi_bot/BubbleSortByStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module 2/src/lesson_14_sort_algorithm/practice/bai_02_thuat_toan_chon/SelectionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Module 2/src/lesson_14_sort_algorithm/practice/bai_03_cai_dat_thuat_toan_noi_bot/BubbleSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caseStudy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yeu_cau_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_06.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/data/villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/models/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/models/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/~$-DN CaseStudy Furama Resort Module 2_v2.0.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/out/production/CaseStudy/~$-DN CaseStudy Furama Resort Module 2_v2.0.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/data/villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/CaseStudy/src/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/out/production/Module 2/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/out/production/Module 2/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module 2/out/production/Module 2/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module 2/out/production/Module 2/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch2.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +46,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bai_8_Cau_truc_dieu_kien_01/Thuc_Hanh" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Module 2/CaseStudy" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -48,6 +62,8 @@
       <workItem from="1597128919661" duration="1499000" />
       <workItem from="1597164558064" duration="372000" />
       <workItem from="1597193900415" duration="643000" />
+      <workItem from="1601354720670" duration="472000" />
+      <workItem from="1601361211220" duration="17000" />
     </task>
     <servers />
   </component>
@@ -55,9 +71,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1597195008009">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1601361226205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597195008009" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601361226205" />
   </component>
 </project>

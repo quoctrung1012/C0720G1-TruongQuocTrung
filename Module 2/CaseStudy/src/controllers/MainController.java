@@ -7,7 +7,10 @@ import models.Services;
 import models.Villa;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainController {
     public static int choose;
@@ -18,7 +21,7 @@ public class MainController {
     static double rentalCosts;
     static int maximumNumberOfPeople;
     static String rentalType;
-    static int standardRoom;
+    static String standardRoom;
     static String descriptionOfOtherAmenities;
     static double swimmingPoolArea;
     static int numberOfFloors;
@@ -34,10 +37,19 @@ public class MainController {
     public static ArrayList<Villa> villaArrayList = new ArrayList<>();
     public static ArrayList<Services> servicesArrayList = new ArrayList<>();
 
+//    public static boolean regex(String regexName){
+//        String regex = "^(Vip|Business|Normal)$";
+//        Pattern pattern = Pattern.compile(regex);
+//        Matcher matcher = pattern.matcher(regexName);
+//
+//        return  matcher.find();
+//    }
+
+
     public static void displayMainMenu() {
         do {
             System.out.println("-------------------------------------");
-            System.out.println(
+            System.out.print(
                     "\tBạn hãy chọn từ 1-7\n" +
                             "1.\tAdd New Services\n" +
                             "2.\tShow Services\n" +
@@ -76,13 +88,12 @@ public class MainController {
                     displayMainMenu();
             }
         } while (choose >= 1 && choose <= 7);
-
     }
 
     public static void addNewServices() {
         do {
             System.out.println("-------------------------------------");
-            System.out.println(
+            System.out.print(
                     "\tBạn hãy chọn từ 1-5 \n" +
                             "1.\tAdd New Villa\n" +
                             "2.\tAdd New House\n" +
@@ -113,7 +124,6 @@ public class MainController {
                     addNewServices();
             }
         } while (choose >= 1 && choose <= 5);
-
     }
 
     public static void addNewRoom() {
@@ -139,7 +149,7 @@ public class MainController {
     public static void addNewHouse() {
         addServices();
         System.out.print("Nhập Tiêu chuẩn phòng: ");
-        standardRoom = Integer.parseInt(scanner.nextLine());
+        standardRoom = scanner.nextLine();
 
         System.out.print("Mô tả tiện nghi khác: ");
         descriptionOfOtherAmenities = scanner.nextLine();
@@ -147,7 +157,8 @@ public class MainController {
         System.out.print("Số tầng của Villa: ");
         numberOfFloors = Integer.parseInt(scanner.nextLine());
 
-        House house = new House(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType, standardRoom, descriptionOfOtherAmenities, numberOfFloors);
+        House house = new House(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType,
+                standardRoom, descriptionOfOtherAmenities, numberOfFloors);
         houseArrayList.add(house);
         servicesArrayList.add(house);
 
@@ -169,7 +180,7 @@ public class MainController {
     public static void addNewVilla() {
         addServices();
         System.out.print("Nhập Tiêu chuẩn phòng: ");
-        standardRoom = Integer.parseInt(scanner.nextLine());
+        standardRoom = scanner.nextLine();
 
         System.out.print("Mô tả tiện nghi khác: ");
         descriptionOfOtherAmenities = scanner.nextLine();
@@ -186,23 +197,27 @@ public class MainController {
         servicesArrayList.add(villa);
         String line = null;
         for (Villa writeVilla : villaArrayList) {
-        line = writeVilla.getId()
-                + COMMA + writeVilla.getNameService()
-                + COMMA + writeVilla.getUseArea()
-                + COMMA + writeVilla.getRentalCosts()
-                + COMMA + writeVilla.getMaximumNumberOfPeople()
-                + COMMA + writeVilla.getRentalType()
-                + COMMA + writeVilla.getStandardRoom()
-                + COMMA + writeVilla.getDescriptionOfOtherAmenities()
-                + COMMA + writeVilla.getSwimmingPoolArea()
-                + COMMA + writeVilla.getNumberOfFloors();
-        FileUtils.writeFile(FILE_NAME_VILLA, line);
+            line = writeVilla.getId()
+                    + COMMA + writeVilla.getNameService()
+                    + COMMA + writeVilla.getUseArea()
+                    + COMMA + writeVilla.getRentalCosts()
+                    + COMMA + writeVilla.getMaximumNumberOfPeople()
+                    + COMMA + writeVilla.getRentalType()
+                    + COMMA + writeVilla.getStandardRoom()
+                    + COMMA + writeVilla.getDescriptionOfOtherAmenities()
+                    + COMMA + writeVilla.getSwimmingPoolArea()
+                    + COMMA + writeVilla.getNumberOfFloors();
+            FileUtils.writeFile(FILE_NAME_VILLA, line);
         }
     }
 
     public static void addServices() {
-        System.out.print("Nhập id loại phòng thuê: ");
-        id = scanner.nextLine();
+//        boolean check = true;
+//        do {
+            System.out.print("Nhập id loại phòng thuê: ");
+            id = scanner.nextLine();
+//        } while (!regex(id));
+
 
         System.out.print("Nhập Tên dịch vụ: ");
         nameService = scanner.nextLine();
@@ -215,6 +230,7 @@ public class MainController {
 
         System.out.print("Nhập số người thuê( Tối đa 20 người): ");
         maximumNumberOfPeople = Integer.parseInt(scanner.nextLine());
+
         System.out.print("Nhập kiểu thuê (Thuê theo : Ngày, tháng, năm, giờ): ");
         rentalType = scanner.nextLine();
     }
@@ -222,7 +238,7 @@ public class MainController {
     public static void showServices() {
         do {
             System.out.println("-------------------------------------");
-            System.out.println(
+            System.out.print(
                     "\tBạn hãy chọn từ 1-8 \n" +
                             "1.\tShow all Villa\n" +
                             "2.\tShow all House\n" +
@@ -279,7 +295,8 @@ public class MainController {
 
     public static void showAllRoom() {
         System.out.println("-------------------------------------");
-        for (Room room : roomArrayList) {
+        List<String> stringListRoom = FileUtils.readFile(FILE_NAME_ROOM);
+        for (String room : stringListRoom) {
             System.out.println(room);
         }
         System.out.println("-------------------------------------");
@@ -287,7 +304,8 @@ public class MainController {
 
     public static void showAllHouse() {
         System.out.println("-------------------------------------");
-        for (House house : houseArrayList) {
+        List<String> stringListHouse = FileUtils.readFile(FILE_NAME_HOUSE);
+        for (String house : stringListHouse) {
             System.out.println(house);
         }
         System.out.println("-------------------------------------");
@@ -295,7 +313,8 @@ public class MainController {
 
     public static void showAllVilla() {
         System.out.println("-------------------------------------");
-        for (Villa villa : villaArrayList) {
+        List<String> stringListVilla = FileUtils.readFile(FILE_NAME_VILLA);
+        for (String villa : stringListVilla) {
             System.out.println(villa);
         }
         System.out.println("-------------------------------------");
