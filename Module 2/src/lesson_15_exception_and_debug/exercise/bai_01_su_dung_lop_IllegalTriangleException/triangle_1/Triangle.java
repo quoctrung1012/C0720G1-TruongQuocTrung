@@ -1,6 +1,7 @@
-package lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException;
+package lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException.triangle_1;
 
 public class Triangle extends GeometricObject {
+
     protected double side1 = 1.0;
     protected double side2 = 1.0;
     protected double side3 = 1.0;
@@ -20,6 +21,7 @@ public class Triangle extends GeometricObject {
             this.side2 = side2;
             this.side3 = side3;
         }
+
     }
 
     public double getSide1() {
@@ -47,7 +49,6 @@ public class Triangle extends GeometricObject {
 
     @Override
     public String toString() {
-        return "Triangle side 1 = " + side1 + ", side 2 = " + side2 + ", side 3 = " + side3 + "\n" + super.toString();
+        return "Triangle side 1 = " + side1 + ", side 2 = " + side2 + ", side 3 = " + side3;
     }
-
 }

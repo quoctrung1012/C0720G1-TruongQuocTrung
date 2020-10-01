@@ -1,9 +1,9 @@
-package lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException;
+package lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException.triangle_1;
 
 import java.util.Scanner;
 
 public class TriangleWithException {
-    public static void main(String[] args) throws IllegalTriangleException {
+    public static void main(String[] args) throws lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException.triangle_3.IllegalTriangleException {
         Scanner scanner = new Scanner(System.in);
         // create triangle
         Triangle triangle = new Triangle();
@@ -16,11 +16,11 @@ public class TriangleWithException {
 
         while (!done) {
             try {
-                System.out.println("input side1: ");
+                System.out.print("input side1: ");
                 side1 = Double.parseDouble(scanner.nextLine());
-                System.out.println("input side2: ");
+                System.out.print("input side2: ");
                 side2 = Double.parseDouble(scanner.nextLine());
-                System.out.println("input side3: ");
+                System.out.print("input side3: ");
                 side3 = Double.parseDouble(scanner.nextLine());
                 triangle = new Triangle(side1, side2, side3);
                 done = true;

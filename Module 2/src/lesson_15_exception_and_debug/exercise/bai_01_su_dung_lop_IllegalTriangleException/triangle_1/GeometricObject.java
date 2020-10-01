@@ -1,4 +1,4 @@
-package lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException;
+package lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException.triangle_1;
 
 public abstract class GeometricObject {
     private String color = " white ";
