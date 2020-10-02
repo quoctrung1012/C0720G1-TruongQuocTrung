@@ -32,13 +32,15 @@ public class Triangle {
                 double c = scanner.nextDouble();
                 Triangle triangle = new Triangle();
                 triangle.testTriangle(a, b, c);
-//            } catch (IllegalTriangleException ex) {
-//                System.err.println(ex.getMessage());
-//                System.out.println("-------------------------------------------------------------");
+            } catch (IllegalTriangleException ex) {
+                System.err.println(ex.getMessage());
+                System.out.println("-------------------------------------------------------------");
+                scanner.nextLine();
             } catch (InputMismatchException ex) {
                 System.err.println("Input number not String. You should re-enter");
                 System.out.println("Enter new sides");
                 System.out.println("-------------------------------------------------------------");
+                scanner.nextLine();
             }
         }
     }
