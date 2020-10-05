@@ -3,7 +3,7 @@ package lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangl
 import java.util.Scanner;
 
 public class TriangleWithException {
-    public static void main(String[] args) throws lesson_15_exception_and_debug.exercise.bai_01_su_dung_lop_IllegalTriangleException.triangle_3.IllegalTriangleException {
+    public static void main(String[] args) throws IllegalTriangleException {
         Scanner scanner = new Scanner(System.in);
         // create triangle
         Triangle triangle = new Triangle();

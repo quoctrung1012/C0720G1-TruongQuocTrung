@@ -1,11 +1,7 @@
 package test.b;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
+import java.io.*;
+
 import java.util.*;
 
 public class Demo {

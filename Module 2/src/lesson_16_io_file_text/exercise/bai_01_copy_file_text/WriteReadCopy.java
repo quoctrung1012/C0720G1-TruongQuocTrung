@@ -10,8 +10,8 @@ public class WriteReadCopy {
     private static BufferedReader bufferedReader;
     private static BufferedWriter bufferedWriter;
 
-    public static void copyFIleTxt(){
-        InputStream inputStream =null;
+    public static void copyFIleTxt() {
+        InputStream inputStream = null;
         OutputStream outputStream = null;
         try {
             if (true) {
@@ -23,7 +23,7 @@ public class WriteReadCopy {
                     outputStream.write(buffer, 0, length);
                 }
                 System.out.println("File is copied successful!");
-            }   else {
+            } else {
                 System.out.println("File is copied unsuccessful!");
             }
         } catch (FileNotFoundException e) {
@@ -46,6 +46,7 @@ public class WriteReadCopy {
             e.printStackTrace();
         }
     }
+
     public static List<String> readFile(String pathFile) {
         List<String> listLine = new ArrayList<>();
         try {
@@ -62,6 +63,4 @@ public class WriteReadCopy {
         }
         return listLine;
     }
-
-
 }

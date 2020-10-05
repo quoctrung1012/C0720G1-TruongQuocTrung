@@ -11,15 +11,15 @@ public class CopyFileIO {
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
         if (true) {
-        String line = null;
-        while ((line = bufferedReader.readLine())!=null){
-            bufferedWriter.write(line);
-            bufferedWriter.newLine();
-        }
-        bufferedWriter.close();
-        bufferedReader.close();
+            String line = null;
+            while ((line = bufferedReader.readLine()) != null) {
+                bufferedWriter.write(line);
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+            bufferedReader.close();
             System.out.println("File is copied successful!");
-        }   else {
+        } else {
             System.out.println("File is copied unsuccessful!");
         }
     }
