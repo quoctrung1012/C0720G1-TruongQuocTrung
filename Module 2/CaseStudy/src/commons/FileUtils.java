@@ -47,7 +47,7 @@ public class FileUtils {
         // add tail file:
         stringBuffer.append(StringUtils.CSV);
 
-        FileUtils.pathFile = pathFile.toString();
+        FileUtils.pathFile = stringBuffer.toString();
     }
 
 }
