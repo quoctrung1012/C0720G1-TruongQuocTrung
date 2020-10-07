@@ -2,6 +2,6 @@ package exceptions;
 
 public class GenderException extends Exception{
     public GenderException(){
-        super("Gender must be Male, Female or Unknown.");
+        super("\nGender must be Male, Female or Unknown.");
     }
 }

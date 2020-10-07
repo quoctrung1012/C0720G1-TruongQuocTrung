@@ -25,9 +25,10 @@ public class Room extends Services {
 
     @Override
     public String toString() {
-        return "Room{" +
-                "extraServices=" + extraServices +
-                "} " + super.toString();
+        return "Room\n "
+                + super.toString()
+                + "\nExtra Services: " + extraServices
+                + "\n-------------------------------------";
     }
 
     @Override

@@ -3,14 +3,17 @@ package commons;
 import exceptions.*;
 
 import java.time.Year;
-import java.util.Arrays;
+import java.util.*;
 import java.util.regex.*;
 
 public class Validate {
     public static final String SERVICE_CODE_REGEX = "SV(VL|HO|RO)-[\\d]{4}";
-    public static final String SERVICE_NAME_REGEX = "[A-Z][a-z]*";
-    public static final String ID_CARD_REGEX = "[\\d]{3} [\\d]{3} [\\d]{3} ";
+    public static final String SERVICE_NAME_REGEX = "[A-Z][a-z]+(\\s[A-Z][a-z]*)*";
+    public static final String ID_CARD_REGEX = "[\\d]{3}\\s[\\d]{3}\\s[\\d]{3}";
     public static final String DAY_REGEX = "[\\d]{2}/[\\d]{2}/[\\d]{4}";
+    public static final String EXTRA_SERVICE_REGEX = "^(massage|karaoke|food|drink|car)$";
+    public static final String GENDER_REGEX = "^(male|female|unknown|Male|Female|Unknown)$";
+
     private static Pattern pattern;
     private static Matcher matcher;
 
@@ -117,11 +120,19 @@ public class Validate {
 
     public static void isValidGender(String gender) throws GenderException {
         String[] list = {"male", "female", "unknown"};
-        if (Arrays.asList(list).contains(gender.toLowerCase())) {
+        if (!Arrays.asList(list).contains(gender.toLowerCase())) {
             throw new GenderException();
         }
     }
 
+    public static void validGender(String regex){
+        pattern = Pattern.compile(GENDER_REGEX);
+        matcher = pattern.matcher(regex);
+        if (!matcher.matches() == false){
+
+        }
+
+    }
     public static void isValidIdCard(String idCard) throws IdCardException {
         if (!isValidRegex(idCard, Validate.ID_CARD_REGEX)) {
             throw new IdCardException();

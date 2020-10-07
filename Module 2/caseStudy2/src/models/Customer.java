@@ -1,11 +1,13 @@
 package models;
 
-public class Customer {
+import java.util.Comparator;
+
+public class Customer implements Comparable<Customer> {
     private String fullName;
     private String dateOfBirth;
     private String genderCustomer;
-    private int numberIdCard;
-    private int phoneNumber;
+    private String numberIdCard;
+    private String phoneNumber;
     private String emailCustomer;
     private String typeOfCustomer;
     private String addressCustomer;
@@ -14,7 +16,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String fullName, String dateOfBirth, String genderCustomer, int numberIdCard, int phoneNumber, String emailCustomer, String typeOfCustomer, String addressCustomer, Services services) {
+    public Customer(String fullName, String dateOfBirth, String genderCustomer, String numberIdCard, String phoneNumber, String emailCustomer, String typeOfCustomer, String addressCustomer, Services services) {
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
         this.genderCustomer = genderCustomer;
@@ -50,19 +52,19 @@ public class Customer {
         this.genderCustomer = genderCustomer;
     }
 
-    public int getNumberIdCard() {
+    public String getNumberIdCard() {
         return numberIdCard;
     }
 
-    public void setNumberIdCard(int numberIdCard) {
+    public void setNumberIdCard(String numberIdCard) {
         this.numberIdCard = numberIdCard;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -100,20 +102,31 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "fullName='" + fullName + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", genderCustomer='" + genderCustomer + '\'' +
-                ", numberIdCard=" + numberIdCard +
-                ", phoneNumber=" + phoneNumber +
-                ", emailCustomer='" + emailCustomer + '\'' +
-                ", typeOfCustomer='" + typeOfCustomer + '\'' +
-                ", addressCustomer='" + addressCustomer + '\'' +
-                ", services=" + services +
-                '}';
+        return "Customer:" +
+                "\nFull Name Customer: " + fullName +
+                "\nDate Of Birth: " + dateOfBirth +
+                "\nGender Customer: " + genderCustomer +
+                "\nNumber Id Card: " + numberIdCard +
+                "\nPhone Number: " + phoneNumber +
+                "\nEmail Customer: " + emailCustomer +
+                "\nType Of Customer: " + typeOfCustomer +
+                "\nAddress Customer: " + addressCustomer +
+                "\nService: " + services +
+                "\n-------------------------------------";
     }
 
-    public void showInFor(){
+    public void showInFor() {
         System.out.println(this.toString());
+    }
+
+    @Override
+    public int compareTo(Customer second) {
+        int result = this.fullName.compareTo(second.fullName);
+        if (result == 0) {
+            int yearCustomerFist = Integer.parseInt(this.dateOfBirth.split("/")[2]);
+            int yearCustomerSecond = Integer.parseInt(this.dateOfBirth.split("/")[2]);
+            return yearCustomerFist - yearCustomerSecond;
+        }
+        return result;
     }
 }
