@@ -15,7 +15,7 @@ public class MainController {
     public static String BOOKING = "booking";
     public static String EMPLOYEE = "employee";
     public static int choose;
-    public static final Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         do {
@@ -39,8 +39,9 @@ public class MainController {
                             "5.\tAdd New Booking\n" +
                             "6.\tShow Information of Employee\n" +
                             "7.\tShow Movie Ticket List\n" +
-                            "8.\tFind Employee Information In File Cabinets()\n" +
-                            "9.\tExit\n");
+                            "8.\tFind Employee Information In File Cabinets\n" +
+                            "9.\tSearch\n" +
+                            "10.\tExit\n");
             System.out.println("-------------------------------------");
             System.out.print("\tInput number your choice: ");
             choose = Integer.parseInt(scanner.nextLine());
@@ -70,6 +71,9 @@ public class MainController {
                     FilingCabinets.findEmployeeInformationInFileCabinets();
                     break;
                 case 9:
+                    searchCustomer();
+                    break;
+                case 10:
                     System.exit(0);
                     break;
                 default:
@@ -166,7 +170,8 @@ public class MainController {
     private static void addNewBooking() {
         List<Customer> customerList = readAllCustomer(CUSTOMER);
         showInformationCustomers(CUSTOMER);
-        System.out.println("Please customer choose from 1 -3 booking services resort: ");
+
+        System.out.print("Please choose customer booking services resort: ");
         int inputCustomer = Integer.parseInt(scanner.nextLine());
         System.out.println("-------------------------------------");
         System.out.print(
@@ -176,9 +181,9 @@ public class MainController {
                         "3.\tBooking Room\n");
         System.out.println("-------------------------------------");
         System.out.print("\tInput number your choice: ");
+        int inputTypeServices = Integer.parseInt(scanner.nextLine());
         List<Services> servicesList = null;
-        int typeServices = Integer.parseInt(scanner.nextLine());
-        switch (typeServices) {
+        switch (inputTypeServices) {
             case 1:
                 servicesList = readAllServices(VILLA);
                 showAllServices(VILLA);
@@ -201,10 +206,12 @@ public class MainController {
                 System.out.println("\tPlease again input number!!");
                 displayMainMenu();
         }
+        System.out.print("Please choose service to booking: ");
         int inputServices = Integer.parseInt(scanner.nextLine());
 
         Customer customer = customerList.get(inputCustomer - 1);
         customer.setServices(servicesList.get(inputServices - 1));
+
         FileUtils.setFullPathFile(BOOKING);
         FileUtils.writeFile(new String[]{customer.toString()});
         System.out.println("Booking is done!!!" +
@@ -250,6 +257,7 @@ public class MainController {
         } while (!Validate.isValidRegexName(rentalType, Validate.SERVICE_NAME_REGEX));
 
         FileUtils.setFullPathFile(fileName);
+
         if (fileName.equals(VILLA)) {
 
             String standardRoom = null;
@@ -370,7 +378,7 @@ public class MainController {
         Services services = null;
         for (int i = 0; i < servicesList.size(); i++) {
             services = servicesList.get(i);
-            System.out.println((i + 1) + ". ");
+            System.out.print("No."+(i + 1) + ": ");
             services.showInFor();
         }
     }
@@ -522,7 +530,6 @@ public class MainController {
             }
         } while (!flag);
 
-
         System.out.print("Please input phone number: ");
         phoneNumber = scanner.nextLine();
 
@@ -552,7 +559,10 @@ public class MainController {
     private static void showMovieTicketList() {
         Queue<Customer> customerQueue = new LinkedList<>();
         List<Customer> customerList = readAllCustomer(CUSTOMER);
-        showInformationCustomers(CUSTOMER);
+        //showInformationCustomers(CUSTOMER);
+
+        System.out.println("Please input number customer buy ticket: ");
+        int numberCustomerBuyTicket = scanner.nextInt();
 
         customerQueue.add(customerList.get(5));
         customerQueue.add(customerList.get(3));
@@ -566,6 +576,22 @@ public class MainController {
             customer = customerQueue.poll();
             customer.showInFor();
         }
+    }
+
+    private static void searchCustomer() {
+        System.out.print("Please input number id card: ");
+        String valueIdCardCustomer = scanner.nextLine();
+
+        List<Customer> customerList = readAllCustomer(CUSTOMER);
+        for (int i = 0; i < customerList.size(); i++) {
+//            boolean idCardTest = ;
+            if (valueIdCardCustomer.equals(customerList.get(i).getNumberIdCard())) {
+                System.out.println(customerList.get(i).toString());
+            } else {
+                System.out.println("Not found");
+            }
+        }
+
     }
 }
 

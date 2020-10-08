@@ -116,6 +116,7 @@ public class Validate {
         if (countPoint == 0) {
             throw new EmailException();
         }
+
     }
 
     public static void isValidGender(String gender) throws GenderException {
@@ -133,6 +134,7 @@ public class Validate {
         }
 
     }
+
     public static void isValidIdCard(String idCard) throws IdCardException {
         if (!isValidRegex(idCard, Validate.ID_CARD_REGEX)) {
             throw new IdCardException();

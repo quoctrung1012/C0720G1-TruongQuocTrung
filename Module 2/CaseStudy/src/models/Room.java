@@ -3,25 +3,32 @@ package models;
 import java.time.LocalDateTime;
 
 public class Room extends Services {
-    private String freeServiceIncluded = "";
     private ExtraServices extraServices;
 
-    public Room(String freeServiceIncluded, ExtraServices extraServices) {
-        this.freeServiceIncluded = freeServiceIncluded;
+    public Room(String s, String s1, double v, double parseDouble, int i, String s2, String s3, ExtraServices extraServices) {
+    }
+
+    public Room(ExtraServices extraServices) {
         this.extraServices = extraServices;
     }
 
-    public Room(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, String freeServiceIncluded) {
+    public Room(String id, String nameService, double useArea, double rentalCosts, int maximumNumberOfPeople, String rentalType, ExtraServices extraServices) {
         super(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType);
-        this.freeServiceIncluded = freeServiceIncluded;
+        this.extraServices = extraServices;
+    }
+
+    public ExtraServices getExtraServices() {
+        return extraServices;
+    }
+
+    public void setExtraServices(ExtraServices extraServices) {
         this.extraServices = extraServices;
     }
 
     @Override
     public String toString() {
         return "Room{" +
-                "freeServiceIncluded='" + freeServiceIncluded + '\'' +
-                ", extraServices=" + extraServices +
+                "extraServices=" + extraServices +
                 "} " + super.toString();
     }
 
