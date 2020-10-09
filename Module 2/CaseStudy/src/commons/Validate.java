@@ -14,8 +14,6 @@ public class Validate {
     public static final String SERVICE_HOUSE_REGEX = "SVHO-[\\d]{4}";
     public static final String SERVICE_ROOM_REGEX = "SVRO-[\\d]{4}";
     public static final String SERVICE_STRING_REGEX = "[A-Z][a-z]+(\\s[A-Z][a-z]*)*";
-    public static final String SERVICE_STRING_REGEX_2 = "^\\p{L}\\s\\p{L}*";
-    public static final String SERVICE_TYPE_RENTAL = "^(Năm|Tháng|Ngày|Giờ)$";
     public static final String SERVICE_QUALITY_RENTAL = "^(Villa|House|Room)$";
     public static final String EXTRA_SERVICE_REGEX = "^(Massage|Karaoke|Food|Drink|Car)$";
     public static final String CUSTOMER_DAY_REGEX = "[\\d]{2}/[\\d]{2}/[\\d]{4}";
@@ -23,18 +21,18 @@ public class Validate {
     public static final String CUSTOMER_GENDER_REGEX = "^(male|female|unknown|Male|Female|Unknown)$";
     public static final String CUSTOMER_QUALITY_CUSTOMER = "^(Diamond|Platinium|Gold|Silver|Member)$";
     public static final String CUSTOMER_NUMBER_PHONE = "0\\d{9}";
-    public static final String CUSTOMER_EMAIL ="^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+    public static final String CUSTOMER_EMAIL = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 
-    public static boolean isValidRegex(String stringInput, String regex) {
-        pattern = Pattern.compile(regex);
-        matcher = pattern.matcher(stringInput);
-
-        boolean flag = matcher.matches();
-        if (!flag) {
-            System.out.println("Input not matching. " + regex);
-        }
-        return flag;
-    }
+//    public static boolean isValidRegex(String stringInput, String regex) {
+//        pattern = Pattern.compile(regex);
+//        matcher = pattern.matcher(stringInput);
+//
+//        boolean flag = matcher.matches();
+//        if (!flag) {
+//            System.out.println("Input not matching. " + regex);
+//        }
+//        return flag;
+//    }
 
     public static boolean validateVilla(String stringInput, String regex) {
         pattern = Pattern.compile(regex);
@@ -93,9 +91,9 @@ public class Validate {
         return flag;
     }
 
-    public static boolean isExtraServices(String extraServices, String regex) {
-        Pattern pattern = Pattern.compile(extraServices);
-        Matcher matcher = pattern.matcher(regex);
+    public static boolean isExtraServices(String stringInput, String regex) {
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(stringInput);
         boolean flag = matcher.matches();
         if (!flag) {
             System.out.println("Resort chỉ cung cấp những dịch vụ: massage, karaoke, thức ăn, nước uống, thuê xe: ");
@@ -123,7 +121,7 @@ public class Validate {
         return flag;
     }
 
-        public static boolean isQualityCustomer(String stringInput, String regex) {
+    public static boolean isQualityCustomer(String stringInput, String regex) {
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(stringInput);
         boolean flag = matcher.matches();
@@ -132,6 +130,7 @@ public class Validate {
         }
         return flag;
     }
+
     public static boolean checkNameCustomer(String stringInput, String regex) throws NameException {
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(stringInput);
@@ -187,11 +186,12 @@ public class Validate {
         }
         return flag;
     }
-    public static boolean checkNumberPhone(String stringInput, String regex){
+
+    public static boolean checkNumberPhone(String stringInput, String regex) {
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(stringInput);
         boolean flag = matcher.matches();
-        if (!flag){
+        if (!flag) {
             System.out.println("Yêu cầu bạn điền số điện thoại gồm 9 chữ số: ");
         }
         return flag;

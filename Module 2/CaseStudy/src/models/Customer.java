@@ -101,16 +101,15 @@ public class Customer implements Comparable<Customer> {
     @Override
     public String toString() {
         return "Customer:" +
-                "\tFull Name Customer: " + fullName +
-                "\tDate Of Birth: " + dateOfBirth +
-                "\tGender Customer: " + genderCustomer +
-                "\tNumber Id Card: " + numberIdCard +
-                "\tPhone Number: " + phoneNumber +
-                "\tEmail Customer: " + emailCustomer +
-                "\tType Of Customer: " + typeOfCustomer +
-                "\tAddress Customer: " + addressCustomer +
-                "\tService: " + services +
-                "\n-------------------------------------";
+                "Full Name Customer: " + fullName +
+                ",Date Of Birth: " + dateOfBirth +
+                ",Gender Customer: " + genderCustomer +
+                ",Number Id Card: " + numberIdCard +
+                ",Phone Number: " + phoneNumber +
+                ",Email Customer: " + emailCustomer +
+                ",Type Of Customer: " + typeOfCustomer +
+                ",Address Customer: " + addressCustomer +
+                ",Service: " + services;
     }
 
     public void showInFor() {

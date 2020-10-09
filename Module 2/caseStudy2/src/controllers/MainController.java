@@ -559,10 +559,10 @@ public class MainController {
     private static void showMovieTicketList() {
         Queue<Customer> customerQueue = new LinkedList<>();
         List<Customer> customerList = readAllCustomer(CUSTOMER);
-        //showInformationCustomers(CUSTOMER);
+        showInformationCustomers(CUSTOMER);
 
-        System.out.println("Please input number customer buy ticket: ");
-        int numberCustomerBuyTicket = scanner.nextInt();
+        //System.out.println("Please input number customer buy ticket: ");
+        //int numberCustomerBuyTicket = scanner.nextInt();
 
         customerQueue.add(customerList.get(5));
         customerQueue.add(customerList.get(3));

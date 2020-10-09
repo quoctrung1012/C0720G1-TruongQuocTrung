@@ -28,29 +28,38 @@ public class MainController {
     public static final String FILE_NAME_ROOM = "src/data/room.csv";
     public static final String FILE_NAME_CUSTOMER = "src/data/customer.csv";
     public static final String FILE_NAME_EMPLOYEE = "src/data/employee.csv";
+    public static final String FILE_NAME_BOOKING = "src/data/booking.csv";
     public static final String COMMA = ",";
 
     public static ArrayList<Room> roomArrayList = new ArrayList<>();
     public static ArrayList<House> houseArrayList = new ArrayList<>();
     public static ArrayList<Villa> villaArrayList = new ArrayList<>();
     public static ArrayList<Customer> customerArrayList = new ArrayList<>();
-    Map<String, Employee> employeeTreeMap = new TreeMap<>();
+    public static Map<String, Employee> stringEmployeeMap = new HashMap<>();
+    public static Queue<Customer> customerQueue = new LinkedList<>();
+    public static Stack<Employee> employeeStack = new Stack<>();
 
     public static void displayMainMenu() {
         do {
             System.out.println("-------------------------------------");
             System.out.print(
-                    "\tBạn hãy chọn từ 1-7\n" +
-                            "1.\tAdd New Services\n" +
-                            "2.\tShow Services\n" +
-                            "3.\tAdd New Customer\n" +
-                            "4.\tShow Information of Customer\n" +
-                            "5.\tAdd New Booking\n" +
-                            "6.\tShow Information of Employee\n" +
-                            "7.\tExit\n");
+                    "\tBạn hãy chọn từ 1-7.\n" +
+                            "01.\tAdd New Services.\n" +
+                            "02.\tShow Services.\n" +
+                            "03.\tAdd New Customer.\n" +
+                            "04.\tShow Information of Customer.\n" +
+                            "05.\tAdd New Booking.\n" +
+                            "07.\tShow Information of Employee.\n" +
+                            "08.\tMenu buy ticket movie 4D.\n" +
+                            "09.\tFind Employee Information In File Cabinets\n" +
+                            "10.\tExit.\n");
             System.out.println("-------------------------------------");
-            System.out.print("Nhập sự lựa chọn của bạn: ");
-            choose = Integer.parseInt(scanner.nextLine());
+            try {
+                System.out.print("Nhập sự lựa chọn của bạn: ");
+                choose = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.err.println("Yêu cầu bạn nhập số không nhập ký tự khác.");
+            }
             switch (choose) {
                 case 1:
                     addNewServices();
@@ -68,16 +77,25 @@ public class MainController {
                     addNewBooking();
                     break;
                 case 6:
-                    showInformationOfEmployee();
+                    addNewEmployee();
                     break;
                 case 7:
+                    showInformationOfEmployee();
+                    break;
+                case 8:
+                    menuMovieTicketList();
+                    break;
+                case 9:
+                    findEmployeeInformationInFileCabinets();
+                    break;
+                case 10:
                     System.exit(0);
                     break;
                 default:
                     System.out.println("Yêu cầu nhập sự lựa chọn khác.");
                     displayMainMenu();
             }
-        } while (choose >= 1 && choose <= 7);
+        } while (choose >= 1 && choose <= 10);
     }
 
     public static void addNewServices() {
@@ -91,8 +109,12 @@ public class MainController {
                             "4.\tBack to menu\n" +
                             "5.\tExit\n");
             System.out.println("-------------------------------------");
-            System.out.print("Nhập sự lựa chọn của bạn: ");
-            choose = Integer.parseInt(scanner.nextLine());
+            try {
+                System.out.print("Nhập sự lựa chọn của bạn: ");
+                choose = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.err.println("Yêu cầu bạn nhập số không nhập ký tự khác.");
+            }
             switch (choose) {
                 case 1:
                     addNewVilla();
@@ -117,36 +139,7 @@ public class MainController {
     }
 
     public static void addNewRoom() {
-        do {
-            System.out.print("Nhập id loại phòng thuê: ");
-            id = scanner.nextLine();
-        } while (!Validate.validateRoom(id, Validate.SERVICE_ROOM_REGEX));
-
-        do {
-            System.out.print("Nhập Tên dịch vụ: ");
-            nameService = scanner.nextLine();
-        } while (!Validate.isValidRegexString(nameService, Validate.SERVICE_STRING_REGEX));
-
-        do {
-            System.out.print("Nhập diện tích phòng(lớn hơn 30 mét vuông): ");
-            useArea = Double.parseDouble(scanner.nextLine());
-        } while (!Validate.isMoreThan(useArea, 30));
-
-        do {
-            System.out.print("Nhập chi phí thuê: ");
-            rentalCosts = Double.parseDouble(scanner.nextLine());
-        } while (!Validate.isMoreThan(useArea, 0));
-
-        do {
-            System.out.print("Nhập số người thuê( Tối đa 20 người): ");
-            maximumNumberOfPeople = Integer.parseInt(scanner.nextLine());
-        } while (!Validate.isMoreThanMid(maximumNumberOfPeople, 0, 20));
-
-        do {
-            System.out.print("Nhập kiểu thuê (Thuê theo : Ngày, tháng, năm, giờ): ");
-            rentalType = scanner.nextLine();
-        } while (!Validate.isTypeRents(rentalType, Validate.SERVICE_TYPE_RENTAL));
-
+        addNewInformationServices();
         do {
             System.out.print("Nhập tên dịch vụ đi kèm(Massage, Karaoke, Food, Drink, Car): ");
             nameExtraServices = scanner.nextLine();
@@ -182,43 +175,14 @@ public class MainController {
     }
 
     public static void addNewHouse() {
-        do {
-            System.out.print("Nhập id loại phòng thuê: ");
-            id = scanner.nextLine();
-        } while (!Validate.validateHouse(id, Validate.SERVICE_HOUSE_REGEX));
-
-        do {
-            System.out.print("Nhập Tên dịch vụ: ");
-            nameService = scanner.nextLine();
-        } while (!Validate.isValidRegexString(nameService, Validate.SERVICE_STRING_REGEX));
-
-        do {
-            System.out.print("Nhập diện tích phòng(lớn hơn 30 mét vuông): ");
-            useArea = Double.parseDouble(scanner.nextLine());
-        } while (!Validate.isMoreThan(useArea, 30));
-
-        do {
-            System.out.print("Nhập chi phí thuê: ");
-            rentalCosts = Double.parseDouble(scanner.nextLine());
-        } while (!Validate.isMoreThan(rentalCosts, 0));
-
-        do {
-            System.out.print("Nhập số người thuê( Tối đa 20 người): ");
-            maximumNumberOfPeople = Integer.parseInt(scanner.nextLine());
-        } while (!Validate.isMoreThanMid(maximumNumberOfPeople, 0, 20));
-
-        do {
-            System.out.print("Nhập kiểu thuê (Thuê theo : Ngày, tháng, năm, giờ): ");
-            rentalType = scanner.nextLine();
-        } while (!Validate.isTypeRents(rentalType, Validate.SERVICE_TYPE_RENTAL));
-
+        addNewInformationServices();
         do {
             System.out.print("Nhập Tiêu chuẩn phòng: ");
             standardRoom = scanner.nextLine();
         } while (!Validate.isQualityRents(standardRoom, Validate.SERVICE_QUALITY_RENTAL));
 
         do {
-            System.out.print("Nhập tên dịch vụ đi kèm(Massage, Karaoke, Food, Drink, Car");
+            System.out.print("Nhập tên dịch vụ đi kèm(Massage, Karaoke, Food, Drink, Car): ");
             descriptionOfOtherAmenities = scanner.nextLine();
         } while (!Validate.isExtraServices(descriptionOfOtherAmenities, Validate.EXTRA_SERVICE_REGEX));
 
@@ -248,43 +212,14 @@ public class MainController {
     }
 
     public static void addNewVilla() {
-        do {
-            System.out.print("Nhập id loại phòng thuê: ");
-            id = scanner.nextLine();
-        } while (!Validate.validateVilla(id, Validate.SERVICE_VILLA_REGEX));
-
-        do {
-            System.out.print("Nhập Tên dịch vụ: ");
-            nameService = scanner.nextLine();
-        } while (!Validate.isValidRegexString(nameService, Validate.SERVICE_STRING_REGEX));
-
-        do {
-            System.out.print("Nhập diện tích phòng(lớn hơn 30 mét vuông): ");
-            useArea = Double.parseDouble(scanner.nextLine());
-        } while (!Validate.isMoreThan(useArea, 30));
-
-        do {
-            System.out.print("Nhập chi phí thuê: ");
-            rentalCosts = Double.parseDouble(scanner.nextLine());
-        } while (!Validate.isMoreThan(rentalCosts, 0));
-
-        do {
-            System.out.print("Nhập số người thuê( Tối đa 20 người): ");
-            maximumNumberOfPeople = Integer.parseInt(scanner.nextLine());
-        } while (!Validate.isMoreThanMid(maximumNumberOfPeople, 0, 20));
-
-        do {
-            System.out.print("Nhập kiểu thuê (Thuê theo : Ngày, tháng, năm, giờ): ");
-            rentalType = scanner.nextLine();
-        } while (!Validate.isTypeRents(rentalType, Validate.SERVICE_TYPE_RENTAL));
-
+        addNewInformationServices();
         do {
             System.out.print("Nhập Tiêu chuẩn phòng: ");
             standardRoom = scanner.nextLine();
         } while (!Validate.isQualityRents(standardRoom, Validate.SERVICE_QUALITY_RENTAL));
 
         do {
-            System.out.print("Nhập tên dịch vụ đi kèm(Massage, Karaoke, Food, Drink, Car");
+            System.out.print("Nhập tên dịch vụ đi kèm(Massage, Karaoke, Food, Drink, Car): ");
             descriptionOfOtherAmenities = scanner.nextLine();
         } while (!Validate.isExtraServices(descriptionOfOtherAmenities, Validate.EXTRA_SERVICE_REGEX));
 
@@ -317,6 +252,39 @@ public class MainController {
                     + COMMA + writeVilla.getNumberOfFloors();
             FileUtils.writeFile(FILE_NAME_VILLA, line);
         }
+    }
+
+    public static void addNewInformationServices(){
+        do {
+            System.out.print("Nhập id loại phòng thuê: ");
+            id = scanner.nextLine();
+        } while (!Validate.validateVilla(id, Validate.SERVICE_VILLA_REGEX));
+
+        do {
+            System.out.print("Nhập Tên dịch vụ: ");
+            nameService = scanner.nextLine();
+        } while (!Validate.isValidRegexString(nameService, Validate.SERVICE_STRING_REGEX));
+
+        do {
+            System.out.print("Nhập diện tích phòng(lớn hơn 30 mét vuông): ");
+            useArea = Double.parseDouble(scanner.nextLine());
+        } while (!Validate.isMoreThan(useArea, 30));
+
+        do {
+            System.out.print("Nhập chi phí thuê: ");
+            rentalCosts = Double.parseDouble(scanner.nextLine());
+        } while (!Validate.isMoreThan(rentalCosts, 0));
+
+        do {
+            System.out.print("Nhập số người thuê( Tối đa 20 người): ");
+            maximumNumberOfPeople = Integer.parseInt(scanner.nextLine());
+        } while (!Validate.isMoreThanMid(maximumNumberOfPeople, 0, 20));
+
+        do {
+            System.out.print("Nhập kiểu thuê (Thuê theo : Ngày, tháng, năm, giờ): ");
+            rentalType = scanner.nextLine();
+        } while (!Validate.isTypeRents(rentalType, Validate.SERVICE_STRING_REGEX));
+
     }
 
     public static void showServices() {
@@ -408,7 +376,6 @@ public class MainController {
         List<String> stringListRoom = FileUtils.readFile(FILE_NAME_ROOM);
         int index = 1;
         for (String string : stringListRoom) {
-//           System.out.println(string);
             String[] stringSplit = string.split(COMMA);
             Room room = new Room(stringSplit[0], stringSplit[1], Double.parseDouble(stringSplit[2]),
                     Double.parseDouble(stringSplit[3]), Integer.parseInt(stringSplit[4]), stringSplit[5],
@@ -560,45 +527,218 @@ public class MainController {
         }
     }
 
-    public static void showInformationCustomers() {
+    public static List<Customer> readCustomer() {
         List<String> stringListCustomer = FileUtils.readFile(FILE_NAME_CUSTOMER);
-        int index = 1;
 
         for (String string : stringListCustomer) {
             String[] stringSplit = string.split(COMMA);
             Customer customer = new Customer(stringSplit[0], stringSplit[1], stringSplit[2], stringSplit[3],
                     stringSplit[4], stringSplit[5], stringSplit[6], stringSplit[7], null);
-
             customerArrayList.add(customer);
-
         }
         Collections.sort(customerArrayList);
+        return customerArrayList;
+    }
+
+    public static void showInformationCustomers() {
+        customerArrayList = new ArrayList<>();
+        int index = 1;
+        customerArrayList = (ArrayList<Customer>) readCustomer();
+        System.out.println("-------------------------------------");
+        System.out.println("Danh sách khách hàng đã và đang lưu trú tại resort: ");
         for (Customer customer : customerArrayList) {
-            //System.out.println(index++ + ". " + customer.toString());
             System.out.print("No." + index++ + ": ");
             customer.showInFor();
         }
     }
 
     public static void addNewBooking() {
+        showInformationCustomers();
+        System.out.println("Chọn vị trí khách hàng muốn lại booking ");
+        int iPositionCustomer = Integer.parseInt(scanner.nextLine());
+        System.out.println("-------------------------------------");
+        System.out.print(
+                "\tBạn hãy chọn từ 1-5\n" +
+                        "1.\tBooking Villa\n" +
+                        "2.\tBooking House\n" +
+                        "3.\tBooking Room\n" +
+                        "4.\tBack Menu\n" +
+                        "5.\tExit");
+        try {
+            System.out.print("Nhập sự lựa chọn của bạn: ");
+            choose = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.err.println("Yêu cầu bạn nhập số không nhập ký tự khác.");
+        }
+        int iTypeServices = Integer.parseInt(scanner.nextLine());
+        do {
+            switch (iTypeServices) {
+                case 1:
+                    showAllVilla();
+                    System.out.print("Chọn villa muốn thuê: ");
+                    addFileBooking(iPositionCustomer);
+                    break;
+                case 2:
+                    showAllHouse();
+                    System.out.print("Chọn House muốn thuê: ");
+                    addFileBooking(iPositionCustomer);
+                    break;
+                case 3:
+                    showAllRoom();
+                    System.out.print("Chọn Room muốn thuê: ");
+                    addFileBooking(iPositionCustomer);
+                    break;
+                case 4:
+                    displayMainMenu();
+                    break;
+                case 5:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.print("Nhập lại!!!");
+            }
+        } while (true);
+
+    }
+
+    public static void addFileBooking(int iPositionCustomer) {
+        int numberInput = Integer.parseInt(scanner.nextLine());
+        customerArrayList.get(iPositionCustomer - 1).setServices(villaArrayList.get(numberInput - 1));
+        String line = null;
+        line = customerArrayList.get(iPositionCustomer - 1).getFullName() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getDateOfBirth() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getGenderCustomer() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getNumberIdCard() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getPhoneNumber() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getEmailCustomer() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getTypeOfCustomer() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getAddressCustomer() + COMMA +
+                customerArrayList.get(iPositionCustomer - 1).getServices();
+        FileUtils.writeFile(FILE_NAME_BOOKING, line);
+    }
+
+    public static void addNewEmployee() {
     }
 
     public static void showInformationOfEmployee() {
-        List<String> stringListEmployee = FileUtils.readFile(FILE_NAME_EMPLOYEE);
-
-//        for (String stringEmployee : stringListEmployee) {
-//            String[] arrayEmployee = stringEmployee.split(COMMA);
-//            Employee employee = new Employee(arrayEmployee[0],arrayEmployee[1],arrayEmployee[2],arrayEmployee[3]);
-//            stringEmployeeMap.put(arrayEmployee[0], employee);
-//        }
-//        System.out.println("-------------------------------------");
-//        System.out.println("Danh sách khách hàng đã và đang lưu trú tại resort: ");
-//        for (String employeeEntry : stringEmployeeMap.keySet()) {
-//            System.out.println("Key: " + employeeEntry + "\n" + stringEmployeeMap.get(employeeEntry));
-//        }
+        getFileInformationOfEmployee();
+        System.out.println("-------------------------------------");
+        System.out.println("Danh sách nhân viên đang làm việc tại resort: ");
+        for (Map.Entry<String, Employee> employeeEntry : stringEmployeeMap.entrySet()) {
+            System.out.println("Key: " + employeeEntry.getKey() + "\n" + employeeEntry.getValue().toString());
+        }
     }
 
+    public static Map<String, Employee> getFileInformationOfEmployee() {
+        List<String> stringListEmployee = FileUtils.readFile(FILE_NAME_EMPLOYEE);
+        for (String stringEmployee : stringListEmployee) {
+            String[] arrayEmployee = stringEmployee.split(COMMA);
+            Employee employee = new Employee();
+            employee.setIdEmployee(arrayEmployee[0]);
+            employee.setFullNameEmployee(arrayEmployee[1]);
+            employee.setAgeEmployee(arrayEmployee[2]);
+            employee.setIdCardEmployee(arrayEmployee[3]);
+            employee.setPhoneNumberEmployee(arrayEmployee[4]);
+            employee.setEmailEmployee(arrayEmployee[5]);
+            employee.setAcademicLevelEmployee(arrayEmployee[6]);
+            employee.setPositionEmployee(arrayEmployee[7]);
+            employee.setSalaryEmployee(arrayEmployee[8]);
+            employee.setAddressEmployee(arrayEmployee[9]);
 
+            stringEmployeeMap.put(employee.getIdEmployee(), employee);
+        }
+        return stringEmployeeMap;
+    }
+
+    public static void menuMovieTicketList() {
+        do {
+            System.out.println("Menu buy ticket movie 4D:\n" +
+                    "1.\tBuy ticket movie 4D.\n" +
+                    "2.\tList Customer buy ticket movie 4D.\n" +
+                    "3.\tBack Menu.\n" +
+                    "4.\tExit.");
+            try {
+                System.out.print("Sự lựa chọn của bạn: ");
+                choose = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.err.print("\tYêu cầu nhập số. Bạn đang nhập một chuỗi: ");
+            } catch (IndexOutOfBoundsException e) {
+                System.err.println("Bạn đã nhập nằm ngoài danh sách để chọn.");
+            }
+            switch (choose) {
+                case 1:
+                    bookingTicket();
+                    break;
+                case 2:
+                    showMovieTicketList();
+                    break;
+                case 3:
+                    displayMainMenu();
+                    break;
+                case 4:
+                    System.exit(0);
+            }
+        } while (choose >= 1 && choose <= 4);
+    }
+
+    private static void showMovieTicketList() {
+        Customer customer = null;
+
+        System.out.println("-------------------------------------");
+        System.out.println("Danh sách khách hàng mua vé xem phim 4D: ");
+        while (!customerQueue.isEmpty()) {
+            customer = customerQueue.poll();
+            customer.showInFor();
+
+        }
+    }
+
+    public static void bookingTicket() {
+        showInformationCustomers();
+        try {
+            System.out.print("\nVui lòng nhập số lượng khách hàng cần đăng ký: ");
+            int index = 1;
+            int number = Integer.parseInt(scanner.nextLine());
+            for (int i = 0; i < number; i++) {
+                System.out.print("Vui lòng nhập số tứ tự khách hàng thứ " + index++ + " đã đăng ký lưu trú hiện có của resort: ");
+                int numberPosition = Integer.parseInt(scanner.nextLine());
+                customerQueue.add(customerArrayList.get(numberPosition - 1));
+            }
+        } catch (NumberFormatException e) {
+            System.err.print("\tYêu cầu nhập số. Bạn đang nhập một chuỗi: ");
+        } catch (IndexOutOfBoundsException e) {
+            System.err.println("Bạn đã chọn số thứ tự của khách hàng ngoài danh sách hiện có.");
+        }
+
+
+    }
+
+    private static Employee getFileEmployee(String idEmployee) {
+        Map<String, Employee> stringEmployeeMap = getFileInformationOfEmployee();
+        for (Map.Entry<String, Employee> stringEmployeeEntry : stringEmployeeMap.entrySet()) {
+            employeeStack.push(stringEmployeeEntry.getValue());
+        }
+        Employee employee = null;
+        while (!employeeStack.isEmpty()) {
+            employee = employeeStack.pop();
+            if (employee.getIdEmployee().equals(idEmployee)) {
+                return employee;
+            }
+        }
+        return employee;
+    }
+
+    public static void findEmployeeInformationInFileCabinets() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập Id nhân viên bạn muốn tìm: ");
+        String idEmployee = scanner.nextLine();
+        Employee employee = getFileEmployee(idEmployee);
+        if (employee != null) {
+            System.out.println("Hồ sơ nhân viên: \n" + employee.toString());
+        } else {
+            System.out.println("Không tìm thấy!!!");
+        }
+    }
 }
 //    public static void showAllRoom() {
 //        for (Room room : roomArrayList) {
