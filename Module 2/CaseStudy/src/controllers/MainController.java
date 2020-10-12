@@ -9,33 +9,33 @@ import java.util.*;
 public class MainController {
     public static String choose;
 
-    static String id;
-    static String nameService;
-    static double useArea;
-    static double rentalCosts;
-    static int maximumNumberOfPeople;
-    static String rentalType;
+    String id;
+    String nameService;
+    double useArea;
+    double rentalCosts;
+    int maximumNumberOfPeople;
+    String rentalType;
 
     static Scanner scanner = new Scanner(System.in);
-    public static final String FILE_NAME_VILLA = "src/data/villa.csv";
-    public static final String FILE_NAME_HOUSE = "src/data/house.csv";
-    public static final String FILE_NAME_ROOM = "src/data/room.csv";
-    public static final String FILE_NAME_CUSTOMER = "src/data/customer.csv";
-    public static final String FILE_NAME_EMPLOYEE = "src/data/employee.csv";
-    public static final String FILE_NAME_BOOKING = "src/data/booking.csv";
-    public static final String COMMA = ",";
+    public final String FILE_NAME_VILLA = "src/data/villa.csv";
+    public final String FILE_NAME_HOUSE = "src/data/house.csv";
+    public final String FILE_NAME_ROOM = "src/data/room.csv";
+    public final String FILE_NAME_CUSTOMER = "src/data/customer.csv";
+    public final String FILE_NAME_EMPLOYEE = "src/data/employee.csv";
+    public final String FILE_NAME_BOOKING = "src/data/booking.csv";
+    public final String COMMA = ",";
 
-    public static List<Room> roomArrayList = new ArrayList<>();
-    public static List<House> houseArrayList = new ArrayList<>();
-    public static List<Villa> villaArrayList = new ArrayList<>();
-    public static List<Customer> customerArrayList = new ArrayList<>();
-    public static List<Employee> employeeArrayList = new ArrayList<>();
+    public List<Room> roomArrayList = new ArrayList<>();
+    public List<House> houseArrayList = new ArrayList<>();
+    public List<Villa> villaArrayList = new ArrayList<>();
+    public List<Customer> customerArrayList = new ArrayList<>();
+    public List<Employee> employeeArrayList = new ArrayList<>();
 
-    public static Map<Integer, Employee> stringEmployeeMap = new HashMap<Integer, Employee>();
-    public static Queue<Customer> customerQueue = new LinkedList<>();
-    public static Stack<Employee> employeeStack = new Stack<>();
+    public Map<Integer, Employee> stringEmployeeMap = new HashMap<Integer, Employee>();
+    public Queue<Customer> customerQueue = new LinkedList<>();
+    public Stack<Employee> employeeStack = new Stack<>();
 
-    public static void displayMainMenu() {
+    public void displayMainMenu() {
         do {
             System.out.println("-------------------------------------");
             System.out.print(
@@ -90,7 +90,7 @@ public class MainController {
         } while (Integer.parseInt(choose) >= 1 && Integer.parseInt(choose) <= 10);
     }
 
-    public static void addNewServices() {
+    public void addNewServices() {
         do {
             System.out.println("-------------------------------------");
             System.out.print(
@@ -126,7 +126,7 @@ public class MainController {
         } while (Integer.parseInt(choose) >= 1 && Integer.parseInt(choose) <= 5);
     }
 
-    public static void addNewRoom() {
+    public void addNewRoom() {
 
         String nameExtraServices;
         int amountExtraServices;
@@ -173,7 +173,7 @@ public class MainController {
         }
     }
 
-    public static void addNewHouse() {
+    public void addNewHouse() {
 
         String rentalType = null;
         String standardRoom;
@@ -221,7 +221,7 @@ public class MainController {
         }
     }
 
-    public static void addNewVilla() {
+    public void addNewVilla() {
         String standardRoom;
         String descriptionOfOtherAmenities;
         double swimmingPoolArea = 0;
@@ -283,7 +283,7 @@ public class MainController {
         }
     }
 
-    public static void addNewInformationServices() {
+    public void addNewInformationServices() {
         do {
             System.out.print("Nhập Tên dịch vụ: ");
             nameService = scanner.nextLine();
@@ -322,7 +322,7 @@ public class MainController {
         } while (!Validate.isTypeRents(rentalType, Validate.SERVICE_TYPE_RENTS));
     }
 
-    public static void showServices() {
+    public void showServices() {
         do {
             System.out.println("-------------------------------------");
             System.out.print(
@@ -370,7 +370,7 @@ public class MainController {
         } while (Integer.parseInt(choose) >= 1 && Integer.parseInt(choose) <= 8);
     }
 
-    public static void showAllNameRoomNotDuplicate() {
+    public void showAllNameRoomNotDuplicate() {
         readAllRoom();
         Set<String> setServicesRoom = new TreeSet<>();
         System.out.println("-------------------------------------");
@@ -383,7 +383,7 @@ public class MainController {
         }
     }
 
-    public static void showAllNameHouseNotDuplicate() {
+    public void showAllNameHouseNotDuplicate() {
         readAllHouse();
         Set<String> setServicesHouse = new TreeSet<>();
         System.out.println("-------------------------------------");
@@ -396,7 +396,7 @@ public class MainController {
         }
     }
 
-    public static void showAllNameVillaNotDuplicate() {
+    public void showAllNameVillaNotDuplicate() {
         readAllVilla();
         Set<String> setServicesVilla = new TreeSet<>();
         System.out.println("-------------------------------------");
@@ -409,7 +409,7 @@ public class MainController {
         }
     }
 
-    public static void readAllRoom() {
+    public void readAllRoom() {
         List<String> stringListRoom = FileUtils.readFile(FILE_NAME_ROOM);
         for (String string : stringListRoom) {
             String[] stringSplit = string.split(COMMA);
@@ -420,7 +420,7 @@ public class MainController {
         }
     }
 
-    public static void readAllHouse() {
+    public void readAllHouse() {
         List<String> stringListHouse = FileUtils.readFile(FILE_NAME_HOUSE);
 
         for (String string : stringListHouse) {
@@ -432,7 +432,7 @@ public class MainController {
         }
     }
 
-    public static void readAllVilla() {
+    public void readAllVilla() {
         List<String> stringListVilla = FileUtils.readFile(FILE_NAME_VILLA);
 
         for (String string : stringListVilla) {
@@ -445,7 +445,7 @@ public class MainController {
         }
     }
 
-    public static void showAllRoom() {
+    public void showAllRoom() {
         System.out.println("-------------------------------------");
         int index = 1;
         readAllRoom();
@@ -456,7 +456,7 @@ public class MainController {
         System.out.println("-------------------------------------");
     }
 
-    public static void showAllHouse() {
+    public void showAllHouse() {
         System.out.println("-------------------------------------");
         int index = 1;
         readAllHouse();
@@ -467,7 +467,7 @@ public class MainController {
         System.out.println("-------------------------------------");
     }
 
-    public static void showAllVilla() {
+    public void showAllVilla() {
         System.out.println("-------------------------------------");
         int index = 1;
         readAllVilla();
@@ -478,7 +478,7 @@ public class MainController {
         System.out.println("-------------------------------------");
     }
 
-    public static void addNewCustomer() {
+    public void addNewCustomer() {
         String fullName;
         String dateOfBirth;
         String genderCustomer;
@@ -584,7 +584,7 @@ public class MainController {
         }
     }
 
-    public static List<Customer> readCustomer() {
+    public List<Customer> readCustomer() {
         List<String> stringListCustomer = FileUtils.readFile(FILE_NAME_CUSTOMER);
 
         for (String string : stringListCustomer) {
@@ -597,7 +597,7 @@ public class MainController {
         return customerArrayList;
     }
 
-    public static void showInformationCustomers() {
+    public void showInformationCustomers() {
         customerArrayList = new ArrayList<>();
         int index = 1;
         customerArrayList = (ArrayList<Customer>) readCustomer();
@@ -609,7 +609,7 @@ public class MainController {
         }
     }
 
-    public static void addNewBooking() {
+    public void addNewBooking() {
         showInformationCustomers();
         System.out.println("Chọn vị trí khách hàng muốn lại booking ");
         int iPositionCustomer = Integer.parseInt(scanner.nextLine());
@@ -654,7 +654,7 @@ public class MainController {
 
     }
 
-    public static void addBookingServices(int iPositionCustomer) {
+    public void addBookingServices(int iPositionCustomer) {
         String line = null;
         line = customerArrayList.get(iPositionCustomer - 1).getFullName() + COMMA +
                 customerArrayList.get(iPositionCustomer - 1).getDateOfBirth() + COMMA +
@@ -669,25 +669,25 @@ public class MainController {
         displayMainMenu();
     }
 
-    public static void addFileBookingVilla(int iPositionCustomer) {
+    public void addFileBookingVilla(int iPositionCustomer) {
         int numberInput = Integer.parseInt(scanner.nextLine());
         customerArrayList.get(iPositionCustomer - 1).setServices(villaArrayList.get(numberInput - 1));
         addBookingServices(iPositionCustomer);
     }
 
-    public static void addFileBookingHouse(int iPositionCustomer) {
+    public void addFileBookingHouse(int iPositionCustomer) {
         int numberInput = Integer.parseInt(scanner.nextLine());
         customerArrayList.get(iPositionCustomer - 1).setServices(houseArrayList.get(numberInput - 1));
         addBookingServices(iPositionCustomer);
     }
 
-    public static void addFileBookingRoom(int iPositionCustomer) {
+    public void addFileBookingRoom(int iPositionCustomer) {
         int numberInput = Integer.parseInt(scanner.nextLine());
         customerArrayList.get(iPositionCustomer - 1).setServices(roomArrayList.get(numberInput - 1));
         addBookingServices(iPositionCustomer);
     }
 
-    public static void addNewEmployee() {
+    public void addNewEmployee() {
 
         Employee employee = new Employee();
         System.out.print("01.Nhập Id nhân viên: ");
@@ -738,7 +738,7 @@ public class MainController {
         }
     }
 
-    public static void showInformationOfEmployee() {
+    public void showInformationOfEmployee() {
         getFileInformationOfEmployee();
         System.out.println("-------------------------------------");
         System.out.println("Danh sách nhân viên đang làm việc tại resort: ");
@@ -747,7 +747,7 @@ public class MainController {
         }
     }
 
-    public static Map<Integer, Employee> getFileInformationOfEmployee() {
+    public Map<Integer, Employee> getFileInformationOfEmployee() {
         List<String> stringListEmployee = FileUtils.readFile(FILE_NAME_EMPLOYEE);
 
         for (String stringEmployee : stringListEmployee) {
@@ -769,7 +769,7 @@ public class MainController {
         return stringEmployeeMap;
     }
 
-    public static void menuMovieTicketList() {
+    public void menuMovieTicketList() {
         do {
             System.out.println("Menu buy ticket movie 4D:\n" +
                     "1.\tBuy ticket movie 4D.\n" +
@@ -794,7 +794,7 @@ public class MainController {
         } while (Integer.parseInt(choose) >= 1 && Integer.parseInt(choose) <= 4);
     }
 
-    private static void showMovieTicketList() {
+    private void showMovieTicketList() {
         Customer customer = null;
 
         System.out.println("-------------------------------------");
@@ -806,7 +806,7 @@ public class MainController {
         }
     }
 
-    public static void bookingTicket() {
+    public void bookingTicket() {
         showInformationCustomers();
         try {
             System.out.print("\nVui lòng nhập số lượng khách hàng cần đăng ký: ");
@@ -824,7 +824,7 @@ public class MainController {
         }
     }
 
-    private static Employee getFileEmployee(String idEmployee) {
+    private Employee getFileEmployee(String idEmployee) {
         Map<Integer, Employee> stringEmployeeMap = getFileInformationOfEmployee();
         for (Map.Entry<Integer, Employee> stringEmployeeEntry : stringEmployeeMap.entrySet()) {
             employeeStack.push(stringEmployeeEntry.getValue());
@@ -839,7 +839,7 @@ public class MainController {
         return employee;
     }
 
-    public static void findEmployeeInformationInFileCabinets() {
+    public void findEmployeeInformationInFileCabinets() {
         String idEmployee = null;
         System.out.print("Nhập Id nhân viên bạn muốn tìm: ");
         idEmployee = scanner.nextLine();
