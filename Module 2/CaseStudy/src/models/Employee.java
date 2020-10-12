@@ -1,7 +1,7 @@
 package models;
 
 public class Employee {
-    private String idEmployee;
+    private int idEmployee;
     private String fullNameEmployee;
     private String ageEmployee;
     private String idCardEmployee;
@@ -15,7 +15,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String idEmployee, String fullNameEmployee, String ageEmployee, String idCardEmployee, String phoneNumberEmployee, String emailEmployee, String academicLevelEmployee, String positionEmployee, String salaryEmployee, String addressEmployee) {
+    public Employee(int idEmployee, String fullNameEmployee, String ageEmployee, String idCardEmployee, String phoneNumberEmployee, String emailEmployee, String academicLevelEmployee, String positionEmployee, String salaryEmployee, String addressEmployee) {
         this.idEmployee = idEmployee;
         this.fullNameEmployee = fullNameEmployee;
         this.ageEmployee = ageEmployee;
@@ -28,11 +28,11 @@ public class Employee {
         this.addressEmployee = addressEmployee;
     }
 
-    public String getIdEmployee() {
+    public int getIdEmployee() {
         return idEmployee;
     }
 
-    public void setIdEmployee(String idEmployee) {
+    public void setIdEmployee(int idEmployee) {
         this.idEmployee = idEmployee;
     }
 
@@ -111,16 +111,17 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "idEmployee='" + idEmployee + '\'' +
-                ", fullNameEmployee='" + fullNameEmployee + '\'' +
-                ", ageEmployee='" + ageEmployee + '\'' +
-                ", idCardEmployee='" + idCardEmployee + '\'' +
-                ", phoneNumberEmployee='" + phoneNumberEmployee + '\'' +
-                ", emailEmployee='" + emailEmployee + '\'' +
-                ", academicLevelEmployee='" + academicLevelEmployee + '\'' +
-                ", positionEmployee='" + positionEmployee + '\'' +
-                ", salaryEmployee='" + salaryEmployee + '\'' +
-                ", addressEmployee='" + addressEmployee + '\'' +
-                '}';
+                "Id Employee: " + idEmployee +
+                ",Full Name Employee: " + fullNameEmployee +
+                ",Age Employee: " + ageEmployee +
+                ",Id Card Employee: " + idCardEmployee +
+                ",Phone Number Employee: " + phoneNumberEmployee +
+                ",Email Employee: " + emailEmployee +
+                ",Academic Level Employee: " + academicLevelEmployee +
+                ",Position Employee: " + positionEmployee +
+                ",Salary Employee: " + salaryEmployee +
+                ",Address Employee: " + addressEmployee +
+                "\n-------------------------------------------------------";
+
     }
 }

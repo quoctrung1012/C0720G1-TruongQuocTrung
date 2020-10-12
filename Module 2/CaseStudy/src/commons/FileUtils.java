@@ -7,7 +7,6 @@ import java.util.List;
 public class FileUtils {
     private static BufferedReader bufferedReader;
     private static BufferedWriter bufferedWriter;
-    private static String pathFile;
     
     public static void writeFile(String pathFile, String line) {
         try {
@@ -40,14 +39,4 @@ public class FileUtils {
         }
         return listLine;
     }
-    public static void setFullPathFile(String fileName) {
-        StringBuffer stringBuffer = new StringBuffer("E:\\App Codegym\\C0720G1-TruongQuocTrung\\Module 2\\CaseStudy\\src\\data");
-        // add name file:
-        stringBuffer.append(fileName);
-        // add tail file:
-        stringBuffer.append(StringUtils.CSV);
-
-        FileUtils.pathFile = stringBuffer.toString();
-    }
-
 }

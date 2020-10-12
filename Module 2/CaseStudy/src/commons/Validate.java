@@ -15,6 +15,7 @@ public class Validate {
     public static final String SERVICE_ROOM_REGEX = "SVRO-[\\d]{4}";
     public static final String SERVICE_STRING_REGEX = "[A-Z][a-z]+(\\s[A-Z][a-z]*)*";
     public static final String SERVICE_QUALITY_RENTAL = "^(Villa|House|Room)$";
+    public static final String SERVICE_TYPE_RENTS = "^(Ngày|Tháng|Năm|Giờ)$";
     public static final String EXTRA_SERVICE_REGEX = "^(Massage|Karaoke|Food|Drink|Car)$";
     public static final String CUSTOMER_DAY_REGEX = "[\\d]{2}/[\\d]{2}/[\\d]{4}";
     public static final String CUSTOMER_ID_CARD_REGEX = "[\\d]{3}\\s[\\d]{3}\\s[\\d]{3}";

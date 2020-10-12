@@ -21,3 +21,49 @@ Swimming Pool Area: 35.0
 Number Of Floors: 2
 -------------------------------------
 -------------------------------------
+Customer:
+Full Name Customer: Trần Văn Tám
+Date Of Birth: 11/07/1989
+Gender Customer: male
+Number Id Card: 102 567 522
+Phone Number: 1356982222
+Email Customer: vantam89@gmail.com
+Type Of Customer: Platium
+Address Customer: Quang Ngãi
+Service: Villa: 
+-------------------------------------
+Id: SVVL-0003
+Name Service: Villa03
+Use Area: 50.0
+Rental Costs: 2000.7
+Number Of Customer: 5
+Rental Type: Platium
+Standard Room: Villa
+Description Of Other Amenities: Other
+Swimming Pool Area: 35.0
+Number Of Floors: 2
+-------------------------------------
+-------------------------------------
+Customer:
+Full Name Customer: Trần Thị Tuyết Mai
+Date Of Birth: 13/06/1991
+Gender Customer: female
+Number Id Card: 568 789 156
+Phone Number: 0123685940
+Email Customer: tuyetmai91@gmail.com
+Type Of Customer: Platium
+Address Customer: Ninh Bình
+Service: Villa: 
+-------------------------------------
+Id: SVVL-0002
+Name Service: Villa02
+Use Area: 50.0
+Rental Costs: 2000.0
+Number Of Customer: 15
+Rental Type: Gold
+Standard Room: Villa
+Description Of Other Amenities: Vip
+Swimming Pool Area: 30.5
+Number Of Floors: 3
+-------------------------------------
+-------------------------------------

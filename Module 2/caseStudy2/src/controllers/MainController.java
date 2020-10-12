@@ -196,12 +196,12 @@ public class MainController {
                 servicesList = readAllServices(ROOM);
                 showAllServices(ROOM);
                 break;
-//            case 4:
-//                displayMainMenu();
-//                break;
-//            case 5:
-//                System.exit(0);
-//                break;
+            case 4:
+                displayMainMenu();
+                break;
+            case 5:
+                System.exit(0);
+                break;
             default:
                 System.out.println("\tPlease again input number!!");
                 displayMainMenu();
@@ -228,7 +228,6 @@ public class MainController {
         do {
             System.out.print("Please input service id: ");
             id = scanner.nextLine();
-
         } while (!Validate.isValidServiceCode(id, Validate.SERVICE_CODE_REGEX));
 
         do {

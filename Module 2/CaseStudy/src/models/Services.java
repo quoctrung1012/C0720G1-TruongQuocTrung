@@ -1,6 +1,6 @@
 package models;
 
-public abstract class Services{
+public abstract class Services {
     protected String id;
     protected String nameService;
     protected double useArea;
@@ -70,14 +70,12 @@ public abstract class Services{
 
     @Override
     public String toString() {
-        return "Services{" +
-                "id='" + id + '\'' +
-                ", nameService='" + nameService + '\'' +
-                ", useArea=" + useArea +
-                ", rentalCosts=" + rentalCosts +
-                ", maximumNumberOfPeople=" + maximumNumberOfPeople +
-                ", rentalType='" + rentalType + '\'' +
-                '}';
+        return "Id: " + id +
+                ",Name Service: " + nameService +
+                ",Use Area: " + useArea +
+                ",Rental Costs: " + rentalCosts +
+                ",Number Of Customer: " + maximumNumberOfPeople +
+                ",Rental Type: " + rentalType;
     }
 
     public abstract void showInFor();
