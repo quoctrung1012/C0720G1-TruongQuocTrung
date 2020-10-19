@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileUtils {
+    public class FileUtils {
     private static BufferedReader bufferedReader;
     private static BufferedWriter bufferedWriter;
     
@@ -22,6 +22,7 @@ public class FileUtils {
             e.printStackTrace();
         }
     }
+
 
     public static List<String> readFile(String pathFile) {
         List<String> listLine = new ArrayList<>();

@@ -16,7 +16,7 @@ public class MainController {
     int maximumNumberOfPeople;
     String rentalType;
 
-    static Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     public final String FILE_NAME_VILLA = "src/data/villa.csv";
     public final String FILE_NAME_HOUSE = "src/data/house.csv";
     public final String FILE_NAME_ROOM = "src/data/room.csv";
@@ -30,6 +30,7 @@ public class MainController {
     public List<Villa> villaArrayList = new ArrayList<>();
     public List<Customer> customerArrayList = new ArrayList<>();
     public List<Employee> employeeArrayList = new ArrayList<>();
+    public Set<String> setServices = new TreeSet<>();
 
     public Map<Integer, Employee> stringEmployeeMap = new HashMap<Integer, Employee>();
     public Queue<Customer> customerQueue = new LinkedList<>();
@@ -158,7 +159,7 @@ public class MainController {
 
         Room room = new Room(id, nameService, useArea, rentalCosts, maximumNumberOfPeople, rentalType, extraServices);
         roomArrayList.add(room);
-        String line = null;
+        String line;
         for (Room writeRoom : roomArrayList) {
             line = writeRoom.getId()
                     + COMMA + writeRoom.getNameService()
@@ -372,39 +373,36 @@ public class MainController {
 
     public void showAllNameRoomNotDuplicate() {
         readAllRoom();
-        Set<String> setServicesRoom = new TreeSet<>();
         System.out.println("-------------------------------------");
         System.out.println("List Room Resort Room Not Duplicate: ");
         for (Room room : roomArrayList) {
-            setServicesRoom.add(room.getNameService());
+            setServices.add(room.getNameService());
         }
-        for (String roomString : setServicesRoom) {
+        for (String roomString : setServices) {
             System.out.println(roomString);
         }
     }
 
     public void showAllNameHouseNotDuplicate() {
         readAllHouse();
-        Set<String> setServicesHouse = new TreeSet<>();
         System.out.println("-------------------------------------");
         System.out.println("List House Resort Room Not Duplicate: ");
         for (House house : houseArrayList) {
-            setServicesHouse.add(house.getNameService());
+            setServices.add(house.getNameService());
         }
-        for (String houseString : setServicesHouse) {
+        for (String houseString : setServices) {
             System.out.println(houseString);
         }
     }
 
     public void showAllNameVillaNotDuplicate() {
         readAllVilla();
-        Set<String> setServicesVilla = new TreeSet<>();
         System.out.println("-------------------------------------");
         System.out.println("List House Resort Room Not Duplicate: ");
         for (Villa villa : villaArrayList) {
-            setServicesVilla.add(villa.getNameService());
+            setServices.add(villa.getNameService());
         }
-        for (String villaString : setServicesVilla) {
+        for (String villaString : setServices) {
             System.out.println(villaString);
         }
     }
@@ -434,7 +432,6 @@ public class MainController {
 
     public void readAllVilla() {
         List<String> stringListVilla = FileUtils.readFile(FILE_NAME_VILLA);
-
         for (String string : stringListVilla) {
             String[] stringSplit = string.split(COMMA);
             Villa villa = new Villa(stringSplit[0], stringSplit[1], Double.parseDouble(stringSplit[2]),
@@ -600,12 +597,13 @@ public class MainController {
     public void showInformationCustomers() {
         customerArrayList = new ArrayList<>();
         int index = 1;
-        customerArrayList = (ArrayList<Customer>) readCustomer();
+        customerArrayList = readCustomer();
         System.out.println("-------------------------------------");
         System.out.println("Danh sách khách hàng đã và đang lưu trú tại resort: ");
         for (Customer customer : customerArrayList) {
             System.out.print("No." + index++ + ": ");
-            customer.showInFor();
+            //customer.showInFor();
+            System.out.println(customer.toString());
         }
     }
 
@@ -796,32 +794,36 @@ public class MainController {
 
     private void showMovieTicketList() {
         Customer customer = null;
-
         System.out.println("-------------------------------------");
         System.out.println("Danh sách khách hàng mua vé xem phim 4D: ");
         while (!customerQueue.isEmpty()) {
             customer = customerQueue.poll();
             customer.showInFor();
-
         }
     }
 
     public void bookingTicket() {
         showInformationCustomers();
-        try {
-            System.out.print("\nVui lòng nhập số lượng khách hàng cần đăng ký: ");
-            int index = 1;
-            int number = Integer.parseInt(scanner.nextLine());
-            for (int i = 0; i < number; i++) {
-                System.out.print("Vui lòng nhập số tứ tự khách hàng thứ " + index++ + " đã đăng ký lưu trú hiện có của resort: ");
-                int numberPosition = Integer.parseInt(scanner.nextLine());
-                customerQueue.add(customerArrayList.get(numberPosition - 1));
+        boolean flag = false;
+        do {
+            try {
+                flag = true;
+                System.out.print("\nVui lòng nhập số lượng khách hàng cần đăng ký: ");
+                int index = 1;
+                int number = Integer.parseInt(scanner.nextLine());
+                for (int i = 0; i < number; i++) {
+                    System.out.print("Vui lòng nhập số tứ tự khách hàng thứ " + index++ + " đã đăng ký lưu trú hiện có của resort: ");
+                    int numberPosition = Integer.parseInt(scanner.nextLine());
+                    customerQueue.add(customerArrayList.get(numberPosition - 1));
+                }
+            } catch (NumberFormatException e) {
+                flag = false;
+                System.err.println("\tYêu cầu nhập số. Bạn đang nhập một chuỗi: ");
+            } catch (IndexOutOfBoundsException e) {
+                flag = false;
+                System.err.println("Bạn đã chọn số thứ tự của khách hàng ngoài danh sách hiện có.");
             }
-        } catch (NumberFormatException e) {
-            System.err.println("\tYêu cầu nhập số. Bạn đang nhập một chuỗi: ");
-        } catch (IndexOutOfBoundsException e) {
-            System.err.println("Bạn đã chọn số thứ tự của khách hàng ngoài danh sách hiện có.");
-        }
+        } while (!flag);
     }
 
     private Employee getFileEmployee(String idEmployee) {
@@ -841,9 +843,16 @@ public class MainController {
 
     public void findEmployeeInformationInFileCabinets() {
         String idEmployee = null;
+//        boolean flag = false;
         System.out.print("Nhập Id nhân viên bạn muốn tìm: ");
         idEmployee = scanner.nextLine();
         Employee employee = getFileEmployee(idEmployee);
+//        for (int i = 0; i < employeeStack.size(); i++) {
+//            if (idEmployee.equals(employeeStack.get(i).getIdEmployee())) {
+//                System.out.println("Hồ sơ nhân viên có số ID: " + idEmployee + employeeStack.get(i).toString());
+//                flag =true;
+//            }
+
         if (employee != null) {
             System.out.println("Hồ sơ nhân viên: \n" + employee.toString());
         } else {

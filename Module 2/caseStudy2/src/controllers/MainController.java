@@ -377,7 +377,7 @@ public class MainController {
         Services services = null;
         for (int i = 0; i < servicesList.size(); i++) {
             services = servicesList.get(i);
-            System.out.print("No."+(i + 1) + ": ");
+            System.out.print("No." + (i + 1) + ": ");
             services.showInFor();
         }
     }
@@ -578,19 +578,20 @@ public class MainController {
     }
 
     private static void searchCustomer() {
-        System.out.print("Please input number id card: ");
+        System.out.print("Nhập số CMND  : ");
         String valueIdCardCustomer = scanner.nextLine();
-
+        boolean idCardTest = false;
         List<Customer> customerList = readAllCustomer(CUSTOMER);
-        for (int i = 0; i < customerList.size(); i++) {
-//            boolean idCardTest = ;
-            if (valueIdCardCustomer.equals(customerList.get(i).getNumberIdCard())) {
+        int i;
+        for (i = 0; i < customerList.size(); i++) {
+            if (valueIdCardCustomer.contains(customerList.get(i).getNumberIdCard()) ) {
                 System.out.println(customerList.get(i).toString());
-            } else {
-                System.out.println("Not found");
+                idCardTest = true;
             }
         }
-
+        if (!idCardTest) {
+            System.out.println("Not Found");
+        }
     }
 }
 

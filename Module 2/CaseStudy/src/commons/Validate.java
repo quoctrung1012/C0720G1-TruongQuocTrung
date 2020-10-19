@@ -15,13 +15,14 @@ public class Validate {
     public static final String SERVICE_ROOM_REGEX = "SVRO-[\\d]{4}";
     public static final String SERVICE_STRING_REGEX = "[A-Z][a-z]+(\\s[A-Z][a-z]*)*";
     public static final String SERVICE_QUALITY_RENTAL = "^(Villa|House|Room)$";
-    public static final String SERVICE_TYPE_RENTS = "^(Ngày|Tháng|Năm|Giờ)$";
+    public static final String SERVICE_TYPE_RENTS = "^(Ngày|Tháng|Năm|Giờ|Ngay|Thang|Nam|Gio)$";
     public static final String EXTRA_SERVICE_REGEX = "^(Massage|Karaoke|Food|Drink|Car)$";
     public static final String CUSTOMER_DAY_REGEX = "[\\d]{2}/[\\d]{2}/[\\d]{4}";
+    public static final String CUSTOMER_DAY_REGEX_1 = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$";
     public static final String CUSTOMER_ID_CARD_REGEX = "[\\d]{3}\\s[\\d]{3}\\s[\\d]{3}";
     public static final String CUSTOMER_GENDER_REGEX = "^(male|female|unknown|Male|Female|Unknown)$";
-    public static final String CUSTOMER_QUALITY_CUSTOMER = "^(Diamond|Platinium|Gold|Silver|Member)$";
-    public static final String CUSTOMER_NUMBER_PHONE = "0\\d{9}";
+    public static final String CUSTOMER_QUALITY_CUSTOMER = "^(Diamond|Platinum|Gold|Silver|Member)$";
+    public static final String CUSTOMER_NUMBER_PHONE = "^0\\d{9}$";
     public static final String CUSTOMER_EMAIL = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 
 //    public static boolean isValidRegex(String stringInput, String regex) {

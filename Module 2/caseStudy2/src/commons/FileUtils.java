@@ -21,7 +21,7 @@ public class FileUtils {
     }
 
     public static List<String> readFile() {
-        List<String> arrayContent = new ArrayList<String>();
+        List<String> arrayContent = new ArrayList<>();
         try {
             bufferedReader = new BufferedReader(new FileReader(pathFile));
             String line = null;
@@ -37,7 +37,7 @@ public class FileUtils {
         return arrayContent;
     }
 
-    public static void setFullPathFile(String fileName) {
+    public static void  setFullPathFile(String fileName) {
         StringBuffer stringBuffer = new StringBuffer("E:\\App Codegym\\C0720G1-TruongQuocTrung\\Module 2\\caseStudy2\\src\\data\\");
         stringBuffer.append(fileName);
         stringBuffer.append(StringUtils.CSV);
