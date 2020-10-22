@@ -18,11 +18,14 @@ public class Validate {
     public static final String NUMBER_PHONE = "^0\\d{9}$";
     public static final String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     public static final String GENDER_REGEX = "^(male|female|unknown|Male|Female|unknown)$";
-
-
-    public static void iRegexPhoneNumber(String input) throws ExceptionPhone {
-        pattern = Pattern.compile(NUMBER_PHONE);
+    public static void duoble(String input,String regex){
+        pattern = Pattern.compile(regex);
         matcher = pattern.matcher(input);
+    }
+
+
+    public static void iRegexPhoneNumber(String input,String regex) throws ExceptionPhone {
+        duoble(input,regex);
         if (!matcher.find()) throw new ExceptionPhone("Số điện thoại không hợp lệ !!!");
     }
 

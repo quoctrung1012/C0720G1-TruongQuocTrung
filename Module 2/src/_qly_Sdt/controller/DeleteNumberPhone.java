@@ -33,7 +33,8 @@ public class DeleteNumberPhone {
                 System.out.println("Nếu đồng ý thì nhập 'Y'.\n Nếu không nhập 'N' ");
                 if (scanner.nextLine().equals("Y")) {
                     MainMenu.telephoneList.remove(i);
-                    i--;
+                    break;
+                    //i--;
                 } else if (scanner.nextLine().equals("N")) {
                     MainMenu.mainMenu();
                 } else {

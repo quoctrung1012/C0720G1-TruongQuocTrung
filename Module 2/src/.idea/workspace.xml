@@ -20,81 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c499dc9-89c8-4deb-89ef-d01c50e241b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/commons/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/commons/Validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/controller/AddNumberPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/controller/DeleteNumberPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/controller/EditPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/controller/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/controller/ReadAllFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/controller/SearchPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/controller/ShowListPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/data/contacts.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/exception/ExceptionBirthday.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/exception/ExceptionEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/exception/ExceptionName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/exception/ExceptionPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/exception/NotFoundPhoneException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_qly_Sdt/models/TelephoneDirectory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/commons/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/commons/Validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/controller/Input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/controller/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/controller/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/controller/ManagerProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/data/extra.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/data/import.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/models/ExtraProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/models/ImportProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_thi_module/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study_v1/commons/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study_v1/controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study_v1/data/dictionary.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study_v1/models/Dictionarys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/commons/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/commons/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/controllers/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/models/Students.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/a/test/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/commons/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/commons/FileUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/commons/Validate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/commons/Validate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/controllers/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/controllers/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/data/house.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/data/house.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/models/ExtraServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/models/ExtraServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/models/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/out/production/CaseStudy/models/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/src/commons/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/src/commons/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/src/commons/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/src/commons/Validate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/src/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../caseStudy2/out/production/caseStudy2/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy2/out/production/caseStudy2/controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../caseStudy2/out/production/caseStudy2/data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy2/out/production/caseStudy2/data/villa.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../caseStudy2/src/commons/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy2/src/commons/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../caseStudy2/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../caseStudy2/src/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/lesson_13_thua_toan_tim_kiem/exercise/bai_01_tim_chuoi_tang_dan_co_do_dai_lon_nhat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/lesson_13_thua_toan_tim_kiem/exercise/bai_02_cai_dat_thua_toan_tim_kiem_nhi_phan_su_dung_de_quy/BinarySearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/lesson_13_thua_toan_tim_kiem/exercise/bai_02_cai_dat_thua_toan_tim_kiem_nhi_phan_su_dung_de_quy/BinarySearchMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/lesson_13_thua_toan_tim_kiem/exercise/bai_03_tim_chuoi_lien_tiep_co_do_dai_lon_nhat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/lesson_13_thua_toan_tim_kiem/practice/bai_02_tinh_do_phuc_tap_cua_thuat_toan/AlgorithmComplexityTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/test/b/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Module 2/test/b/_16_binary_file.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sf,df;" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module 2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13_thua_toan_tim_kiem/exercise/bai_01_tim_chuoi_tang_dan_co_do_dai_lon_nhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13_thuat_toan_tim_kiem/exercise/bai_01_tim_chuoi_tang_dan_co_do_dai_lon_nhat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13_thua_toan_tim_kiem/exercise/bai_02_cai_dat_thua_toan_tim_kiem_nhi_phan_su_dung_de_quy/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13_thuat_toan_tim_kiem/exercise/bai_02_cai_dat_thua_toan_tim_kiem_nhi_phan_su_dung_de_quy/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13_thua_toan_tim_kiem/exercise/bai_02_cai_dat_thua_toan_tim_kiem_nhi_phan_su_dung_de_quy/BinarySearchMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13_thuat_toan_tim_kiem/exercise/bai_02_cai_dat_thua_toan_tim_kiem_nhi_phan_su_dung_de_quy/BinarySearchMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13_thua_toan_tim_kiem/exercise/bai_03_tim_chuoi_lien_tiep_co_do_dai_lon_nhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13_thuat_toan_tim_kiem/exercise/bai_03_tim_chuoi_lien_tiep_co_do_dai_lon_nhat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13_thuat_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13_thua_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch2.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13_thuat_toan_tim_kiem/practice/bai_01_cai_dat_thua_toan_tim_kiem_khong_su_dung_de_quy/BinarySearch2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_13_thua_toan_tim_kiem/practice/bai_02_tinh_do_phuc_tap_cua_thuat_toan/AlgorithmComplexityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13_thuat_toan_tim_kiem/practice/bai_02_tinh_do_phuc_tap_cua_thuat_toan/AlgorithmComplexityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/b/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/b/_16_binary_file.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_qly_Sdt/commons/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/_qly_Sdt/commons/Validate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_qly_Sdt/controller/AddNumberPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/_qly_Sdt/controller/AddNumberPhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_qly_Sdt/controller/DeleteNumberPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/_qly_Sdt/controller/DeleteNumberPhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_qly_Sdt/data/contacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/_qly_Sdt/data/contacts.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,6 +185,7 @@
       <workItem from="1603070290640" duration="1300000" />
       <workItem from="1603071685024" duration="6726000" />
       <workItem from="1603078647170" duration="991000" />
+      <workItem from="1603101102978" duration="638000" />
     </task>
     <servers />
   </component>
@@ -294,38 +225,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603075920680" />
-    <state width="1877" height="591" key="GridCell.Tab.0.bottom" timestamp="1603079644905">
+    <state width="1877" height="676" key="GridCell.Tab.0.bottom" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="591" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603079644905" />
-    <state width="1877" height="591" key="GridCell.Tab.0.center" timestamp="1603079644905">
+    <state width="1877" height="676" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
+    <state width="1877" height="676" key="GridCell.Tab.0.center" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="591" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603079644905" />
-    <state width="1877" height="591" key="GridCell.Tab.0.left" timestamp="1603079644905">
+    <state width="1877" height="676" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
+    <state width="1877" height="676" key="GridCell.Tab.0.left" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="591" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603079644905" />
-    <state width="1877" height="591" key="GridCell.Tab.0.right" timestamp="1603079644905">
+    <state width="1877" height="676" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
+    <state width="1877" height="676" key="GridCell.Tab.0.right" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="591" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603079644905" />
-    <state width="1877" height="676" key="GridCell.Tab.1.bottom" timestamp="1603078456881">
+    <state width="1877" height="676" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
+    <state width="1877" height="676" key="GridCell.Tab.1.bottom" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="676" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603078456881" />
-    <state width="1877" height="676" key="GridCell.Tab.1.center" timestamp="1603078456881">
+    <state width="1877" height="676" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
+    <state width="1877" height="676" key="GridCell.Tab.1.center" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="676" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603078456881" />
-    <state width="1877" height="676" key="GridCell.Tab.1.left" timestamp="1603078456881">
+    <state width="1877" height="676" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
+    <state width="1877" height="676" key="GridCell.Tab.1.left" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="676" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603078456881" />
-    <state width="1877" height="676" key="GridCell.Tab.1.right" timestamp="1603078456881">
+    <state width="1877" height="676" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
+    <state width="1877" height="676" key="GridCell.Tab.1.right" timestamp="1603101746077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="676" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603078456881" />
+    <state width="1877" height="676" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603101746077" />
     <state x="775" y="454" key="ReplaceDuplicatesPrompt" timestamp="1603039058702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

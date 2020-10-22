@@ -152,7 +152,7 @@ public class AddNumberPhone {
             try {
                 System.out.println("1.\tNhập số điện thoại: ");
                 phoneNumber = scanner.nextLine();
-                Validate.iRegexPhoneNumber(phoneNumber);
+                Validate.iRegexPhoneNumber(phoneNumber,Validate.NUMBER_PHONE);
             } catch (ExceptionPhone e) {
                 e.printStackTrace();
                 flag = false;
@@ -173,7 +173,7 @@ public class AddNumberPhone {
             try {
                 System.out.println("1.\tNhập số điện thoại: ");
                 phoneNumber = scanner.nextLine();
-                Validate.iRegexPhoneNumber(phoneNumber);
+                Validate.iRegexPhoneNumber(phoneNumber,Validate.NUMBER_PHONE);
             } catch (ExceptionPhone e) {
                 e.printStackTrace();
                 flag = false;
