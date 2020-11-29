@@ -15,7 +15,7 @@ public class Validate {
 
     public static final String STRING_REGEX = "[A-Z][a-z]+(\\s[A-Z][a-z]*)*";
     public static final String DAY_REGEX = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$";
-    public static final String NUMBER_PHONE = "^0\\d{9}$";
+    public static final String NUMBER_PHONE = "^(090|091|(\\(\\+84\\)-90)|(\\(\\+84\\)-91))\\d{7}$";
     public static final String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     public static final String GENDER_REGEX = "^(male|female|unknown|Male|Female|unknown)$";
         public static void duplicate(String input, String regex){
